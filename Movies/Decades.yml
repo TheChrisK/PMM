@@ -1,19 +1,21 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Decade:
+    collection_order: alpha
+    url_poster: <<poster>>
+    plex_search:
+      all:
+        decade: <<decade>>
+
+#####################
+#    COLLECTIONS    #
+#####################
 collections:
   70s Movies:
-    collection_order: alpha
-    url_poster: https://i.imgur.com/TCZ0jV0.png
-    plex_search:
-      any:
-        decade: 1970
+    template: {name: Decade, decade: 1970, poster: https://i.imgur.com/TCZ0jV0.png}
   80s Movies:
-    collection_order: alpha
-    url_poster: https://i.imgur.com/9SdMuka.jpg
-    plex_search:
-      any:
-        decade: 1980
+    template: {name: Decade, decade: 1980, poster: https://i.imgur.com/9SdMuka.jpg}
   90s Movies:
-    collection_order: alpha
-    url_poster: https://i.imgur.com/AmPjLin.png
-    plex_search:
-      any:
-        decade: 1990
+    template: {name: Decade, decade: 1990, poster: https://i.imgur.com/AmPjLin.png}
