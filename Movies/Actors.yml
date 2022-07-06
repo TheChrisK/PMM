@@ -1,10 +1,16 @@
-collections:
-  Jim Carrey Collection:
+templates:
+  Person:
     collection_order: alpha
-    url_poster: https://theposterdb.com/api/assets/230372
+    url_poster: <<poster>>
     plex_search:
       all:
-        actor: Jim Carrey
+        actor: <<actor>>
+        writer: <<writer>>
+        director: <<director>>
+        producer: <<producer>>
+collections:
+  Jim Carrey Collection:
+    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/137121}
   Adam Sandler Collection:
     collection_order: alpha
     url_poster: https://theposterdb.com/api/assets/137106
@@ -35,3 +41,9 @@ collections:
     plex_search:
       all:
         actor: Robin Williams
+  Ryan Reynolds Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/137121
+    plex_search:
+      all:
+        actor: Ryan Reynolds
