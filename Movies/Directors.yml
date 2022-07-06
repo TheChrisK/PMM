@@ -15,8 +15,8 @@ templates:
 #####################
 collections:
   Steven Spielberg Collection:
-    template: {name: Person, director: "Steven Spielberg", poster: https://theposterdb.com/api/assets/147222}
+    template: {name: Person, director: "Steven Spielberg", writer: "Steven Spielberg", poster: https://theposterdb.com/api/assets/147222}
   Quentin Tarantino Collection:
-    template: {name: Person, director: "Quentin Tarantino", poster: https://theposterdb.com/api/assets/147223}
+    template: {name: Person, director: "Quentin Tarantino", writer: "Quentin Tarantino", poster: https://theposterdb.com/api/assets/147223}
   John Hughes Collection:
     template: {name: Person, director: "John Hughes", writer: "John Hughes", poster: https://theposterdb.com/api/assets/83928}
