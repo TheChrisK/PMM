@@ -19,8 +19,14 @@ collections:
     template: {name: Person, actor: "Arnold Schwarzenegger", poster: https://theposterdb.com/api/assets/137109}
   Bruce Willis Collection:
     template: {name: Person, actor: "Bruce Willis", poster: https://theposterdb.com/api/assets/137111}
+  Christian Bale Collection:
+    template: {name: Person, actor: "Christian Bale", poster: https://theposterdb.com/api/assets/137113}
+  Denzel Washington Collection:
+    template: {name: Person, actor: "Denzel Washington", poster: https://theposterdb.com/api/assets/184778}
   Gary Oldman Collection:
     template: {name: Person, actor: "Gary Oldman", poster: https://theposterdb.com/api/assets/137372}
+  Harrison Ford Collection: 
+    template: {name: Person, actor: "Harrison Ford", poster: https://theposterdb.com/api/assets/137135}
   Jim Carrey Collection:
     template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/85453}
   Keanu Reeves Collection:
