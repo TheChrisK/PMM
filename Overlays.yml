@@ -1,5 +1,5 @@
 overlays:
-################################## Issue identified with using imdb rating and rt at the same time. Workign out the issue and will update the config once resolved.
+##############Test################### Issue identified with using imdb rating and rt at the same time. Workign out the issue and will update the config once resolved.
 #  critic_rating:
 #    overlay:
 #      name: text(critic_rating)
