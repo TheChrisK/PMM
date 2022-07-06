@@ -13,8 +13,6 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
-  Jim Carrey Collection:
-    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/85453}
   Adam Sandler Collection:
     template: {name: Person, actor: "Adam Sandler", poster: https://theposterdb.com/api/assets/137106}
   Arnold Schwarzenegger Collection:   
@@ -23,6 +21,8 @@ collections:
     template: {name: Person, actor: "Bruce Willis", poster: https://theposterdb.com/api/assets/137111}
   Gary Oldman Collection:
     template: {name: Person, actor: "Gary Oldman", poster: https://theposterdb.com/api/assets/137372}
+  Jim Carrey Collection:
+    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/85453}
   Keanu Reeves Collection:
     template: {name: Person, actor: "Keanu Reeves", poster: https://theposterdb.com/api/assets/139145}
   Leonardo DiCaprio Collection:
