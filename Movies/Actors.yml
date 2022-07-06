@@ -17,3 +17,21 @@ collections:
     plex_search:
       all:
         actor: Arnold Schwarzenegger
+  Gary Oldman Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/137372
+    plex_search:
+      all:
+        actor: Gary Oldman
+  Keanu Reeves Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/139145
+    plex_search:
+      all:
+        actor: Keanu Reeves
+  Robin Williams Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/139151
+    plex_search:
+      all:
+        actor: Robin Williams
