@@ -41,7 +41,7 @@ settings:
   show_unmanaged: true
   show_filtered: false
   show_options: false
-  show_missing: true
+  show_missing: false
   show_missing_assets: true
   save_report: false
   tvdb_language: eng
@@ -56,8 +56,8 @@ settings:
 webhooks:                                       # Can be individually specified per library as well
   error: 
   version: notifiarr
-  run_start: notifiarr
-  run_end: notifiarr
+  run_start: 
+  run_end: 
   changes: notifiarr
 plex:                                           # Can be individually specified per library as well; REQUIRED for the script to run
   url: http://10.252.20.14:32400
@@ -92,9 +92,10 @@ radarr:                                         # Can be individually specified 
   add_missing: false
   add_existing: false
   root_folder_path: /nfs/Movies
+  root_folder_path: /nfs/Other/Kids
   monitor: true
   availability: announced
-  quality_profile: HD-1080p
+  quality_profile: HD - 720/1080p
   tag:
   search: false
   radarr_path:
@@ -107,7 +108,7 @@ sonarr:                                         # Can be individually specified 
   add_existing: false
   root_folder_path: /nfs/Shows
   monitor: all
-  quality_profile: HD-1080p
+  quality_profile: HD - 720/1080p
   language_profile: English
   series_type: standard
   season_folder: true
