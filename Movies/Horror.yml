@@ -1,0 +1,6 @@
+collections:
+  Horror Test:
+    collection_order: alpha
+    plex_search:
+      all:
+        genre: Horror

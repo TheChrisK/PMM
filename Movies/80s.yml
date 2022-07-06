@@ -1,0 +1,7 @@
+collections:
+  80s Movies:
+    collection_order: alpha
+    url_poster: https://i.imgur.com/9SdMuka.jpg      
+    plex_search:
+      any:
+        decade: 1980
