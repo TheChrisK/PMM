@@ -1,0 +1,17 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Person:
+    collection_order: alpha
+    url_poster: <<poster>>
+    plex_search:
+      all:
+        director: <<director>>
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Steven Spielberg Collection:
+    template: {name: Person, director: "Steven Spielberg", poster: https://theposterdb.com/api/assets/147222}
