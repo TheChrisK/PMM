@@ -1,0 +1,19 @@
+collections:
+  70s Movies:
+    collection_order: alpha
+    url_poster: https://i.imgur.com/TCZ0jV0.png
+    plex_search:
+      any:
+        decade: 1970
+  80s Movies:
+    collection_order: alpha
+    url_poster: https://i.imgur.com/9SdMuka.jpg
+    plex_search:
+      any:
+        decade: 1980
+  90s Movies:
+    collection_order: alpha
+    url_poster: https://i.imgur.com/AmPjLin.png
+    plex_search:
+      any:
+        decade: 1990
