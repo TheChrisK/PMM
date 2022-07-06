@@ -40,3 +40,6 @@ collections:
       - https://www.imdb.com/list/ls066252180/
       - https://www.imdb.com/list/ls031348568/
       - https://www.imdb.com/list/ls027353066/
+    plex_search:
+      all:
+        title.begins: 12 Days
