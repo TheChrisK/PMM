@@ -5,7 +5,6 @@ templates:
     plex_search:
       all:
         actor: <<actor>>
-        writer: <<writer>>
         director: <<director>>
         producer: <<producer>>
 collections:
