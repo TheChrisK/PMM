@@ -8,7 +8,7 @@ templates:
 
 collections:
   Jim Carrey Collection:
-    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/137121}
+    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/85453}
   Adam Sandler Collection:
     collection_order: alpha
     url_poster: https://theposterdb.com/api/assets/137106
