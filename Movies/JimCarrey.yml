@@ -1,7 +1,0 @@
-collections:
-  Jim Carrey Collection:
-    collection_order: alpha
-    url_poster: https://theposterdb.com/api/assets/230372
-    plex_search:
-      all:
-        actor: Jim Carrey

@@ -1,0 +1,19 @@
+collections:
+  Jim Carrey Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/230372
+    plex_search:
+      all:
+        actor: Jim Carrey
+  Adam Sandler Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/137106
+    plex_search:
+      all:
+        actor: Adam Sandler
+  Arnold Schwarzenegger Collection:
+    collection_order: alpha
+    url_poster: https://theposterdb.com/api/assets/137109
+    plex_search:
+      all:
+        actor: Arnold Schwarzenegger
