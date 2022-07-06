@@ -92,7 +92,6 @@ radarr:                                         # Can be individually specified 
   add_missing: false
   add_existing: false
   root_folder_path: /nfs/Movies
-  root_folder_path: /nfs/Other/Kids
   monitor: true
   availability: announced
   quality_profile: HD - 720/1080p
