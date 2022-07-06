@@ -5,8 +5,7 @@ templates:
     plex_search:
       all:
         actor: <<actor>>
-        director: <<director>>
-        producer: <<producer>>
+
 collections:
   Jim Carrey Collection:
     template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/137121}
