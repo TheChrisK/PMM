@@ -3,7 +3,6 @@
 libraries:                                      # This is called out once within the config.yml file                           
   Movies:                           # Each library must match the Plex library name
     metadata_path:
-    - file: config/Movies.yml                   # This is a local file on the system
     - folder: config/Movies/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
@@ -15,7 +14,6 @@ libraries:                                      # This is called out once within
       mass_genre_update: tmdb
   TV Shows:
     metadata_path:
-    - file: config/Shows.yml
     - folder: config/Shows/
     overlay_path:
     - remove_overlays: false
