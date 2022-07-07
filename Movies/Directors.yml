@@ -6,7 +6,7 @@ templates:
     collection_order: alpha
     url_poster: <<poster>>
     plex_search:
-      all:
+      any:
         director: <<director>>
         writer: <<writer>>
 
