@@ -3,6 +3,6 @@ collections:
     collection_order: alpha
     sync_mode: sync
     plex_search:
-      all:
+      any:
         genre: Horror
         title.begins: Hocus Pocus
