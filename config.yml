@@ -98,7 +98,7 @@ radarr:                                         # Can be individually specified 
   root_folder_path: /nfs/Movies
   monitor: true
   availability: announced
-  quality_profile: HD - 720/1080p
+  quality_profile: HD-1080p
   tag:
   search: false
   radarr_path:
@@ -111,7 +111,7 @@ sonarr:                                         # Can be individually specified 
   add_existing: false
   root_folder_path: /nfs/Shows
   monitor: all
-  quality_profile: HD - 720/1080p
+  quality_profile: HD-1080p
   language_profile: English
   series_type: standard
   season_folder: true
