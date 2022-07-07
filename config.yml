@@ -10,12 +10,12 @@ libraries:                                      # This is called out once within
       schedule: hourly(2)
     - git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
       schedule: weekly(sunday)
-    operations:
-      mass_genre_update: tmdb
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
         vertical_align: top
+    operations:
+      mass_genre_update: tmdb
   TV Shows:
     metadata_path:
     - folder: config/Shows/
