@@ -16,7 +16,7 @@ libraries:                                      # This is called out once within
         vertical_align: top
     operations:
       mass_genre_update: tmdb
-  'TV Shows':
+  TV Shows:
     metadata_path:
     - folder: config/Shows/
     overlay_path:
