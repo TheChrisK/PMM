@@ -12,6 +12,10 @@ libraries:                                      # This is called out once within
       schedule: weekly(sunday)
     operations:
       mass_genre_update: tmdb
+    - git: PMM/overlays/streaming
+      template_variables:
+        vertical_offset: 15
+        vertical_align: top
   TV Shows:
     metadata_path:
     - folder: config/Shows/
@@ -19,6 +23,10 @@ libraries:                                      # This is called out once within
     - remove_overlays: false
     - file: config/Overlays.yml
     - git: PMM/overlays/imdb_top_250
+    - git: PMM/overlays/streaming
+      template_variables:
+        vertical_offset: 15
+        vertical_align: top
 settings:
   cache: true
   cache_expiration: 60
