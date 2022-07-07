@@ -1,15 +1,18 @@
-# Templates
+#####################
+#     TEMPLATES     #
+#####################
 templates:
   Horror:
     url_poster: <<poster>>
     sort_title: <<collection_name>>
     collection_order: alpha
  
-# Collections
-
+#####################
+#    COLLECTIONS    #
+#####################
 collections:
   Horror Test:
-    template: {name: Horror, summary: "This collection includes true Horror films and Halloween themed titles.", poster: https://imgur.com/XvXXZ4y.jpg}
+    template: {name: Horror, poster: https://imgur.com/XvXXZ4y.jpg}
     trakt_list:
       - https://trakt.tv/users/jayinftl/lists/halloween
       - https://trakt.tv/users/mybicycle/lists/halloween
@@ -24,3 +27,4 @@ collections:
     plex_search:
       any:
         genre: Horror
+    summary: "This collection includes true Horror films and Halloween themed titles."
