@@ -27,7 +27,7 @@ templates:
 # Collections
 collections:
   Christmas Collection:
-    template: {name: Holiday, summary: "Christmas film is a genre that revolves around the plot involving Christmas.", poster: https://theposterdb.com/api/assets/111695}
+    template: {name: Holiday, summary: "Christmas and holiday themed movies. Movies that take place during the Holidays are included.", poster: https://theposterdb.com/api/assets/111695}
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
