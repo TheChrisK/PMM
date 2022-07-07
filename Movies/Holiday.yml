@@ -1,33 +1,18 @@
-# Collection Templates
+#####################
+#     TEMPLATES     #
+#####################
 templates:
-  tmdb:
-    optional:
-      - collections
-      - lists
-      - movies
-      - tmdb_summary
-      - summary
-    tmdb_collection: <<collections>>
-    tmdb_list: <<lists>>
-    tmdb_movie: <<movies>>
-    tmdb_summary: <<tmdb_summary>>
-    summary: <<summary>>
-    url_poster: <<poster>>
-    sort_title: <<collection_name>>
-    collection_order: release
-  imdb:
-    url_poster: <<poster>>
-    summary: <<summary>>
-    sync_mode: sync
   Holiday:
     url_poster: <<poster>>
     sort_title: <<collection_name>>
     collection_order: alpha
 
-# Collections
+#####################
+#    COLLECTIONS    #
+#####################
 collections:
   Christmas Collection:
-    template: {name: Holiday, summary: "Christmas and holiday themed movies. Movies that take place during the Holidays are included.", poster: https://theposterdb.com/api/assets/111695}
+    template: {name: Holiday, poster: https://theposterdb.com/api/assets/111695}
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
@@ -43,3 +28,4 @@ collections:
     plex_search:
       all:
         title.begins: 12 Days
+    summary: "Christmas and holiday themed movies. Movies that take place during the Holidays are included."
