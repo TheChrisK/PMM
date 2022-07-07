@@ -12,7 +12,7 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
-  Horror Test:
+  Halloween and Horror Collection:
     template: {name: Horror, poster: https://imgur.com/XvXXZ4y.jpg}
     trakt_list:
       - https://trakt.tv/users/jayinftl/lists/halloween
