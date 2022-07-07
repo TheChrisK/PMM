@@ -6,3 +6,4 @@ collections:
       any:
         genre: Horror
         title.begins: Hocus Pocus
+        title.begins: Addams Family
