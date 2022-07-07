@@ -13,8 +13,8 @@ collections:
     trakt_list:
       - https://trakt.tv/users/jayinftl/lists/halloween
       - https://trakt.tv/users/mybicycle/lists/halloween
-	    - https://trakt.tv/users/movistapp/lists/horror
-	    - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
     imdb_list:
       - https://www.imdb.com/list/ls079318228/
       - https://www.imdb.com/list/ls025783055/
