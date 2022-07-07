@@ -1,9 +1,26 @@
+# Templates
+templates:
+  Horror:
+    url_poster: <<poster>>
+    sort_title: <<collection_name>>
+    collection_order: alpha
+ 
+# Collections
+
 collections:
   Horror Test:
-    collection_order: alpha
-    sync_mode: sync
+    template: {name: Horror, summary: "This collection includes true Horror films and Halloween themed titles.", poster: https://imgur.com/XvXXZ4y.jpg}
+    trakt_list:
+      - https://trakt.tv/users/jayinftl/lists/halloween
+      - https://trakt.tv/users/mybicycle/lists/halloween
+	    - https://trakt.tv/users/movistapp/lists/horror
+	    - https://trakt.tv/users/g0g0/lists/horror
+    imdb_list:
+      - https://www.imdb.com/list/ls079318228/
+      - https://www.imdb.com/list/ls025783055/
+      - https://www.imdb.com/list/ls063988425/
+      - https://www.imdb.com/list/ls059633855/
+      - https://www.imdb.com/list/ls009129354/
     plex_search:
       any:
         genre: Horror
-        title.begins: Hocus Pocus
-        title.begins: Addams Family
