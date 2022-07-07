@@ -66,8 +66,8 @@ settings:
 webhooks:                                       # Can be individually specified per library as well
   error: 
   version: notifiarr
-  run_start: 
-  run_end: 
+  run_start: notifiarr
+  run_end: notifiarr
   changes: notifiarr
 plex:                                           # Can be individually specified per library as well; REQUIRED for the script to run
   url: http://10.252.20.14:32400
