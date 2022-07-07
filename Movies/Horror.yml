@@ -1,6 +1,7 @@
 collections:
   Horror Test:
     collection_order: alpha
+    sync_mode: sync
     plex_search:
       all:
         genre: Horror
