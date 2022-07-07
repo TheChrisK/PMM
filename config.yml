@@ -7,9 +7,9 @@ libraries:                                      # This is called out once within
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
     - file: config/Overlays.yml                 # This is a local file on the system
-      schedule: hourly(2)
+      #schedule: hourly(2)
     - git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
-      schedule: weekly(sunday)
+      #schedule: weekly(sunday)
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
