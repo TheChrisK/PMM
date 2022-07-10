@@ -16,7 +16,7 @@ libraries:                                      # This is called out once within
       mass_genre_update: tmdb                   
   Kids Movies:                           # Each library must match the Plex library name
     metadata_path:
-    - folder: config/Movies/                    # This is a local directory on the system
+    - folder: config/Kids/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
     - file: config/Overlays.yml                 # This is a local file on the system
