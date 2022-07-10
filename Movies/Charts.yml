@@ -16,11 +16,11 @@ collections:
         chart: top
       - name: chart_shared
         key: top
-    summary: "IMDb Top 250 movies of all time as rated by regular IMDb users."
+    summary: "This collection includes movies in the IMDb Top 250 chart. Sorted by popularity."
   IMDb Popular:
     template:
       - name: imdb
         chart: popular
       - name: chart_shared
         key: popular
-    summary: "Current popular movies as voted by IMDb users."
+    summary: "This collection includes movies in the current IMDb popular chart as voted by IMDb users. Sorted by popularity."
