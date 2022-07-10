@@ -16,12 +16,9 @@ collections:
         chart: top
       - name: chart_shared
         key: top
-
-  IMDb Lowest Rated:
-    imdb_chart: lowest_rated
-    collection_order: custom
-    sync_mode: sync
+  IMDb Popular:
     template:
+      - name: imdb
+        chart: popular
       - name: chart_shared
-        key: lowest
-        check_library: movie
+        key: popular
