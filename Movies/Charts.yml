@@ -1,0 +1,27 @@
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: "01"
+
+templates:
+  imdb:
+    imdb_chart: <<chart>>_<<library_type>>s
+    collection_order: custom
+    sync_mode: sync
+
+collections:
+  IMDb Top 250:
+    template:
+      - name: imdb
+        chart: top
+      - name: chart_shared
+        key: top
+
+  IMDb Lowest Rated:
+    imdb_chart: lowest_rated
+    collection_order: custom
+    sync_mode: sync
+    template:
+      - name: chart_shared
+        key: lowest
+        check_library: movie
