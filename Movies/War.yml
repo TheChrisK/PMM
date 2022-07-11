@@ -19,5 +19,4 @@ collections:
     plex_search:
       any:
         genre: War
-        title: War
     summary: "This collection includes War films, themes and military based titles."
