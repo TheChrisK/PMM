@@ -16,7 +16,9 @@ collections:
     template: {name: War, poster: https://theposterdb.com/api/assets/117323}
     imdb_list:
       - https://www.imdb.com/list/ls055723960/
+      - https://www.imdb.com/list/ls567574786/
     plex_search:
       any:
         genre: War
+        title.not: The Unborn
     summary: "This collection includes War films, themes and military based titles."
