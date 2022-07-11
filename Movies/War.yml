@@ -1,0 +1,20 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  War:
+    url_poster: <<poster>>
+    sort_title: <<collection_name>>
+    collection_order: alpha
+    sync_mode: sync
+ 
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  War Collection Test:
+    template: {name: War, poster: https://theposterdb.com/api/assets/117323}
+    plex_search:
+      any:
+        genre: War
+    summary: "This collection includes War films, themes and military based titles."
