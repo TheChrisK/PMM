@@ -18,7 +18,6 @@ collections:
       - https://www.imdb.com/list/ls055723960/
       - https://www.imdb.com/list/ls567574786/
     plex_search:
-      any:
+      all:
         genre: War
-        title.not: The Unborn
     summary: "This collection includes War films, themes and military based titles."
