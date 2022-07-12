@@ -77,7 +77,7 @@ overlays:
       back_height: 105
       horizontal_offset: 0
       vertical_offset: 0
-      git: PMM/overlays/images/raw/RT-Cert-Fresh
+      git: PMM/overlays/images/raw/RT-Crit-Top
     suppress_overlays:
       - rating-fresh
       - rating-rotten
