@@ -39,7 +39,7 @@ overlays:
     plex_search:
       all:
         audience_rating.gte: 0
-        audience_rating.lte: 60
+        audience_rating.lte: 6
 
 
   rating-fresh:
@@ -59,8 +59,8 @@ overlays:
       git: PMM/overlays/images/raw/RT-Aud-Fresh
     plex_search:
       all:
-        audience_rating.gte: 61
-        audience_rating.lte: 100
+        audience_rating.gte: 6.1
+        audience_rating.lte: 10
 
   cert-fresh:
     mdblist_list: https://mdblist.com/lists/andrewkennedy/certified-fresh-since-1901/
