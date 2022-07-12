@@ -12,7 +12,7 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
-  War Collection Test:
+  War Collection:
     template: {name: War, poster: https://theposterdb.com/api/assets/117323}
     imdb_list:
       - https://www.imdb.com/list/ls055723960/
