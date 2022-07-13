@@ -12,7 +12,7 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
-  Marvel Cinematic Universe Test:
+  Marvel Cinematic Universe:
     template: {name: Custom, poster: https://theposterdb.com/api/assets/345}
     trakt_list:
       - https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
