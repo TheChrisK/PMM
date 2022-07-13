@@ -1,7 +1,0 @@
-collections:
-  90s Movies:
-    collection_order: alpha
-    url_poster: https://i.imgur.com/AmPjLin.png      
-    plex_search:
-      any:
-        decade: 1990
