@@ -105,15 +105,15 @@ overlays:
 
   IMDB-Top-250red:
     template:
-      - name: IMDbTop250
+      - name: IMDbTop250red
         weight: 50
 
   RT-Cert-Freshred:
     template:
-      - name: RT-Cert-Fresh
+      - name: RT-Cert-Freshred
         weight: 40
 
   MC-Must-See:
     template:
-      - name: Meta-Must
+      - name: Meta-Must-See
         weight: 45
