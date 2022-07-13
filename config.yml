@@ -7,8 +7,8 @@ libraries:                                      # This is called out once within
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
     - file: config/Overlays.yml                 # This is a local file on the system
-    - file: config/overlays/Top.yml
-    - git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
+    - folder: config/overlays/
+    #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
@@ -21,7 +21,7 @@ libraries:                                      # This is called out once within
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
     - file: config/Overlays.yml                 # This is a local file on the system
-    - file: config/overlays/Top.yml
+    - folder: config/overlays/
    #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
       template_variables:
@@ -35,8 +35,8 @@ libraries:                                      # This is called out once within
     overlay_path:
     - remove_overlays: false
     - file: config/Overlays.yml
-    - file: config/overlays/Top.yml
-    - git: PMM/overlays/imdb_top_250
+    - folder: config/overlays/
+    #- git: PMM/overlays/imdb_top_250
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
