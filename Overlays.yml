@@ -1,5 +1,5 @@
 templates:
-IMDbTop250:
+  IMDbTop250:
     default:
       overlay: <<overlay_name>>
     imdb_chart: top_<<library_type>>s
