@@ -17,14 +17,13 @@ collections:
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
     imdb_list:
-      - https://www.imdb.com/list/ls025976544/
-      - https://www.imdb.com/list/ls003863000/
-      - https://www.imdb.com/list/ls027454200/
-      - https://www.imdb.com/list/ls027886673/
-      - https://www.imdb.com/list/ls097998599/
-      - https://www.imdb.com/list/ls066252180/
-      - https://www.imdb.com/list/ls031348568/
-      - https://www.imdb.com/list/ls027353066/
+      - https://www.imdb.com/list/ls025976544/ #The Top 200 Christmas Movies of All Time!
+      - https://www.imdb.com/list/ls003863000/ #CHRISTMAS MOVIE COLLECTION
+      - https://www.imdb.com/list/ls027454200/ #Ultimate Christmas Movie List
+      - https://www.imdb.com/list/ls027886673/ #Christmas Films
+      - https://www.imdb.com/list/ls097998599/ #2019 Christmas movies
+      - https://www.imdb.com/list/ls031348568/ #The Rankin/Bass Christmas Specials
+      - https://www.imdb.com/list/ls027353066/ #Christmas Movies A to Z
     plex_search:
       all:
         title.begins: 12 Days
