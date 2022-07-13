@@ -1,5 +1,5 @@
 templates:
-  IMDbTop250:
+  IMDbTop250red:
     default:
       overlay: <<overlay_name>>
     imdb_chart: top_<<library_type>>s
@@ -13,7 +13,7 @@ templates:
       vertical_align: bottom
       file: config/overlays/IMDB-Top-250.png
   
-  RT-Cert-Fresh:
+  RT-Cert-Freshred:
     optional:
       - overlay_level
     collection_level: <<overlay_level>>
@@ -28,7 +28,7 @@ templates:
       vertical_align: bottom
       file: config/overlays/RT-Cert-Freshred.png
       
-  Meta-Must:
+  Meta-Must-See:
     optional:
       - overlay_level
     collection_level: <<overlay_level>>
