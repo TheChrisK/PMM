@@ -62,22 +62,23 @@ overlays:
         audience_rating.gte: 6.1
         audience_rating.lte: 10
 
-  cert-fresh:
-    mdblist_list: https://mdblist.com/lists/andrewkennedy/certified-fresh-since-1901/
-    overlay:
-      name: text(audience_rating%)
-      horizontal_align: left
-      vertical_align: bottom
-      font: fonts/Inter-Medium.ttf
-      font_size: 63
-      font_color: "#FFFFFF"
-      back_color: "#00000099"
-      back_radius: 30
-      back_width: 300
-      back_height: 105
-      horizontal_offset: 0
-      vertical_offset: 0
-      git: PMM/overlays/images/raw/RT-Crit-Top
-    suppress_overlays:
-      - rating-fresh
-      - rating-rotten
+
+ # cert-fresh:
+ #   mdblist_list: https://mdblist.com/lists/andrewkennedy/certified-fresh-since-1901/
+ #   overlay:
+ #     name: text(audience_rating%)
+ #     horizontal_align: left
+ #     vertical_align: bottom
+ #     font: fonts/Inter-Medium.ttf
+ #     font_size: 63
+ #     font_color: "#FFFFFF"
+ #     back_color: "#00000099"
+ #     back_radius: 30
+ #     back_width: 300
+ #     back_height: 105
+ #     horizontal_offset: 0
+ #     vertical_offset: 0
+ #     git: PMM/overlays/images/raw/RT-Crit-Top
+ #   suppress_overlays:
+ #     - rating-fresh
+ #     - rating-rotten
