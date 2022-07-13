@@ -101,9 +101,9 @@ tautulli:                                       # Can be individually specified 
 #omdb:
   #apikey: ########
   #cache_expiration: 60
-#mdblist:
-  #apikey: #########################
-  #cache_expiration: 60
+mdblist:
+  apikey: ctdc8wn70taulk81l6blktmv2
+  cache_expiration: 60
 notifiarr:
   apikey: 941b4d0d-6611-4ce6-aef1-9d383c66f308 
 #anidb:                                          # Not required for AniDB builders unless you want mature content
