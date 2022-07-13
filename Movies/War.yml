@@ -15,8 +15,10 @@ collections:
   War Collection:
     template: {name: War, poster: https://theposterdb.com/api/assets/117323}
     imdb_list:
-      - https://www.imdb.com/list/ls055723960/
-      - https://www.imdb.com/list/ls567574786/
+      - https://www.imdb.com/list/ls055723960/ #"Sam's List" of 1000 War Movies
+      - https://www.imdb.com/list/ls006109775/ #100 Greatest War Movies
+      - https://www.imdb.com/list/ls070336403/ #War Movies (2013 - 2020)
+      - https://www.imdb.com/list/ls567574786/ #MY LIST
     plex_search:
       all:
         genre: War
