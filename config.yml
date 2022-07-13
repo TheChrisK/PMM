@@ -6,9 +6,7 @@ libraries:                                      # This is called out once within
     - folder: config/Movies/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
-    #- file: config/Overlays.yml                 # This is a local file on the system
     - folder: config/overlays/
-    #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
@@ -20,9 +18,7 @@ libraries:                                      # This is called out once within
     - folder: config/Kids/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
-    #- file: config/Overlays.yml                 # This is a local file on the system
     - folder: config/overlays/
-   #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
@@ -34,9 +30,7 @@ libraries:                                      # This is called out once within
     #- folder: config/Shows/
     overlay_path:
     - remove_overlays: false
-    #- file: config/Overlays.yml
     - folder: config/overlays/
-    #- git: PMM/overlays/imdb_top_250
     - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
@@ -62,11 +56,11 @@ settings:
   run_again_delay: 2
   missing_only_released: false
   only_filter_missing: false
-  show_unmanaged: true
+  show_unmanaged: false
   show_filtered: false
   show_options: false
   show_missing: false
-  show_missing_assets: true
+  show_missing_assets: false
   save_report: false
   tvdb_language: eng
   ignore_ids:
@@ -106,10 +100,6 @@ mdblist:
   cache_expiration: 60
 notifiarr:
   apikey: 941b4d0d-6611-4ce6-aef1-9d383c66f308 
-#anidb:                                          # Not required for AniDB builders unless you want mature content
-  #username: ######
-  #password: ######
-  #language: en
 radarr:                                         # Can be individually specified per library as well
   url: http://10.252.55.12:7878
   token: 141b3719f3db4d75bcc058abef96f62e
@@ -153,12 +143,3 @@ trakt:
     refresh_token: b7049a5110542978215f6d1f5e58244ae22c751de5856108c2c89debbb9bb7b2
     scope: public
     created_at: 1657054228
-#mal:
- #client_id: ################################
- #client_secret: ################################################################
-  #authorization:
-    # everything below is autofilled by the script
-    #access_token:
-    #token_type:
-    #expires_in:
-    #refresh_token:
