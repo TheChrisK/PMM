@@ -33,6 +33,8 @@ collections:
     template: {name: Person, actor: "Keanu Reeves", poster: https://theposterdb.com/api/assets/139145}
   Leonardo DiCaprio Collection:
     template: {name: Person, actor: "Leonardo DiCaprio", poster: https://theposterdb.com/api/assets/139138}
+  Matt Damon Collection:
+    template: {name: Person, actor: "Matt Damon", poster: https://theposterdb.com/api/assets/137119}
   Robin Williams Collection:
     template: {name: Person, actor: "Robin Williams", poster: https://theposterdb.com/api/assets/139151}
   Ryan Reynolds Collection:
