@@ -17,3 +17,8 @@ collections:
     trakt_list:
       - https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
     summary: "This collection is organized in chronological order according to the events that happen in each film."
+  DC Extended Universe:
+    template: {name: Custom, poster: https://theposterdb.com/api/assets/79223}
+    trakt_list:
+      - https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
+    summary: "This collection is organized in chronological order according to the events that happen in each film."
