@@ -24,8 +24,8 @@ libraries:
     operations:
       mass_genre_update: tmdb
   TV Shows:
-    #metadata_path:
-    #- folder: config/Shows/
+    metadata_path:
+    - folder: config/Shows/
     overlay_path:
     - remove_overlays: false
     - folder: config/overlays/
