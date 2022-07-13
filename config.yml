@@ -6,7 +6,7 @@ libraries:                                      # This is called out once within
     - folder: config/Movies/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
-    - file: config/Overlays.yml                 # This is a local file on the system
+    #- file: config/Overlays.yml                 # This is a local file on the system
     - folder: config/overlays/
     #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
@@ -20,7 +20,7 @@ libraries:                                      # This is called out once within
     - folder: config/Kids/                    # This is a local directory on the system
     overlay_path:
     - remove_overlays: false                    # Set this to true to remove all overlays
-    - file: config/Overlays.yml                 # This is a local file on the system
+    #- file: config/Overlays.yml                 # This is a local file on the system
     - folder: config/overlays/
    #- git: PMM/overlays/imdb_top_250      # This is a file within the https://github.com/meisnate12/Plex-Meta-Manager-Configs Repository
     - git: PMM/overlays/streaming
@@ -34,7 +34,7 @@ libraries:                                      # This is called out once within
     #- folder: config/Shows/
     overlay_path:
     - remove_overlays: false
-    - file: config/Overlays.yml
+    #- file: config/Overlays.yml
     - folder: config/overlays/
     #- git: PMM/overlays/imdb_top_250
     - git: PMM/overlays/streaming
