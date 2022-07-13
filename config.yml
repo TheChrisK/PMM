@@ -1,11 +1,9 @@
-## This file is a template remove the .template to use the file
-
-libraries:                                      # This is called out once within the config.yml file                           
-  Movies:                           # Each library must match the Plex library name
+libraries:
+  Movies:
     metadata_path:
-    - folder: config/Movies/                    # This is a local directory on the system
+    - folder: config/Movies/
     overlay_path:
-    - remove_overlays: false                    # Set this to true to remove all overlays
+    - remove_overlays: false
     - folder: config/overlays/
     - git: PMM/overlays/streaming
       template_variables:
@@ -13,11 +11,11 @@ libraries:                                      # This is called out once within
         vertical_align: top
     operations:
       mass_genre_update: tmdb                   
-  Kids Movies:                           # Each library must match the Plex library name
+  Kids Movies:
     metadata_path:
-    - folder: config/Kids/                    # This is a local directory on the system
+    - folder: config/Kids/
     overlay_path:
-    - remove_overlays: false                    # Set this to true to remove all overlays
+    - remove_overlays: false
     - folder: config/overlays/
     - git: PMM/overlays/streaming
       template_variables:
@@ -71,25 +69,25 @@ settings:
   verify_ssl: true
   custom_repo:
   check_nightly: false
-webhooks:                                       # Can be individually specified per library as well
+webhooks:
   error: 
   version: notifiarr
   run_start: notifiarr
   run_end: notifiarr
   changes: notifiarr
-plex:                                           # Can be individually specified per library as well; REQUIRED for the script to run
+plex:
   url: http://10.252.20.14:32400
   token: uTM2jyeu_RGx8seCjE36
   timeout: 60
   clean_bundles: false
   empty_trash: false
   optimize: false
-tmdb:                                           # REQUIRED for the script to run
+tmdb:
   apikey: 8b5834c3a5033a8f564d64ec32c4345a
   language: en
   cache_expiration: 60
   region:
-tautulli:                                       # Can be individually specified per library as well
+tautulli:
   url: http://10.252.20.15:8181
   apikey: f92ee82df1ac4e769d6cea47f7973642
 #omdb:
@@ -100,7 +98,7 @@ mdblist:
   cache_expiration: 60
 notifiarr:
   apikey: 941b4d0d-6611-4ce6-aef1-9d383c66f308 
-radarr:                                         # Can be individually specified per library as well
+radarr:
   url: http://10.252.55.12:7878
   token: 141b3719f3db4d75bcc058abef96f62e
   add_missing: false
@@ -114,7 +112,7 @@ radarr:                                         # Can be individually specified 
   radarr_path:
   plex_path:
   upgrade_existing: false
-sonarr:                                         # Can be individually specified per library as well
+sonarr:
   url: http://10.252.55.12:8989
   token: a3d46c53557d4a16b6bc43df3f7cbf72
   add_missing: false
