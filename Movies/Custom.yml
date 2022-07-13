@@ -1,0 +1,19 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Custom:
+    url_poster: <<poster>>
+    sort_title: <<collection_name>>
+    collection_order: custom
+    sync_mode: sync
+ 
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Marvel Cinematic Universe Test:
+    template: {name: Custom, poster: https://theposterdb.com/api/assets/345}
+    trakt_list:
+      - https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
+    summary: "This collection is organized in chronological order according to the events that happen in each film."
