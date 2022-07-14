@@ -38,11 +38,11 @@ settings:
   cache_expiration: 60
   asset_directory: config/assets
   asset_folders: true
-  asset_depth: 0
-  create_asset_folders: false
+  asset_depth: 1
+  create_asset_folders: true
   prioritize_assets: false
   dimensional_asset_rename: false
-  download_url_assets: false
+  download_url_assets: true
   show_missing_season_assets: false
   show_missing_episode_assets: false
   show_asset_not_needed: true

@@ -4,7 +4,7 @@
 templates:
   Person:
     collection_order: alpha
-    url_poster: <<poster>>
+    url_poster: https://theposterdb.com/api/assets/<<poster_id>>
     plex_search:
       all:
         actor: <<actor>>
@@ -14,36 +14,36 @@ templates:
 #####################
 collections:
   Adam Sandler Collection:
-    template: {name: Person, actor: "Adam Sandler", poster: https://theposterdb.com/api/assets/137106}
+    template: {name: Person, actor: "Adam Sandler", poster_id: 137106}
   Arnold Schwarzenegger Collection:   
-    template: {name: Person, actor: "Arnold Schwarzenegger", poster: https://theposterdb.com/api/assets/137109}
+    template: {name: Person, actor: "Arnold Schwarzenegger", poster_id: 137109}
   Bruce Willis Collection:
-    template: {name: Person, actor: "Bruce Willis", poster: https://theposterdb.com/api/assets/137111}
+    template: {name: Person, actor: "Bruce Willis", poster_id: 137111}
   Christian Bale Collection:
-    template: {name: Person, actor: "Christian Bale", poster: https://theposterdb.com/api/assets/137113}
+    template: {name: Person, actor: "Christian Bale", poster_id: 137113}
   Denzel Washington Collection:
-    template: {name: Person, actor: "Denzel Washington", poster: https://theposterdb.com/api/assets/184778}
+    template: {name: Person, actor: "Denzel Washington", poster_id: 184778}
   Gary Oldman Collection:
-    template: {name: Person, actor: "Gary Oldman", poster: https://theposterdb.com/api/assets/137372}
+    template: {name: Person, actor: "Gary Oldman", poster_id: 137372}
   Harrison Ford Collection: 
-    template: {name: Person, actor: "Harrison Ford", poster: https://theposterdb.com/api/assets/137135}
+    template: {name: Person, actor: "Harrison Ford", poster_id: 137135}
   Jim Carrey Collection:
-    template: {name: Person, actor: "Jim Carrey", poster: https://theposterdb.com/api/assets/85453}
+    template: {name: Person, actor: "Jim Carrey", poster_id: 85453}
   Keanu Reeves Collection:
-    template: {name: Person, actor: "Keanu Reeves", poster: https://theposterdb.com/api/assets/139145}
+    template: {name: Person, actor: "Keanu Reeves", poster_id: 139145}
   Leonardo DiCaprio Collection:
-    template: {name: Person, actor: "Leonardo DiCaprio", poster: https://theposterdb.com/api/assets/139138}
+    template: {name: Person, actor: "Leonardo DiCaprio", poster_id: 139138}
   Matt Damon Collection:
-    template: {name: Person, actor: "Matt Damon", poster: https://theposterdb.com/api/assets/137119}
+    template: {name: Person, actor: "Matt Damon", poster_id: 137119}
   Robin Williams Collection:
-    template: {name: Person, actor: "Robin Williams", poster: https://theposterdb.com/api/assets/139151}
+    template: {name: Person, actor: "Robin Williams", poster_id: 139151}
   Ryan Reynolds Collection:
-    template: {name: Person, actor: "Ryan Reynolds", poster: https://theposterdb.com/api/assets/137121}
+    template: {name: Person, actor: "Ryan Reynolds", poster_id: 137121}
   Sandra Bullock Collection:
-    template: {name: Person, actor: "Sandra Bullock", poster: https://theposterdb.com/api/assets/140474}
+    template: {name: Person, actor: "Sandra Bullock", poster_id: 140474}
   Tom Cruise Collection:
-    template: {name: Person, actor: "Tom Cruise", poster: https://theposterdb.com/api/assets/137354}
+    template: {name: Person, actor: "Tom Cruise", poster_id: 137354}
   Tom Hanks Collection:
-    template: {name: Person, actor: "Tom Hanks", poster: https://theposterdb.com/api/assets/139133}
+    template: {name: Person, actor: "Tom Hanks", poster_id: 139133}
   Vin Diesel Collection:
-    template: {name: Person, actor: "Vin Diesel", poster: https://theposterdb.com/api/assets/136769}
+    template: {name: Person, actor: "Vin Diesel", poster_id: 136769}

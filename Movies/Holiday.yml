@@ -3,7 +3,7 @@
 #####################
 templates:
   Holiday:
-    url_poster: <<poster>>
+    url_poster: https://theposterdb.com/api/assets/<<poster_id>>
     sort_title: <<collection_name>>
     collection_order: alpha
 
@@ -12,7 +12,7 @@ templates:
 #####################
 collections:
   Christmas Collection:
-    template: {name: Holiday, poster: https://theposterdb.com/api/assets/111695}
+    template: {name: Holiday, poster_id: 111695}
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
