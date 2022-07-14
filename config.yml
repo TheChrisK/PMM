@@ -33,7 +33,7 @@ libraries:
       template_variables:
         vertical_offset: 15
         vertical_align: top
-settings:
+settings:                                      
   cache: true
   cache_expiration: 60
   asset_directory: config/assets
@@ -54,11 +54,11 @@ settings:
   run_again_delay: 2
   missing_only_released: false
   only_filter_missing: false
-  show_unmanaged: false
+  show_unmanaged: true
   show_filtered: false
   show_options: false
-  show_missing: false
-  show_missing_assets: false
+  show_missing: true
+  show_missing_assets: true
   save_report: false
   tvdb_language: eng
   ignore_ids:
