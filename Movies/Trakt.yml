@@ -5,7 +5,7 @@ templates:
   Trakt:
     url_poster: https://theposterdb.com/api/assets/<<poster_id>>
     sort_title: <<collection_name>>
-    collection_order: <<order>>
+    collection_order: release
 
 #####################
 #    COLLECTIONS    #
@@ -15,7 +15,6 @@ collections:
     template: 
       name: Trakt
       poster_id: 158968
-      order: release
     trakt_list:
       - https://trakt.tv/users/iamgabriel/lists/jurassic
     summary: "Jurassic Park, later also referred to as Jurassic World, is an American science fiction media franchise centered on a disastrous attempt to create a theme park of cloned dinosaurs."
