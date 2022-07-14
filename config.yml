@@ -57,7 +57,7 @@ settings:
   show_unmanaged: true
   show_filtered: false
   show_options: false
-  show_missing: true
+  show_missing: false
   show_missing_assets: true
   save_report: false
   tvdb_language: eng
