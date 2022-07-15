@@ -9,8 +9,8 @@ libraries:
       template_variables:
         vertical_offset: 15
         vertical_align: top
-    operations:
-      mass_genre_update: tmdb                   
+    #operations:
+      #mass_genre_update: tmdb                   
   Kids Movies:
     metadata_path:
     - folder: config/Kids/
