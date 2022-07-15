@@ -12,6 +12,13 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
+    Spy Collection:
+    template: {name: imdb, poster_id: 164833}
+    imdb_list:
+      - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
+      - https://www.imdb.com/list/ls068127872/ #Spies: Best Spy Movies:The Ultimate List
+    summary: "This collection includes Spy films, themes and government intelligence based titles."
+    
   War Collection:
     template: {name: imdb, poster_id: 52688}
     imdb_list:
@@ -23,14 +30,7 @@ collections:
       all:
         genre: War
     summary: "This collection includes War films, themes and military based titles."
-
-  Spy Collection:
-    template: {name: imdb, poster_id: 164833}
-    imdb_list:
-      - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
-      - https://www.imdb.com/list/ls068127872/ #Spies: Best Spy Movies:The Ultimate List
-    summary: "This collection includes Spy films, themes and government intelligence based titles."
-    
+   
   Western Collection:
     template: {name: imdb, poster_id: 52686}
     imdb_list:
