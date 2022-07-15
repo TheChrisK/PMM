@@ -37,9 +37,9 @@ settings:
   cache: true
   cache_expiration: 60
   asset_directory: config/assets
-  asset_folders: true
+  asset_folders: false
   asset_depth: 1
-  create_asset_folders: true
+  create_asset_folders: false
   prioritize_assets: false
   dimensional_asset_rename: false
   download_url_assets: true
