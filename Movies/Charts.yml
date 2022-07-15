@@ -23,4 +23,5 @@ collections:
         chart: popular
       - name: chart_shared
         key: popular
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/chart/IMDb%20Popular.jpg
     summary: "This collection includes movies in the current IMDb popular chart as voted by IMDb users. Sorted by popularity."
