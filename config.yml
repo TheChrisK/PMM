@@ -40,7 +40,7 @@ settings:
   asset_folders: false
   asset_depth: 1
   create_asset_folders: false
-  prioritize_assets: false
+  prioritize_assets: true
   dimensional_asset_rename: false
   download_url_assets: true
   show_missing_season_assets: false
