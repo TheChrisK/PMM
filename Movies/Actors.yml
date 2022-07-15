@@ -47,3 +47,16 @@ collections:
     template: {name: Person, actor: "Tom Hanks", poster_id: 139133}
   Vin Diesel Collection:
     template: {name: Person, actor: "Vin Diesel", poster_id: 136769}
+
+#############################
+#    DYNAMIC COLLECTIONS    #
+#############################
+dynamic_collections:
+  Top Actors:         # mapping name does not matter just needs to be unique
+    type: actor
+    title_format: <<key_name>> Collection
+    test: true
+    #file_poster: config/posters/<<key_name>>.jpg
+    data:
+      depth: 5
+      limit: 25
