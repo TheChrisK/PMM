@@ -35,5 +35,5 @@ collections:
     template: {name: imdb, poster_id: 52686}
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature&genres=western #Top Westerns
-        limit: 250
+      limit: 250
     summary: "A collection of Western films, themes and cowboy related titles."
