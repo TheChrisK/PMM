@@ -59,7 +59,7 @@ dynamic_collections:
   Top Actors:         # mapping name does not matter just needs to be unique
     type: actor
     title_format: <<key_name>> Collection
-    file_poster: /config/posters/<<key_name>>.jpg
+    file_poster: config/posters/<<key_name>>.jpg
     data:
       depth: 5
       limit: 25
