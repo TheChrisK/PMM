@@ -55,3 +55,9 @@ dynamic_collections:
       - Oscars
       - award
       - shared
+  
+  Top Actors:         # mapping name does not matter just needs to be unique
+    type: actor
+    data:
+      depth: 5
+      limit: 25
