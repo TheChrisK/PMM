@@ -12,7 +12,7 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
-    Spy Collection:
+  Spy Collection:
     template: {name: imdb, poster_id: 164833}
     imdb_list:
       - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
