@@ -17,7 +17,7 @@ collections:
       - name: chart_shared
         key: top
     summary: "This collection includes movies in the IMDb Top 250 chart. Sorted by popularity."
-  IMDb Popular:
+  IMDb Popular Films:
     template:
       - name: imdb
         chart: popular
