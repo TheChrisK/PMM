@@ -29,29 +29,29 @@ collections:
     imdb_list: https://www.imdb.com/search/title/?groups=best_picture_winner
     summary: The Academy Award for Best Picture is one of the Academy Awards presented annually by the Academy of Motion Picture Arts and Sciences since the awards debuted in 1929.
 
-  Oscars Best Director Winners:
-    template:
-      - name: award
-        image: oscars/best_director_winner
-      - name: shared
-        sort: Oscars !2
-    allowed_library_types: movie
-    imdb_list: https://www.imdb.com/search/title/?groups=best_director_winner
-    summary: The Academy Award for Best Director is one of the Academy Awards presented annually by the Academy of Motion Picture Arts and Sciences since the awards debuted in 1929.
+  #Oscars Best Director Winners:
+  #  template:
+  #    - name: award
+  #      image: oscars/best_director_winner
+  #    - name: shared
+  #      sort: Oscars !2
+  #  allowed_library_types: movie
+  #  imdb_list: https://www.imdb.com/search/title/?groups=best_director_winner
+  #  summary: The Academy Award for Best Director is one of the Academy Awards presented annually by the Academy of Motion Picture Arts and Sciences since the awards debuted in 1929.
 
 #############################
 #    DYNAMIC COLLECTIONS    #
 #############################
-#dynamic_collections:
-#  Oscars Winners Awards:
-#    type: number
-#    sync: true
-#    data:
-#      starting: current_year-5
-#      ending: current_year
-#    title_format: Oscars Winners <<key_name>>
-#    template:
-#      - use_year_collections
-#      - Oscars
-#      - award
-#      - shared
+dynamic_collections:
+  Oscars Winners Awards:
+    type: number
+    sync: true
+    data:
+      starting: current_year-5
+      ending: current_year
+    title_format: Oscars Winners <<key_name>>
+    template:
+      - use_year_collections
+      - Oscars
+      - award
+      - shared
