@@ -1,0 +1,60 @@
+templates:
+  IMDbTop250:
+    default:
+      overlay: <<overlay_name>>
+    imdb_chart: top_<<library_type>>s
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/IMDB-Top-250red.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+  
+  RT-Cert-Fresh:
+    optional:
+      - overlay_level
+    collection_level: <<overlay_level>>
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/RT-Cert-Freshred.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 10
+      horizontal_align: right
+      vertical_offset: 10
+      vertical_align: bottom
+      
+  Meta-Must:
+    optional:
+      - overlay_level
+    collection_level: <<overlay_level>>
+    mdblist_list: https://mdblist.com/lists/frostywolf/metacritic-must-see-movies/
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/MC-Must-See.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 10
+      horizontal_align: right
+      vertical_offset: 10
+      vertical_align: bottom
+
+overlays:
+  IMDB-Top-250red:
+    template:
+      - name: IMDbTop250
+        weight: 50
+
+  RT-Cert-Freshred:
+    template:
+      - name: RT-Cert-Fresh
+        weight: 40
+
+  MC-Must-See:
+    template:
+      - name: Meta-Must
+        weight: 45

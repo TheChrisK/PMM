@@ -1,0 +1,33 @@
+#####################
+#     TEMPLATES     #
+#####################
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: 17
+
+templates:
+  actor_dynamic:
+    default:
+      sort_by: release.desc
+    tmdb_person: <<value>>
+    file_poster: /config/assets/<<key>>.jpg
+    sort_title: <<key_name>>
+    smart_filter:
+      sort_by: <<sort_by>>
+      all:
+        actor: tmdb
+
+#############################
+#    DYNAMIC COLLECTIONS    #
+#############################
+dynamic_collections:
+  Top Actors:
+    type: actor
+    template:
+      - actor_dynamic
+    title_format: <<title>> Collection
+    data:
+      depth: 5
+      minimum: 10
+      limit: 50
