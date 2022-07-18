@@ -1,0 +1,93 @@
+libraries:
+  Movies:
+    metadata_path:
+    - folder: config/Movies/
+    overlay_path:
+    - remove_overlays: false
+    - folder: config/overlays/
+    - git: PMM/overlays/streaming
+      template_variables:
+        vertical_offset: 15
+        vertical_align: top
+    operations:
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: mdb            
+  Kids Movies:
+    metadata_path:
+    - folder: config/Kids/
+    overlay_path:
+    - remove_overlays: false
+    - folder: config/overlays/
+    - git: PMM/overlays/streaming
+      template_variables:
+        vertical_offset: 15
+        vertical_align: top
+    operations:
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: mdb
+  Test:
+    metadata_path:
+    - folder: config/Test/
+    overlay_path:
+    - remove_overlays: false
+    - folder: config/overlays/test
+    operations:
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: mdb
+  TV Shows:
+    metadata_path:
+    - folder: config/Shows/
+    overlay_path:
+    - remove_overlays: false
+    - folder: config/overlays/
+    - git: PMM/overlays/streaming
+      template_variables:
+        vertical_offset: 15
+        vertical_align: top
+    operations:
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: mdb
+settings:                                      
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: false
+  asset_depth: 1
+  create_asset_folders: false
+  prioritize_assets: true
+  dimensional_asset_rename: false
+  download_url_assets: true
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_filtered: false
+  show_options: false
+  show_missing: false
+  show_missing_assets: true
+  save_report: true
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_user: all
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  check_nightly: false
