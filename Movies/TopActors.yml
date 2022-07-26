@@ -18,6 +18,17 @@ templates:
       all:
         actor: tmdb
 
+  director_dynamic:
+    default:
+      sort_by: release.desc
+    tmdb_person: <<value>>
+    file_poster: /config/assets/<<key>>.jpg
+    sort_title: <<key_name>>
+    smart_filter:
+      sort_by: <<sort_by>>
+      all:
+        director: tmdb
+        
 #############################
 #    DYNAMIC COLLECTIONS    #
 #############################
@@ -31,3 +42,12 @@ dynamic_collections:
       depth: 5
       minimum: 10
       limit: 50
+
+  Top Directors:
+    type: director
+    template:
+      - director_dynamic
+    title_format: <<title>> Collection
+    data:
+      depth: 1
+      limit: 5
