@@ -18,3 +18,13 @@ collections:
     trakt_list:
       - https://trakt.tv/users/iamgabriel/lists/jurassic
     summary: "Jurassic Park, later also referred to as Jurassic World, is an American science fiction media franchise centered on a disastrous attempt to create a theme park of cloned dinosaurs."
+    
+  Stand-up Comedy Collection:
+    template:
+      name: Trakt
+      poster_id: 49138
+    trakt_list:
+      - https://trakt.tv/users/sy138/lists/stand-up-stand-up
+      - https://trakt.tv/users/ruxton/lists/stand-up
+      - https://trakt.tv/users/willy-wally/lists/stand-up-stand-up
+    summary: "A collection of stand-up comedy specials."

@@ -1,27 +1,19 @@
-external_templates:
-  git: PMM/templates
-  template_variables:
-    collection_section: "01"
-
-templates:
-  imdb:
-    imdb_chart: <<chart>>_<<library_type>>s
-    collection_order: custom
-    sync_mode: sync
+#####################
+#    COLLECTIONS    #
+#####################
 
 collections:
+
   IMDb Top 250:
-    template:
-      - name: imdb
-        chart: top
-      - name: chart_shared
-        key: top
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250
+    collection_order: custom
+    sync_mode: sync
     summary: "This collection includes movies in the IMDb Top 250 chart. Sorted by popularity."
+
   IMDb Popular Films:
-    template:
-      - name: imdb
-        chart: popular
-      - name: chart_shared
-        key: popular
-    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/chart/IMDb%20Popular.jpg
-    summary: "This collection includes movies in the current IMDb popular chart as voted by IMDb users. Sorted by popularity."
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
+      limit: 100
+    collection_order: custom
+    sync_mode: sync
+    summary: "This collection includes movies in the current IMDb Popular chart as voted by IMDb users. Sorted by popularity."

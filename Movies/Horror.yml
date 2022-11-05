@@ -5,7 +5,7 @@ templates:
   Horror:
     url_poster: <<poster>>
     sort_title: <<collection_name>>
-    collection_order: alpha
+    collection_order: audience_rating.desc
     sync_mode: sync
  
 #####################
@@ -19,6 +19,7 @@ collections:
       - https://trakt.tv/users/mybicycle/lists/halloween
       - https://trakt.tv/users/movistapp/lists/horror
       - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/thechrisk/lists/halloween #My list for missing films
     imdb_list:
       - https://www.imdb.com/list/ls079318228/ #Top 200 Horror Movies
       - https://www.imdb.com/list/ls025783055/ #Family Halloween Movies
@@ -28,4 +29,4 @@ collections:
     plex_search:
       any:
         genre: Horror
-    summary: "This collection includes Horror films, themes and Halloween based titles."
+    summary: "This collection includes Horror films, themes and Halloween based titles. Sorted by audience rating."

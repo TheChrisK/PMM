@@ -16,6 +16,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/christmas-movies
       - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
+      - https://trakt.tv/users/thechrisk/lists/christmas #My list
     imdb_list:
       - https://www.imdb.com/list/ls025976544/ #The Top 200 Christmas Movies of All Time!
       - https://www.imdb.com/list/ls003863000/ #CHRISTMAS MOVIE COLLECTION

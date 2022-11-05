@@ -49,5 +49,5 @@ dynamic_collections:
       - director_dynamic
     title_format: <<title>> Collection
     data:
-      depth: 1
-      limit: 5
+      depth: 2
+      limit: 10

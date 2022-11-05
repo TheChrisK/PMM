@@ -4,18 +4,45 @@
 templates:
   Decade:
     collection_order: alpha
-    url_poster: <<poster>>
+    url_poster: https://theposterdb.com/api/assets/<<poster_id>>
+    sync_mode: sync
+    summary: "A collection of some of the most popular movies from the <<decade>>'s."
     plex_search:
       all:
         decade: <<decade>>
+        audience_rating.gte: 7.5
 
 #####################
 #    COLLECTIONS    #
 #####################
 collections:
-  70s Movies:
-    template: {name: Decade, decade: 1970, poster: https://i.imgur.com/TCZ0jV0.png}
-  80s Movies:
-    template: {name: Decade, decade: 1980, poster: https://i.imgur.com/9SdMuka.jpg}
-  90s Movies:
-    template: {name: Decade, decade: 1990, poster: https://i.imgur.com/AmPjLin.png}
+  Best of the 70s:
+    template: 
+      name: Decade
+      decade: 1970
+      poster_id: 105332
+    sort_title: 1970s
+  Best of the 80s:
+    template: 
+      name: Decade
+      decade: 1980
+      poster_id: 105333
+    sort_title: 1980s
+  Best of the 90s:
+    template:
+      name: Decade
+      decade: 1990
+      poster_id: 105334
+    sort_title: 1990s
+  Best of the 2000s:
+    template:
+      name: Decade
+      decade: 2000
+      poster_id: 246851
+    sort_title: 2000s
+  Best of the 2010s:
+    template:
+      name: Decade
+      decade: 2010
+      poster_id: 246852
+    sort_title: 2010s
