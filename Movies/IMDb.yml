@@ -40,3 +40,10 @@ collections:
       all:
         genre: Western
     summary: "A collection of Western films, themes and cowboy related titles."
+
+  Sports Collection:
+    template: {name: imdb, poster_id: 167979}
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature&genres=sport #Top Sports
+      limit: 500
+    summary: "A collection of sports films, themes and sporting related titles."
