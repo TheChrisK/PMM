@@ -2,60 +2,67 @@ libraries:
   Movies:
     metadata_path:
     - folder: config/Movies/
-    overlay_path:
-    - remove_overlays: false
-    - folder: config/overlays/
-    - git: PMM/overlays/streaming
+    - git: PMM/award/oscars
       template_variables:
-        vertical_offset: 15
-        vertical_align: top
+        use_year_collections: false
+    - git: PMM/chart/tmdb
+      template_variables:
+        use_airing: false
+        use_air: false
+
+    overlay_path:
+      - schedule: weekly(monday)
+      - remove_overlays: false
+      - folder: config/overlays/
+        template_variables:
+          vertical_offset: 15
+          vertical_align: top
+
     operations:
+      schedule: weekly(tuesday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb            
-  Kids Movies:
+      mass_user_rating_update: mdb
+
+  Movies - Family:
     metadata_path:
     - folder: config/Kids/
+
     overlay_path:
+    - schedule: weekly(friday)
     - remove_overlays: false
     - folder: config/overlays/
-    - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
         vertical_align: top
+
     operations:
+      schedule: weekly(friday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: mdb
-  Test:
-    metadata_path:
-    - folder: config/Test/
-    overlay_path:
-    - remove_overlays: false
-    - folder: config/overlays/test
-    operations:
-      mass_genre_update: tmdb
-      mass_audience_rating_update: imdb
-      mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb
+
   TV Shows:
     metadata_path:
     - folder: config/Shows/
+
     overlay_path:
     - remove_overlays: false
     - folder: config/overlays/
-    - git: PMM/overlays/streaming
       template_variables:
         vertical_offset: 15
         vertical_align: top
+
     operations:
+      schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: mdb
-settings:                                      
+
+settings:
   cache: true
   cache_expiration: 60
   asset_directory: config/assets
@@ -91,3 +98,5 @@ settings:
   verify_ssl: true
   custom_repo:
   check_nightly: false
+  show_unconfigured: true
+  playlist_exclude_users:
