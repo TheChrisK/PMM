@@ -1,0 +1,89 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Genre:
+    file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
+    sort_title: "!060_<<collection_name>>"
+    collection_order: release
+    delete_not_scheduled: true
+  
+ #####################
+#    COLLECTIONS    #
+#####################   
+collections:
+  Horror Movies:
+    template:
+      name: Genre
+      poster_id: Horror
+    trakt_list:
+      - https://trakt.tv/users/mybicycle/lists/halloween
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/thechrisk/lists/halloween #My list for missing films
+    imdb_list:
+      - https://www.imdb.com/list/ls079318228/ #Top 200 Horror Movies
+      - https://www.imdb.com/list/ls025783055/ #Family Halloween Movies
+      - https://www.imdb.com/list/ls063988425/ #Halloween Movies That Aren't Too Scary or Gory
+      - https://www.imdb.com/list/ls059633855/ #Top 240 Horror Movies 2000-2018
+      - https://www.imdb.com/list/ls009129354/ #Horror - More than 300 Horror Movies To Watch Late at Night
+    plex_search:
+      any:
+        genre: Horror
+    schedule: range(11/01-09/14)
+    summary: "This collection includes Horror films, themes and Halloween based titles."
+
+  Sports Movies:
+    template:
+      name: Genre
+      poster_id: Sport
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature&genres=sport #Top Sports
+      limit: 150
+    summary: "A collection of sports films, themes and sporting related titles."
+
+  Spy Movies:
+    template:
+      name: Genre
+      poster_id: Spy
+    imdb_list:
+      - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
+      - https://www.imdb.com/list/ls068127872/ #Spies: Best Spy Movies:The Ultimate List
+    summary: "This collection includes Spy films, themes and government intelligence based titles."
+    
+  Stand-up Comedy:
+    template:
+      name: Genre
+      poster_id: Stand-Up Comedy
+    trakt_list:
+      - https://trakt.tv/users/sy138/lists/stand-up-stand-up
+      - https://trakt.tv/users/ruxton/lists/stand-up
+      - https://trakt.tv/users/willy-wally/lists/stand-up-stand-up
+      - https://trakt.tv/users/lish408/lists/stand-up-comedy-specials
+    summary: "A collection of stand-up comedy specials."
+
+  War Movies:
+    template:
+      name: Genre
+      poster_id: War
+    imdb_list:
+      - https://www.imdb.com/list/ls055723960/ #"Sam's List" of 1000 War Movies
+      - https://www.imdb.com/list/ls096729756/ #100 Greatest War Movies
+      - https://www.imdb.com/list/ls070336403/ #War Movies (2013 - 2020)
+      - https://www.imdb.com/list/ls567574786/ #MY LIST
+    plex_search:
+      all:
+        genre: War
+    summary: "This collection includes War films, themes and military based titles."
+   
+  Western Movies:
+    template:
+      name: Genre
+      poster_id: Western
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature&genres=western #Top Westerns
+      limit: 150
+    plex_search:
+      all:
+        genre: Western
+    summary: "A collection of Western films, themes and cowboy related titles."

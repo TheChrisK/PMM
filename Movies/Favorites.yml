@@ -1,0 +1,27 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Favorites:
+    file_poster: /config/assets/posters/favorites/<<collection_name>>.png
+    sort_title: "!139_<<collection_name>>"
+    collection_order: alpha
+    sync_mode: sync
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Chris' Favorites:
+    template:
+      name: Favorites
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/chris-top
+    summary: "A collection of Chris' favorite films."
+    
+  Marnie's Favorites:
+    template:
+      name: Favorites
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/marnie-top
+    summary: "A collection of Marnie's favorite films."

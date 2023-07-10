@@ -1,14 +1,77 @@
 libraries:
-  Movies:
+#MOVIE LIBRARY CONFIG FOR SCHEDULED COLLECTIONS TO BE DELETED WHEN OUT OF SEASON
+  Scheduled:
+    library_name: Movies
+    template_variables:
+      use_separator: false
     metadata_path:
-    - folder: config/Movies/
-    - git: PMM/award/oscars
+    - file: config/Scheduled/oscars.yml
       template_variables:
         use_year_collections: false
-    - git: PMM/chart/tmdb
+        collection_order: release.desc
+    - file: config/Scheduled/golden.yml
       template_variables:
-        use_airing: false
-        use_air: false
+        use_year_collections: false
+    - file: config/Scheduled/choice.yml
+      template_variables:
+        use_year_collections: false
+    - file: config/Scheduled/Holiday.yml
+    settings:
+      delete_not_scheduled: true
+ 
+ #MAIN MOVIE LIBRARY CONFIG
+  Movies:
+    template_variables:
+      use_separator: false
+    metadata_path:
+    - folder: config/Movies/
+    - pmm: tautulli
+      template_variables:
+        use_watched: false
+    - pmm: imdb
+      template_variables:
+        use_lowest: false
+    - pmm: genre
+      template_variables:
+        exclude:
+        - Horror
+        - War
+        - Western
+        - Spy
+        - Sport
+        sort_by: title.asc
+        minimum_items: 10
+    - pmm: decade
+      template_variables:
+        exclude:
+          - 1960
+        limit: 100
+        limit_1970: 25
+        summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
+        summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic rating.
+        minimum_items: 25
+    - pmm: universe
+      template_variables:
+        trakt_list_mcu: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
+        trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
+        trakt_list_trek: https://trakt.tv/users/thechrisk/lists/star-trek
+        trakt_list_avp: https://trakt.tv/users/thechrisk/lists/alien-predator
+        minimum_items: 3
+        append_data:
+          star: Star Wars Saga
+          trek: Star Trek Universe
+          xmen: X-Men Collection
+        exclude:
+          - marvel
+          - rocky
+    - pmm: seasonal
+      template_variables:
+        emoji: ""
+        schedule_independence: range(06/28-07/05)
+        schedule_halloween: range(09/15-10/31)
+        exclude:
+          - christmas
+          - halloween
 
     overlay_path:
       - schedule: weekly(monday)
@@ -25,10 +88,32 @@ libraries:
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: mdb
 
+#4K MOVIES CONFIG
+  4K Movies:
+    overlay_path:
+      - schedule: weekly(monday)
+      - remove_overlays: false
+      - folder: config/overlays
+        template_variables:
+          vertical_offset: 15
+          vertical_align: top
+      - pmm: resolution
+
+    operations:
+      schedule: weekly(tuesday)
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: mdb
+
+#CHILDREN'S MOVIES CONFIG
   Movies - Family:
     metadata_path:
     - folder: config/Kids/
-
+    - pmm: tautulli
+      template_variables:
+        use_watched: false
+        
     overlay_path:
     - schedule: weekly(friday)
     - remove_overlays: false
@@ -44,6 +129,7 @@ libraries:
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: mdb
 
+#TV SHOWS CONFIG
   TV Shows:
     metadata_path:
     - folder: config/Shows/
