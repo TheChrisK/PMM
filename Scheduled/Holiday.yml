@@ -1,0 +1,59 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Holiday:
+    file_poster: /config/assets/posters/seasonal/<<poster_id>>.jpg
+    sort_title: "!00_<<collection_name>>"
+    collection_order: alpha
+    sync_mode: sync
+    delete_not_scheduled: true
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Christmas Collection:
+    template:
+      name: Holiday
+      poster_id: christmas
+    trakt_list:
+      - https://trakt.tv/users/littlestella3/lists/christmas
+      - https://trakt.tv/users/triadcool/lists/christmas
+      - https://trakt.tv/users/thechrisk/lists/christmas #My list
+    imdb_list:
+      - https://www.imdb.com/list/ls025976544/ #The Top 200 Christmas Movies of All Time!
+      - https://www.imdb.com/list/ls003863000/ #CHRISTMAS MOVIE COLLECTION
+      - https://www.imdb.com/list/ls027886673/ #Christmas Films
+      - https://www.imdb.com/list/ls097998599/ #2019 Christmas movies
+      - https://www.imdb.com/list/ls031348568/ #The Rankin/Bass Christmas Specials
+      - https://www.imdb.com/list/ls027353066/ #Christmas Movies A to Z
+      - https://www.imdb.com/list/ls563896449/ #2022 Christmas Movies
+      - https://www.imdb.com/list/ls550736368/ #2021 Christmas Movies
+      - https://www.imdb.com/list/ls000096828/ #PMM default list
+    plex_search:
+      all:
+        title.begins: 12 Days
+    schedule: range(11/01-12/27)
+    summary: "Christmas and holiday themed movies. Movies that take place during the Holidays are included."
+
+  Halloween and Horror Movies:
+    template:
+      name: Holiday
+      poster_id: halloween
+    trakt_list:
+      - https://trakt.tv/users/mybicycle/lists/halloween
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/thechrisk/lists/halloween #My list for missing films
+    imdb_list:
+      - https://www.imdb.com/list/ls079318228/ #Top 200 Horror Movies
+      - https://www.imdb.com/list/ls025783055/ #Family Halloween Movies
+      - https://www.imdb.com/list/ls063988425/ #Halloween Movies That Aren't Too Scary or Gory
+      - https://www.imdb.com/list/ls059633855/ #Top 240 Horror Movies 2000-2018
+      - https://www.imdb.com/list/ls009129354/ #Horror - More than 300 Horror Movies To Watch Late at Night
+    plex_search:
+      any:
+        genre: Horror
+    schedule: range(09/15-10/31)
+    summary: "This collection includes Horror films, themes and Halloween based titles."
