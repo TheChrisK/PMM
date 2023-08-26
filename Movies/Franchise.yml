@@ -6,6 +6,7 @@ templates:
     file_poster: /config/assets/posters/franchise/<<poster_id>>.jpg
     sort_title: "!106_<<collection_name>>"
     collection_order: release
+    sync_mode: sync
 
 #####################
 #    COLLECTIONS    #
@@ -299,11 +300,8 @@ collections:
     template:
       name: Franchise
       poster_id: Transformers
-    plex_search:
-      any:
-        title:
-          - Transformers
-          - Bumblebee
+    trakt_list:
+      - https://trakt.tv/users/strangerer/lists/transformers
     summary: "Transformers is a series of science fiction action films based on the Transformers franchise of the 1980s. Michael Bay directed the first five films: Transformers (2007), Revenge of the Fallen (2009), Dark of the Moon (2011), Age of Extinction (2014), and The Last Knight (2017), and has served as a producer for subsequent films. A sixth film Bumblebee, directed by Travis Knight, was released in December 2018, while a seventh film, Rise of the Beasts, directed by Steven Caple Jr. was released in June 2023."
 
   The Transporter Trilogy:

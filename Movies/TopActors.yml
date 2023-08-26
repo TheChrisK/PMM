@@ -77,14 +77,14 @@ dynamic_collections:
       minimum: 10
       limit: 5
 
-  Top Writers:
-    type: writer
-    template:
-      - writer_dynamic
-    title_format: <<title>> Collection
-    data:
-      depth: 2
-      limit: 5
+  #Top Writers:
+    #type: writer
+    #template:
+    #  - writer_dynamic
+    #title_format: <<title>> Collection
+    #data:
+    #  depth: 2
+    #  limit: 5
       
 #############################
 #   STANDARD COLLECTIONS    #
@@ -95,3 +95,8 @@ collections:
     template:
       name: Person
       actor: "Chris Farley"
+
+  Ray Liotta Collection:
+    template:
+      name: Person
+      actor: "Ray Liotta"

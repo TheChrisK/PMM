@@ -5,7 +5,7 @@ templates:
     imdb_chart: top_<<library_type>>s
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/IMDB-Top-250red.png
+      file: config/overlays/images/imdb-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -20,12 +20,12 @@ templates:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/RT-Cert-Freshred.png
+      file: config/overlays/images/rotten-ribbon.png
       group: logo
       weight: <<weight>>
-      horizontal_offset: 10
+      horizontal_offset: 0
       horizontal_align: right
-      vertical_offset: 10
+      vertical_offset: 0
       vertical_align: bottom
       
   Meta-Must:
@@ -35,26 +35,87 @@ templates:
     mdblist_list: https://mdblist.com/lists/frostywolf/metacritic-must-see-movies/
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/MC-Must-See.png
+      file: config/overlays/images/metacritic-ribbon.png
       group: logo
       weight: <<weight>>
-      horizontal_offset: 10
+      horizontal_offset: 0
       horizontal_align: right
-      vertical_offset: 10
+      vertical_offset: 0
       vertical_align: bottom
 
+  Razzie:
+    optional:
+      - overlay_level
+    collection_level: <<overlay_level>>
+    imdb_list: https://www.imdb.com/search/title/?groups=razzie_winner
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/razzie-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+
+  Letterboxd-1000:
+    optional:
+      - overlay_level
+    collection_level: <<overlay_level>>
+    letterboxd_list: https://letterboxd.com/prof_ratigan/list/top-1000-films-of-all-time-calculated/
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/letterboxd-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+
+  IMDb-Lowest:
+    optional:
+      - overlay_level
+    collection_level: <<overlay_level>>
+    imdb_chart: lowest_rated
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/images/imdb-lowest-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+      
+      
 overlays:
   IMDB-Top-250red:
     template:
       - name: IMDbTop250
-        weight: 50
-
-  RT-Cert-Freshred:
+        weight: 60
+        
+  Letterboxd-1000:
     template:
-      - name: RT-Cert-Fresh
-        weight: 40
+      - name: Letterboxd-1000
+        weight: 50
 
   MC-Must-See:
     template:
       - name: Meta-Must
-        weight: 45
+        weight: 40
+
+  RT-Cert-Freshred:
+    template:
+      - name: RT-Cert-Fresh
+        weight: 30
+
+  Razzie:
+    template:
+      - name: Razzie
+        weight: 5
+        
+  IMDb-Lowest:
+    template:
+      - name: IMDb-Lowest
+        weight: 1

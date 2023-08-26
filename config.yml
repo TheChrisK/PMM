@@ -45,6 +45,7 @@ libraries:
         use_watched: false
         list_days: 30
         list_size: 30
+        summary_popular: A collection of the most watched movies on this Plex server.
         order_popular: 1
     - pmm: genre
       template_variables:

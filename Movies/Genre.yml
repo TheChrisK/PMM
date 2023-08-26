@@ -5,7 +5,7 @@ templates:
   Genre:
     file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
     sort_title: "!060_<<collection_name>>"
-    collection_order: release
+    collection_order: title.asc
     delete_not_scheduled: true
   
  #####################

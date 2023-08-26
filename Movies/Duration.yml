@@ -18,4 +18,4 @@ collections:
     plex_search:
       all:
         duration.lte: 90
-    summary: "A collection of titles that are less than 90 minutes long."
+    summary: "A collection of titles that are 90 minutes or less in duration."
