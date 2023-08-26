@@ -1,0 +1,130 @@
+templates:
+  IMDb_Rating:                                                               #IDMB Rating Logo
+    optional:
+      - overlay_level
+    default:
+      overlay: <<overlay_name>>
+    collection_level: <<overlay_level>>
+    overlay:
+      name: <<overlay_name>>
+      file: /config/overlays/images/<<overlay>>.png
+      queue: Rating_Queue_Logo
+      weight: <<weight>>
+      
+  Audience_Rating:                                                               #Audience Rating Text (IMDB Rating)
+    optional:
+      - overlay_level
+    default:
+      rating_type: audience_rating
+    collection_level: <<overlay_level>>
+    overlay:
+      name: text(<<rating_type>>)
+      queue: Rating_Queue_Text
+      weight: <<weight>>
+      font: fonts/Inter-Medium.ttf
+      font_size: 63
+      font_color: "#FFFFFF"
+           
+  RT-Crit-Fresh:                                                            #Rotten Tomatoes Rating Logo (Fresh)
+    optional:
+      - overlay_level
+    default:
+      overlay: <<overlay_name>>
+    collection_level: <<overlay_level>>
+    overlay:
+      name: <<overlay_name>>
+      file: /config/overlays/images/<<overlay>>.png
+      queue: Rating_Queue_Logo
+      weight: <<weight>>
+      
+  RT-Crit-Rotten:                                                           #Rotten Tomatoes Rating Logo (Rotten)
+    optional:
+      - overlay_level
+    default:
+      overlay: <<overlay_name>>
+    collection_level: <<overlay_level>>
+    overlay:
+      name: <<overlay_name>>
+      file: /config/overlays/images/<<overlay>>.png
+      queue: Rating_Queue_Logo
+      weight: <<weight>>
+      
+  Critic_Rating:                                                               #Critic Rating Text (Rotten Tomatoes Rating Under 10)
+    optional:
+      - overlay_level
+    default:
+      rating_type: critic_rating
+    collection_level: <<overlay_level>>
+    overlay:
+      name: text(<<rating_type>>0)
+      queue: Rating_Queue_Text
+      weight: <<weight>>
+      font: fonts/Inter-Medium.ttf
+      font_size: 63
+      font_color: "#FFFFFF"
+
+queues:
+  Rating_Queue_Logo:
+    - horizontal_offset: 10
+      horizontal_align: left
+      vertical_offset: 10
+      vertical_align: bottom
+    - horizontal_offset: 320
+      horizontal_align: left
+      vertical_offset: 10
+      vertical_align: bottom
+  Rating_Queue_Text:
+    - horizontal_offset: 189
+      horizontal_align: left
+      vertical_offset: 41
+      vertical_align: bottom
+    - horizontal_offset: 499
+      horizontal_align: left
+      vertical_offset: 41
+      vertical_align: bottom
+
+overlays:
+  IMDb_Rating:
+    template:
+      - name: IMDb_Rating
+        weight: 80
+    plex_search:
+      all:
+        audience_rating.gte: 0.1
+        audience_rating.lte: 10
+        
+  audience_rating:
+    template:
+      name: Audience_Rating
+      weight: 80
+    plex_search:
+      all:
+        audience_rating.gte: 0.1
+        audience_rating.lte: 10
+ 
+  RT-Crit-Rotten:
+    template:
+      - name: RT-Crit-Rotten
+        weight: 90
+    plex_search:
+      all:
+        critic_rating.gte: 0.1
+        critic_rating.lte: 6.0
+
+  RT-Crit-Fresh:
+    template:
+      - name: RT-Crit-Fresh
+        weight: 90
+    plex_search:
+      all:
+        critic_rating.gte: 6.1
+        critic_rating.lte: 10
+      
+  critic_rating:
+    template:
+      name: Critic_Rating
+      weight: 90
+    plex_search:
+      all:
+        critic_rating.gte: 0.1
+        critic_rating.lte: 10

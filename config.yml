@@ -2,6 +2,7 @@ libraries:
 #MOVIE LIBRARY CONFIG FOR SCHEDULED COLLECTIONS TO BE DELETED WHEN OUT OF SEASON
   Scheduled:
     library_name: Movies
+    report_path: config/missing/Scheduled_report.yml
     template_variables:
       use_separator: false
     metadata_path:
@@ -18,29 +19,46 @@ libraries:
     - file: config/Scheduled/Holiday.yml
     settings:
       delete_not_scheduled: true
+      asset_directory: config/assets
  
  #MAIN MOVIE LIBRARY CONFIG
   Movies:
+    report_path: config/missing/Movies_report.yml
     template_variables:
       use_separator: false
     metadata_path:
     - folder: config/Movies/
-    - pmm: tautulli
-      template_variables:
-        use_watched: false
     - pmm: imdb
       template_variables:
         use_lowest: false
+        order_top: 2
+        order_popular: 2
+    - pmm: trakt
+      template_variables:
+        use_collected: false
+        use_recommended: false
+        order_popular: 3
+        order_trending: 3
+        order_watched: 3
+    - pmm: tautulli
+      template_variables:
+        use_watched: false
+        list_days: 30
+        list_size: 30
+        order_popular: 1
     - pmm: genre
       template_variables:
+        sort_by: title.asc
         exclude:
         - Horror
         - War
         - Western
         - Spy
         - Sport
-        sort_by: title.asc
-        minimum_items: 10
+        - Musical
+        - Indie
+        - Biopic
+      minimum_items: 10
     - pmm: decade
       template_variables:
         exclude:
@@ -64,6 +82,7 @@ libraries:
         exclude:
           - marvel
           - rocky
+        collection_section: "106"
     - pmm: seasonal
       template_variables:
         emoji: ""
@@ -72,17 +91,14 @@ libraries:
         exclude:
           - christmas
           - halloween
-
+   
     overlay_path:
-      - schedule: weekly(monday)
+      - schedule: weekly(tuesday)
       - remove_overlays: false
-      - folder: config/overlays/
-        template_variables:
-          vertical_offset: 15
-          vertical_align: top
+      - file: config/overlays/Top.yml
 
     operations:
-      schedule: weekly(tuesday)
+      schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
@@ -90,26 +106,33 @@ libraries:
 
 #4K MOVIES CONFIG
   4K Movies:
+    report_path: config/missing/4K_Movies_report.yml
     overlay_path:
-      - schedule: weekly(monday)
+      - schedule: weekly(tuesday)
       - remove_overlays: false
-      - folder: config/overlays
-        template_variables:
-          vertical_offset: 15
-          vertical_align: top
+      - file: config/overlays/Top.yml
       - pmm: resolution
+      - pmm: ratings
+        template_variables:
+          rating1: audience
+          rating1_image: imdb
+          rating1_vertical_align: bottom
+          rating1_horizontal_align: left
+          rating1_back_radius: 20
 
     operations:
-      schedule: weekly(tuesday)
+      schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: mdb
 
 #CHILDREN'S MOVIES CONFIG
-  Movies - Family:
+  Family:
+    library_name: Movies - Family
+    report_path: config/missing/Kids_Movies_report.yml
     metadata_path:
-    - folder: config/Kids/
+    #- folder: config/Kids/
     - pmm: tautulli
       template_variables:
         use_watched: false
@@ -117,10 +140,7 @@ libraries:
     overlay_path:
     - schedule: weekly(friday)
     - remove_overlays: false
-    - folder: config/overlays/
-      template_variables:
-        vertical_offset: 15
-        vertical_align: top
+    - file: config/overlays/Top.yml
 
     operations:
       schedule: weekly(friday)
@@ -131,15 +151,21 @@ libraries:
 
 #TV SHOWS CONFIG
   TV Shows:
+    report_path: config/missing/Shows_report.yml
     metadata_path:
     - folder: config/Shows/
+    - file: config/Scheduled/emmy.yml
+      template_variables:
+        data:
+          starting: current_year-1
+          ending: current_year
+    settings:
+      delete_not_scheduled: true
+      asset_directory: config/assets
 
     overlay_path:
     - remove_overlays: false
-    - folder: config/overlays/
-      template_variables:
-        vertical_offset: 15
-        vertical_align: top
+    - file: config/overlays/Top.yml
 
     operations:
       schedule: weekly(monday)
@@ -183,6 +209,6 @@ settings:
   playlist_report: false
   verify_ssl: true
   custom_repo:
-  check_nightly: false
+  check_nightly: true
   show_unconfigured: true
   playlist_exclude_users:
