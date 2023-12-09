@@ -7,6 +7,7 @@ templates:
     sort_title: "!106_<<collection_name>>"
     collection_order: release
     sync_mode: sync
+    schedule: weekly(sunday)
 
 #####################
 #    COLLECTIONS    #
@@ -68,8 +69,7 @@ collections:
     template: 
       name: Franchise
       poster_id: Cornetto Trilogy
-    trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/cornetto-trilogy
+    imdb_id: tt0425112, tt0365748, tt1213663
     summary: "The Three Flavours Cornetto trilogy (also sometimes referred to as the Cornetto trilogy or the Blood and Ice Cream trilogy) is an anthology series of British comedic genre films directed by Edgar Wright, written by Wright and Simon Pegg, and produced by Nira Park. The series stars Pegg, Nick Frost, and Bill Nighy, with several other actors, including Rafe Spall and Martin Freeman, also appearing in all three films. The trilogy consists of Shaun of the Dead (2004), Hot Fuzz (2007), and The World's End (2013)."
 
   Die Hard Collection:
@@ -86,8 +86,7 @@ collections:
     template:
       name: Franchise
       poster_id: Dark Knight
-    trakt_list:
-      - https://trakt.tv/users/feelgood47/lists/dark-knight
+    imdb_id: tt0372784, tt0468569, tt1345836
     summary: "The Dark Knight Trilogy consists of Batman Begins (2005), The Dark Knight (2008), and The Dark Knight Rises (2012), all directed by Christopher Nolan. Collectively grossing over $2.4 billion at the worldwide box office, the trilogy has been ranked among the greatest ever made."
 
   The Godfather Trilogy:
@@ -233,7 +232,7 @@ collections:
       poster_id: Purge
     collection_order: custom
     trakt_list:
-      - https://trakt.tv/users/ohashamsayed/lists/the-purge
+      - https://trakt.tv/users/mythicalsensai/lists/the-purge
     summary: "The Purge is an American anthology media franchise centered on a series of dystopian action horror films distributed by Universal Pictures and produced by Blumhouse Productions and Platinum Dunes, which are written and in some cases also directed by James DeMonaco, who was inspired by a Star Trek: The Original Series episode, 'The Return of the Archons'. The films present a seemingly normal, crime-free America in the near-future. However, the country is a dystopia which observes an annual event known as 'the Purge', in which all crime, including murder, is decriminalized for a 12-hour period."
 
   Rambo Collection:

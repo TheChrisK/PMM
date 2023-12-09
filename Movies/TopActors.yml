@@ -65,7 +65,7 @@ dynamic_collections:
     data:
       depth: 5
       minimum: 10
-      limit: 150
+      limit: 200
 
   Top Directors:
     type: director

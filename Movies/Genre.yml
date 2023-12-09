@@ -6,40 +6,20 @@ templates:
     file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
     sort_title: "!060_<<collection_name>>"
     collection_order: title.asc
-    delete_not_scheduled: true
+    sync_mode: sync
   
  #####################
 #    COLLECTIONS    #
 #####################   
 collections:
-  Horror Movies:
-    template:
-      name: Genre
-      poster_id: Horror
-    trakt_list:
-      - https://trakt.tv/users/mybicycle/lists/halloween
-      - https://trakt.tv/users/movistapp/lists/horror
-      - https://trakt.tv/users/g0g0/lists/horror
-      - https://trakt.tv/users/thechrisk/lists/halloween #My list for missing films
-    imdb_list:
-      - https://www.imdb.com/list/ls079318228/ #Top 200 Horror Movies
-      - https://www.imdb.com/list/ls025783055/ #Family Halloween Movies
-      - https://www.imdb.com/list/ls063988425/ #Halloween Movies That Aren't Too Scary or Gory
-      - https://www.imdb.com/list/ls059633855/ #Top 240 Horror Movies 2000-2018
-      - https://www.imdb.com/list/ls009129354/ #Horror - More than 300 Horror Movies To Watch Late at Night
-    plex_search:
-      any:
-        genre: Horror
-    schedule: range(11/01-09/14)
-    summary: "This collection includes Horror films, themes and Halloween based titles."
-
   Sports Movies:
     template:
       name: Genre
       poster_id: Sport
-    imdb_list:
-      url: https://www.imdb.com/search/title/?title_type=feature&genres=sport #Top Sports
-      limit: 150
+    letterboxd_list:
+      - https://letterboxd.com/vanfo/list/sports/
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e862a78250cfc782dacae
+    schedule: weekly(tuesday)
     summary: "A collection of sports films, themes and sporting related titles."
 
   Spy Movies:
@@ -49,6 +29,8 @@ collections:
     imdb_list:
       - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
       - https://www.imdb.com/list/ls068127872/ #Spies: Best Spy Movies:The Ultimate List
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e849c78250cfc782dac2b
+    schedule: weekly(tuesday)
     summary: "This collection includes Spy films, themes and government intelligence based titles."
     
   Stand-up Comedy:
@@ -60,6 +42,7 @@ collections:
       - https://trakt.tv/users/ruxton/lists/stand-up
       - https://trakt.tv/users/willy-wally/lists/stand-up-stand-up
       - https://trakt.tv/users/lish408/lists/stand-up-comedy-specials
+    schedule: weekly(tuesday)
     summary: "A collection of stand-up comedy specials."
 
   War Movies:
@@ -71,19 +54,20 @@ collections:
       - https://www.imdb.com/list/ls096729756/ #100 Greatest War Movies
       - https://www.imdb.com/list/ls070336403/ #War Movies (2013 - 2020)
       - https://www.imdb.com/list/ls567574786/ #MY LIST
+    imdb_id: tt0102059, tt0107144, tt0272020, tt0399295, tt0120201, tt0367093, tt0844760, tt0372588, tt9777666, tt0105690, tt2005151, tt0086567
     plex_search:
       all:
         genre: War
+    schedule: weekly(tuesday)
     summary: "This collection includes War films, themes and military based titles."
    
   Western Movies:
     template:
       name: Genre
       poster_id: Western
-    imdb_list:
-      url: https://www.imdb.com/search/title/?title_type=feature&genres=western #Top Westerns
-      limit: 150
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e86e278250cfc782dacea
     plex_search:
       all:
         genre: Western
+    schedule: weekly(tuesday)
     summary: "A collection of Western films, themes and cowboy related titles."

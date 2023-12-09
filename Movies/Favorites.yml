@@ -6,6 +6,7 @@ templates:
     file_poster: /config/assets/posters/favorites/<<collection_name>>.png
     sort_title: "!059_<<collection_name>>"
     collection_order: alpha
+    content_rating: R
     sync_mode: sync
 
 #####################
