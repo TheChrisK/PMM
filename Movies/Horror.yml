@@ -1,0 +1,34 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Genre:
+    file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
+    sort_title: "!060_<<collection_name>>"
+    collection_order: title.asc
+  
+ #####################
+#    COLLECTIONS    #
+#####################   
+collections:
+  Horror Movies:
+    template:
+      name: Genre
+      poster_id: Horror
+    trakt_list:
+      - https://trakt.tv/users/mybicycle/lists/halloween
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/thechrisk/lists/halloween #My list for missing films
+    imdb_list:
+      - https://www.imdb.com/list/ls079318228/ #Top 200 Horror Movies
+      - https://www.imdb.com/list/ls025783055/ #Family Halloween Movies
+      - https://www.imdb.com/list/ls063988425/ #Halloween Movies That Aren't Too Scary or Gory
+      - https://www.imdb.com/list/ls059633855/ #Top 240 Horror Movies 2000-2018
+      - https://www.imdb.com/list/ls009129354/ #Horror - More than 300 Horror Movies To Watch Late at Night
+    plex_search:
+      any:
+        genre: Horror
+    schedule: range(11/01-08/31)
+    delete_not_scheduled: true
+    summary: "This collection includes Horror films, themes and Halloween based titles."

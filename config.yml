@@ -20,7 +20,7 @@ libraries:
     settings:
       delete_not_scheduled: true
       asset_directory: config/assets
- 
+
  #MAIN MOVIE LIBRARY CONFIG
   Movies:
     report_path: config/missing/Movies_report.yml
@@ -37,6 +37,7 @@ libraries:
       template_variables:
         use_collected: false
         use_recommended: false
+        use_watched: false
         order_popular: 3
         order_trending: 3
         order_watched: 3
@@ -56,18 +57,22 @@ libraries:
         - Western
         - Spy
         - Sport
+        - Suspense
         - Musical
         - Indie
         - Biopic
+        - Martial Arts
+        - Short
       minimum_items: 10
     - pmm: decade
       template_variables:
         exclude:
-          - 1960
+        - 1960
         limit: 100
         limit_1970: 25
         summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
-        summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic rating.
+        summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic
+          rating.
         minimum_items: 25
     - pmm: universe
       template_variables:
@@ -81,52 +86,50 @@ libraries:
           trek: Star Trek Universe
           xmen: X-Men Collection
         exclude:
-          - marvel
-          - rocky
-        collection_section: "106"
+        - marvel
+        - rocky
+        collection_section: '106'
     - pmm: seasonal
       template_variables:
-        emoji: ""
+        emoji: ''
         schedule_independence: range(06/28-07/05)
-        schedule_halloween: range(09/15-10/31)
+        schedule_labor: range(09/01-09/05)
+        schedule_thanksgiving: range(11/01-11/24)
+        schedule_veteran: range(11/01-11/12)
+        imdb_list_veteran: https://www.imdb.com/list/ls561621160/
         exclude:
-          - christmas
-          - halloween
-   
+        - christmas
+        - halloween
+        - latinx
+        - disabilities
+
     overlay_path:
-      - schedule: weekly(tuesday)
-      - remove_overlays: false
-      - file: config/overlays/Top.yml
+    - schedule: weekly(tuesday)
+    - remove_overlays: false
+    - file: config/overlays/Top.yml
 
     operations:
       schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb
+      mass_user_rating_update: trakt_user
 
 #4K MOVIES CONFIG
   4K Movies:
     report_path: config/missing/4K_Movies_report.yml
     overlay_path:
-      - schedule: weekly(tuesday)
-      - remove_overlays: false
-      - file: config/overlays/Top.yml
-      - pmm: resolution
-      - pmm: ratings
-        template_variables:
-          rating1: audience
-          rating1_image: imdb
-          rating1_vertical_align: bottom
-          rating1_horizontal_align: left
-          rating1_back_radius: 20
+    - schedule: weekly(tuesday)
+    - remove_overlays: false
+    - file: config/overlays/Top.yml
+    - pmm: resolution
 
     operations:
       schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb
+      mass_user_rating_update: trakt_user
 
 #CHILDREN'S MOVIES CONFIG
   Family:
@@ -137,7 +140,7 @@ libraries:
     - pmm: tautulli
       template_variables:
         use_watched: false
-        
+
     overlay_path:
     - schedule: weekly(friday)
     - remove_overlays: false
@@ -148,18 +151,18 @@ libraries:
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb
+      mass_user_rating_update: trakt_user
 
 #TV SHOWS CONFIG
   TV Shows:
     report_path: config/missing/Shows_report.yml
-    metadata_path:
-    - folder: config/Shows/
-    - file: config/Scheduled/emmy.yml
-      template_variables:
-        data:
-          starting: current_year-1
-          ending: current_year
+   #metadata_path:
+   #- folder: config/Shows/
+   #- file: config/Scheduled/emmy.yml
+   #   template_variables:
+   #     data:
+   #       starting: current_year-2
+   #       ending: current_year-1
     settings:
       delete_not_scheduled: true
       asset_directory: config/assets
@@ -173,7 +176,7 @@ libraries:
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: mdb
+      mass_user_rating_update: trakt_user
 
 settings:
   cache: true
@@ -213,3 +216,7 @@ settings:
   check_nightly: true
   show_unconfigured: true
   playlist_exclude_users:
+  run_order:
+  - operations
+  - metadata
+  - overlays
