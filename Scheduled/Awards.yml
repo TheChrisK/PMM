@@ -1,0 +1,40 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Awards:
+    file_poster: /config/assets/posters/award/<<award>>/best_picture_winner.jpg
+    sort_title: "!019_<<collection_name>>"
+    collection_order: release.desc
+    sync_mode: sync
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Golden Globe Best Picture Winners:
+    template:
+      name: Awards
+      award: golden
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/golden-globe-best-picture-winners
+    summary: "Winners of the Golden Globes Best Picture category."
+    schedule: range(01/01-02/01)
+ 
+  Critics' Choice Best Picture Winners:
+    template:
+      name: Awards
+      award: choice
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/critics-choice-best-picture-winners
+    summary: "Winners of the Critics' Choice Best Picture category."
+    schedule: range(01/01-02/01)
+    
+  Academy Awards Best Picture Winners:
+    template:
+      name: Awards
+      award: oscar
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/academy-awards-best-picture-winners
+    summary: "Winners of the Academy Awards Best Picture category."
+    schedule: range(03/01-04/01)

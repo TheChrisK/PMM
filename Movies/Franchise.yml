@@ -7,7 +7,9 @@ templates:
     sort_title: "!106_<<collection_name>>"
     collection_order: release
     sync_mode: sync
-    schedule: weekly(sunday)
+    schedule:
+      - weekly(sunday)
+      - weekly(thursday)
 
 #####################
 #    COLLECTIONS    #
@@ -107,7 +109,6 @@ collections:
     plex_search:
       all:
         title.begins: The Hunger Games
-        actor: Jennifer Lawrence
     summary: "The Hunger Games film series is composed of science fiction dystopian adventure films, based on The Hunger Games trilogy of novels by American author Suzanne Collins. The films are distributed by Lionsgate and produced by Nina Jacobson and Jon Kilik. The series feature an ensemble cast including Jennifer Lawrence as Katniss Everdeen, Josh Hutcherson as Peeta Mellark, Liam Hemsworth as Gale Hawthorne, Woody Harrelson as Haymitch Abernathy, Elizabeth Banks as Effie Trinket, Stanley Tucci as Caesar Flickerman, and Donald Sutherland as President Snow."
 
   Indiana Jones Collection:

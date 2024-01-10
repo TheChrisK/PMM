@@ -4,7 +4,7 @@
 templates:
   Duration:
     file_poster: /config/assets/posters/duration/<<collection_name>>.png
-    sort_title: "!101_<<collection_name>>"
+    sort_title: "!099_<<collection_name>>"
     collection_order: alpha
     sync_mode: sync
     schedule: weekly(wednesday)

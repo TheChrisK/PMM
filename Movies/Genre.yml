@@ -21,53 +21,69 @@ collections:
     reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e862a78250cfc782dacae
     schedule: weekly(tuesday)
     summary: "A collection of sports films, themes and sporting related titles."
+    sync_to_trakt_list: sports
+    sync_missing_to_trakt_list: true
 
   Spy Movies:
     template:
       name: Genre
       poster_id: Spy
-    imdb_list:
-      - https://www.imdb.com/list/ls050515402/ #Best CIA, NSA, Secret Service Movies
-      - https://www.imdb.com/list/ls068127872/ #Spies: Best Spy Movies:The Ultimate List
-    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e849c78250cfc782dac2b
+    imdb_search:
+      list.any:
+        - ls050515402 #Best CIA, NSA, Secret Service Movies
+        - ls068127872 #Spies: Best Spy Movies:The Ultimate List
+      limit: 200
+    trakt_list:
+      - https://trakt.tv/users/votifex/lists/espionage
+      - https://trakt.tv/users/thechrisk/lists/espionage
     schedule: weekly(tuesday)
     summary: "This collection includes Spy films, themes and government intelligence based titles."
+    sync_to_trakt_list: espionage
+    sync_missing_to_trakt_list: true
     
   Stand-up Comedy:
     template:
       name: Genre
       poster_id: Stand-Up Comedy
+    imdb_search:
+      keyword.any: stand-up-comedy,stand-up-comedy-special
+      type: tv_special
+      genre: comedy
+      sort_by: release.desc
+      limit: 200
     trakt_list:
-      - https://trakt.tv/users/sy138/lists/stand-up-stand-up
-      - https://trakt.tv/users/ruxton/lists/stand-up
-      - https://trakt.tv/users/willy-wally/lists/stand-up-stand-up
-      - https://trakt.tv/users/lish408/lists/stand-up-comedy-specials
+      - https://trakt.tv/users/thechrisk/lists/stand-up-comedy
     schedule: weekly(tuesday)
     summary: "A collection of stand-up comedy specials."
+    sync_to_trakt_list: stand-up-comedy
+    sync_missing_to_trakt_list: true
 
   War Movies:
     template:
       name: Genre
       poster_id: War
-    imdb_list:
-      - https://www.imdb.com/list/ls055723960/ #"Sam's List" of 1000 War Movies
-      - https://www.imdb.com/list/ls096729756/ #100 Greatest War Movies
-      - https://www.imdb.com/list/ls070336403/ #War Movies (2013 - 2020)
-      - https://www.imdb.com/list/ls567574786/ #MY LIST
-    imdb_id: tt0102059, tt0107144, tt0272020, tt0399295, tt0120201, tt0367093, tt0844760, tt0372588, tt9777666, tt0105690, tt2005151, tt0086567
+    trakt_list:
+      - https://trakt.tv/users/thechrisk/lists/war
+      - https://trakt.tv/users/movistapp/lists/war
     plex_search:
       all:
         genre: War
     schedule: weekly(tuesday)
     summary: "This collection includes War films, themes and military based titles."
+    sync_to_trakt_list: war
+    sync_missing_to_trakt_list: true
    
   Western Movies:
     template:
       name: Genre
       poster_id: Western
-    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e86e278250cfc782dacea
+    trakt_list:
+      - https://trakt.tv/users/movistapp/lists/western
+      - https://trakt.tv/users/thechrisk/lists/western
     plex_search:
       all:
         genre: Western
     schedule: weekly(tuesday)
     summary: "A collection of Western films, themes and cowboy related titles."
+    sync_to_trakt_list: western
+    sync_missing_to_trakt_list: true

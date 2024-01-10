@@ -47,7 +47,9 @@ templates:
     optional:
       - overlay_level
     collection_level: <<overlay_level>>
-    imdb_list: https://www.imdb.com/search/title/?groups=razzie_winner
+    imdb_search:
+      event.winning: razzie
+      limit: 300
     overlay:
       name: <<overlay_name>>
       file: config/overlays/images/razzie-ribbon.png

@@ -5,18 +5,18 @@ libraries:
     report_path: config/missing/Scheduled_report.yml
     template_variables:
       use_separator: false
-    metadata_path:
-    - file: config/Scheduled/oscars.yml
-      template_variables:
-        use_year_collections: false
-        collection_order: release.desc
-    - file: config/Scheduled/golden.yml
-      template_variables:
-        use_year_collections: false
-    - file: config/Scheduled/choice.yml
-      template_variables:
-        use_year_collections: false
-    - file: config/Scheduled/Holiday.yml
+    collection_files:
+      - folder: /config/Scheduled/
+      - pmm: year
+        template_variables:
+          limit: 25
+          sort_by: critic_rating.desc
+          data:
+            starting: current_year-1
+            ending: current_year-1
+          summary_format: Top <<limit>> movies of <<key>>. Sorted by critic rating.
+          collection_section: '010'
+          schedule: range(01/01-02/01)
     settings:
       delete_not_scheduled: true
       asset_directory: config/assets
@@ -24,89 +24,88 @@ libraries:
  #MAIN MOVIE LIBRARY CONFIG
   Movies:
     report_path: config/missing/Movies_report.yml
+    schedule_overlays: weekly(tuesday)
+    overlay_files: 
+      - file: config/overlays/Top.yml
+      - remove_overlays: false
     template_variables:
       use_separator: false
-    metadata_path:
-    - folder: config/Movies/
-    - pmm: imdb
-      template_variables:
-        use_lowest: false
-        order_top: 2
-        order_popular: 2
-    - pmm: trakt
-      template_variables:
-        use_collected: false
-        use_recommended: false
-        use_watched: false
-        order_popular: 3
-        order_trending: 3
-        order_watched: 3
-    - pmm: tautulli
-      template_variables:
-        use_watched: false
-        list_days: 30
-        list_size: 30
-        summary_popular: A collection of the most watched movies on this Plex server.
-        order_popular: 1
-    - pmm: genre
-      template_variables:
-        sort_by: title.asc
-        exclude:
-        - Horror
-        - War
-        - Western
-        - Spy
-        - Sport
-        - Suspense
-        - Musical
-        - Indie
-        - Biopic
-        - Martial Arts
-        - Short
-      minimum_items: 10
-    - pmm: decade
-      template_variables:
-        exclude:
-        - 1960
-        limit: 100
-        limit_1970: 25
-        summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
-        summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic
-          rating.
-        minimum_items: 25
-    - pmm: universe
-      template_variables:
-        trakt_list_mcu: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
-        trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
-        trakt_list_trek: https://trakt.tv/users/thechrisk/lists/star-trek
-        trakt_list_avp: https://trakt.tv/users/thechrisk/lists/alien-predator
-        minimum_items: 3
-        append_data:
-          star: Star Wars Saga
-          trek: Star Trek Universe
-          xmen: X-Men Collection
-        exclude:
-        - marvel
-        - rocky
-        collection_section: '106'
-    - pmm: seasonal
-      template_variables:
-        emoji: ''
-        schedule_independence: range(06/28-07/05)
-        schedule_labor: range(09/01-09/05)
-        schedule_thanksgiving: range(11/01-11/24)
-        schedule_veteran: range(11/01-11/12)
-        imdb_list_veteran: https://www.imdb.com/list/ls561621160/
-        exclude:
-        - christmas
-        - halloween
-        - latinx
-        - disabilities
-
-    overlay_path:
-    - schedule: weekly(tuesday)
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
+    collection_files:
+      - folder: config/Movies/
+      - pmm: decade
+        template_variables:
+          exclude:
+          - 1960
+          limit: 100
+          limit_1970: 25
+          summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
+          summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic rating.
+          minimum_items: 25
+      - pmm: genre
+        template_variables:
+          sort_by: title.asc
+          exclude:
+          - Horror #IN GENRE.YML CONFIG
+          - War #IN GENRE.YML CONFIG
+          - Western #IN GENRE.YML CONFIG
+          - Spy #IN GENRE.YML CONFIG
+          - Sport #IN GENRE.YML CONFIG
+          - Suspense #REMOVE IF YOU WANT INCLUDED
+          - Musical #REMOVE IF YOU WANT INCLUDED
+          - Indie #REMOVE IF YOU WANT INCLUDED
+          - Biopic #REMOVE IF YOU WANT INCLUDED
+          - Martial Arts #REMOVE IF YOU WANT INCLUDED
+          - Short #REMOVE IF YOU WANT INCLUDED
+        minimum_items: 10
+      - pmm: imdb
+        template_variables:
+          use_lowest: false
+          order_top: 3
+          order_popular: 3
+      - pmm: seasonal
+        template_variables:
+          emoji: ''
+          schedule_independence: range(06/28-07/05)
+          schedule_labor: range(09/01-09/05)
+          schedule_thanksgiving: range(11/01-11/24)
+          schedule_veteran: range(11/01-11/12)
+          imdb_list_veteran: https://www.imdb.com/list/ls561621160/
+          exclude:
+          - christmas #IN HOLIDAY.YML CONFIG
+          - halloween #IN HOLIDAY.YML CONFIG
+          - latinx #REMOVE IF YOU WANT INCLUDED
+          - disabilities #REMOVE IF YOU WANT INCLUDED
+      - pmm: tautulli
+        template_variables:
+          use_watched: false
+          list_days: 30
+          list_size: 25
+          list_minimum: 0
+          summary_popular: A collection of the most watched movies on this Plex server.
+          order_popular: 1
+      - pmm: trakt
+        template_variables:
+          use_collected: false
+          use_recommended: false
+          use_watched: false
+          order_popular: 4
+          order_trending: 4
+          schedule: weekly(monday)
+      - pmm: universe
+        template_variables:
+          trakt_list_mcu: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe
+          trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
+          trakt_list_trek: https://trakt.tv/users/thechrisk/lists/star-trek
+          trakt_list_avp: https://trakt.tv/users/thechrisk/lists/alien-predator
+          minimum_items: 3
+          append_data:
+            star: Star Wars Saga
+            trek: Star Trek Universe
+            xmen: X-Men Collection
+          exclude:
+          - marvel #IN FRANCHISE.YML CONFIG
+          - rocky #REMOVE IF YOU WANT INCLUDED
+          collection_section: '106'
 
     operations:
       schedule: weekly(monday)
@@ -118,33 +117,48 @@ libraries:
 #4K MOVIES CONFIG
   4K Movies:
     report_path: config/missing/4K_Movies_report.yml
-    overlay_path:
-    - schedule: weekly(tuesday)
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
-    - pmm: resolution
+    schedule_overlays: weekly(tuesday)
+    overlay_files:
+      - file: config/overlays/Top.yml
+      - pmm: resolution
+        template_variables:
+          use_edition: false
+          use_dv: false
+          use_hdr: false
+          use_1080p: false
+          use_720p: false
+          use_576p: false
+          use_480p: false
+          use_1080p_hdr: false
+          use_1080p_dv: false
+          use_1080p_dvhdr: false
+          use_1080p_plus: false
+          use_720p_hdr: false
+          use_720p_dv: false
+          use_720p_plus: false
+          use_720p_dvhdr: false
+      - remove_overlays: false
 
     operations:
       schedule: weekly(monday)
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
-      mass_user_rating_update: trakt_user
+      mass_user_rating_update: trakt_user #SET ACCORDINGLY IF YOU DON'T USE TRAKT
 
 #CHILDREN'S MOVIES CONFIG
   Family:
     library_name: Movies - Family
+    schedule_overlays: weekly(friday)
+    overlay_files:
+      - file: config/overlays/Top.yml
+      - remove_overlays: false
     report_path: config/missing/Kids_Movies_report.yml
-    metadata_path:
-    #- folder: config/Kids/
-    - pmm: tautulli
-      template_variables:
-        use_watched: false
-
-    overlay_path:
-    - schedule: weekly(friday)
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
+    collection_files:
+     #- folder: config/Kids/
+      - pmm: tautulli
+        template_variables:
+          use_watched: false
 
     operations:
       schedule: weekly(friday)
@@ -167,9 +181,9 @@ libraries:
       delete_not_scheduled: true
       asset_directory: config/assets
 
-    overlay_path:
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
+    overlay_files:
+      - remove_overlays: false
+      - file: config/overlays/Top.yml
 
     operations:
       schedule: weekly(monday)
@@ -180,7 +194,7 @@ libraries:
 
 settings:
   cache: true
-  cache_expiration: 60
+  cache_expiration: 30
   asset_directory: config/assets
   asset_folders: false
   asset_depth: 1
@@ -206,8 +220,8 @@ settings:
   show_missing_assets: true
   save_report: true
   tvdb_language: eng
-  ignore_ids:
-  ignore_imdb_ids:
+  ignore_ids: 689128,241226,762972,232618,156249,241239,71365,None,84200
+  ignore_imdb_ids: tt0096548,tt0214341,tt4834232,tt0088484,tt0090509,tt0092324,tt0280249,tt4093826,tt1758429,tt0203082
   item_refresh_delay: 0
   playlist_sync_to_user: all
   playlist_report: false
@@ -219,4 +233,5 @@ settings:
   run_order:
   - operations
   - metadata
+  - collections
   - overlays
