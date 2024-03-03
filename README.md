@@ -82,7 +82,7 @@ I created a simple config to generate a "Weekly Random" collection. It searches 
 #####################
 templates:
   random:
-    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/plex/Collections/Weekly%20Random%20Movies/poster.png
     sort_title: "!058_<<collection_name>>"
     summary: "A weekly collection of 10 random movies. Changes every Monday."
     sync_mode: sync
