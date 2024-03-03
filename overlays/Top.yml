@@ -5,7 +5,7 @@ templates:
     imdb_chart: top_<<library_type>>s
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/imdb-ribbon.png
+      file: config/overlays/top-bottom-right/imdb-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -16,11 +16,12 @@ templates:
   RT-Cert-Fresh:
     optional:
       - overlay_level
+    run_definition: movie
     collection_level: <<overlay_level>>
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/rotten-ribbon.png
+      file: config/overlays/top-bottom-right/rotten-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -31,11 +32,12 @@ templates:
   Meta-Must:
     optional:
       - overlay_level
+    run_definition: movie
     collection_level: <<overlay_level>>
-    mdblist_list: https://mdblist.com/lists/frostywolf/metacritic-must-see-movies/
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/metacriticmustseemovies
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/metacritic-ribbon.png
+      file: config/overlays/top-bottom-right/metacritic-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -47,12 +49,13 @@ templates:
     optional:
       - overlay_level
     collection_level: <<overlay_level>>
-    imdb_search:
-      event.winning: razzie
-      limit: 300
+    imdb_award:
+      event_id: ev0000558
+      event_year: 1981-current
+      winning: true
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/razzie-ribbon.png
+      file: config/overlays/top-bottom-right/razzie-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -63,11 +66,12 @@ templates:
   Letterboxd-1000:
     optional:
       - overlay_level
+    run_definition: movie
     collection_level: <<overlay_level>>
     letterboxd_list: https://letterboxd.com/prof_ratigan/list/top-1000-films-of-all-time-calculated/
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/letterboxd-ribbon.png
+      file: config/overlays/top-bottom-right/letterboxd-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -82,7 +86,7 @@ templates:
     imdb_chart: lowest_rated
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/images/imdb-lowest-ribbon.png
+      file: config/overlays/top-bottom-right/imdb-lowest-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -112,12 +116,13 @@ overlays:
       - name: RT-Cert-Fresh
         weight: 30
 
-  Razzie:
-    template:
-      - name: Razzie
-        weight: 5
+#  Razzie:
+#    template:
+#      - name: Razzie
+#        weight: 5
         
-  IMDb-Lowest:
-    template:
-      - name: IMDb-Lowest
-        weight: 1
+#  IMDb-Lowest:
+#    template:
+#      - name: IMDb-Lowest
+#        weight: 1
+

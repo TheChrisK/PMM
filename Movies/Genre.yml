@@ -3,22 +3,22 @@
 #####################
 templates:
   Genre:
-    file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!060_<<collection_name>>"
     collection_order: title.asc
     sync_mode: sync
   
- #####################
+#####################
 #    COLLECTIONS    #
 #####################   
 collections:
   Sports Movies:
     template:
       name: Genre
-      poster_id: Sport
-    letterboxd_list:
-      - https://letterboxd.com/vanfo/list/sports/
+      #poster_id: Sport
     reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e862a78250cfc782dacae
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/sports
     schedule: weekly(tuesday)
     summary: "A collection of sports films, themes and sporting related titles."
     sync_to_trakt_list: sports
@@ -27,15 +27,10 @@ collections:
   Spy Movies:
     template:
       name: Genre
-      poster_id: Spy
-    imdb_search:
-      list.any:
-        - ls050515402 #Best CIA, NSA, Secret Service Movies
-        - ls068127872 #Spies: Best Spy Movies:The Ultimate List
-      limit: 200
+      #poster_id: Spy
+   #reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=65c449d93b496fe24fdc0355
     trakt_list:
-      - https://trakt.tv/users/votifex/lists/espionage
-      - https://trakt.tv/users/thechrisk/lists/espionage
+      - https://trakt.tv/users/oldmankestis/lists/espionage
     schedule: weekly(tuesday)
     summary: "This collection includes Spy films, themes and government intelligence based titles."
     sync_to_trakt_list: espionage
@@ -44,15 +39,10 @@ collections:
   Stand-up Comedy:
     template:
       name: Genre
-      poster_id: Stand-Up Comedy
-    imdb_search:
-      keyword.any: stand-up-comedy,stand-up-comedy-special
-      type: tv_special
-      genre: comedy
-      sort_by: release.desc
-      limit: 200
+      #poster_id: Stand-Up Comedy
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=65c445333b496fe24fdc027a
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/stand-up-comedy
+      - https://trakt.tv/users/oldmankestis/lists/stand-up-comedy
     schedule: weekly(tuesday)
     summary: "A collection of stand-up comedy specials."
     sync_to_trakt_list: stand-up-comedy
@@ -61,9 +51,9 @@ collections:
   War Movies:
     template:
       name: Genre
-      poster_id: War
+      #poster_id: War
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/war
+      - https://trakt.tv/users/oldmankestis/lists/war
       - https://trakt.tv/users/movistapp/lists/war
     plex_search:
       all:
@@ -76,10 +66,10 @@ collections:
   Western Movies:
     template:
       name: Genre
-      poster_id: Western
+      #poster_id: Western
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/western
-      - https://trakt.tv/users/thechrisk/lists/western
+      - https://trakt.tv/users/oldmankestis/lists/western
     plex_search:
       all:
         genre: Western

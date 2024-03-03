@@ -3,7 +3,7 @@
 #####################
 templates:
   Franchise:
-    file_poster: /config/assets/posters/franchise/<<poster_id>>.jpg
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!106_<<collection_name>>"
     collection_order: release
     sync_mode: sync
@@ -15,10 +15,17 @@ templates:
 #    COLLECTIONS    #
 #####################
 collections:
+  After Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: After
+        actor: Josephine Langford
+    summary: "The After film series consists of American romantic-dramas based on the Anna Todd authored After novels. The plot centers around the positive and negative experiences of a romantic relationship between a young couple named Tessa and Hardin. Over the events of their courtship, the pair overcome their various differences, all while strengthening the plans of building a future together."
   Jurassic Park Collection:
     template: 
       name: Franchise
-      poster_id: Jurassic Park
     trakt_list:
       - https://trakt.tv/users/iamgabriel/lists/jurassic
     summary: "Jurassic Park, later also referred to as Jurassic World, is an American science fiction media franchise centered on a disastrous attempt to create a theme park of cloned dinosaurs."
@@ -26,7 +33,6 @@ collections:
   American Pie Collection:
     template: 
       name: Franchise
-      poster_id: American Pie
     trakt_list:
       - https://trakt.tv/users/jes-wan/lists/american-pie
     summary: "American Pie is a film series consisting of four sex comedy films. American Pie, the first film in the series, was released by Universal Pictures in 1999. The film became a worldwide pop culture phenomenon and gained a cult following among young people. Following American Pie, the second and third films in the series, American Pie 2 (2001) and American Wedding (2003), were released; the fourth, American Reunion, was released in 2012. A spin-off film series entitled American Pie Presents consists of five direct-to-video films that were released from 2005 to 2020. "
@@ -34,7 +40,6 @@ collections:
   Back to the Future Trilogy:
     template:
       name: Franchise
-      poster_id: BTTF
     plex_search:
       all:
         title.begins: "Back to the Future"
@@ -43,15 +48,13 @@ collections:
   Batman Collection:
     template:
       name: Franchise
-      poster_id: Batman
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/batman
+      - https://trakt.tv/users/oldmankestis/lists/batman
     summary: "This collection contains the Batman films directed by Tim Burton and Joel Schumacher between 1989 and 1997. Batman and Bruce Wayne are portayed by Michael Keaton in the first two installments, Val Kilmer in Batman Forever and George Clooney in Batman & Robin."
 
   Beverly Hills Cop Collection:
     template:
       name: Franchise
-      poster_id: Beverly Hills Cop
     plex_search:
       all:
         title: Beverly Hills Cop
@@ -60,7 +63,6 @@ collections:
   Blade Trilogy:
     template:
       name: Franchise
-      poster_id: Blade
     plex_search:
       all:
         title.begins: Blade
@@ -70,14 +72,12 @@ collections:
   Cornetto Trilogy:
     template: 
       name: Franchise
-      poster_id: Cornetto Trilogy
     imdb_id: tt0425112, tt0365748, tt1213663
     summary: "The Three Flavours Cornetto trilogy (also sometimes referred to as the Cornetto trilogy or the Blood and Ice Cream trilogy) is an anthology series of British comedic genre films directed by Edgar Wright, written by Wright and Simon Pegg, and produced by Nira Park. The series stars Pegg, Nick Frost, and Bill Nighy, with several other actors, including Rafe Spall and Martin Freeman, also appearing in all three films. The trilogy consists of Shaun of the Dead (2004), Hot Fuzz (2007), and The World's End (2013)."
 
   Die Hard Collection:
     template:
       name: Franchise
-      poster_id: Die Hard
     plex_search:
       all:
         title: Die Hard
@@ -87,14 +87,30 @@ collections:
   Dark Knight Trilogy:
     template:
       name: Franchise
-      poster_id: Dark Knight
     imdb_id: tt0372784, tt0468569, tt1345836
     summary: "The Dark Knight Trilogy consists of Batman Begins (2005), The Dark Knight (2008), and The Dark Knight Rises (2012), all directed by Christopher Nolan. Collectively grossing over $2.4 billion at the worldwide box office, the trilogy has been ranked among the greatest ever made."
+
+  Ghostbusters Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: Ghostbusters
+    summary: "The Ghostbusters franchise consists of American supernatural comedies, based on an original concept created by Dan Aykroyd and Harold Ramis in 1984. The plot ostensibly centers around a group of eccentric New York City parapsychologists who investigate, encounter, and capture ghosts, paranormal manifestations, demigods and demons. The franchise expanded with licensed action figures, books, comic books, video games, television series, theme park attractions, and other original Ghostbusters-themed products. This collection does not include the 2016 reboot directed by Robert Feig."
+
+  The Equalizer Collection:
+    template:
+      name: Franchise
+    sort_title: "!106_Equalizer_Collection"
+    plex_search:
+      all:
+        title.begins: The Equalizer
+        actor: Denzel Washington
+    summary: "The Equalizer is an American spy thriller multimedia franchise initially co-created by Michael Sloan and Richard Lindheim. It originated with a CBS television series from 1985 to 1989 starring Edward Woodward. The concept was thereafter rebooted twice with a trilogy of movies (The Equalizer in 2014, The Equalizer 2 in 2018, and The Equalizer 3 in 2023) starring Denzel Washington and a re-imagined 2021 television series, also on CBS, starring Queen Latifah as Robyn McCall. A series of novels featuring Robert McCall has been written by original co-creator Michael Sloan with the first volume published in 2014."
 
   The Godfather Trilogy:
     template:
       name: Franchise
-      poster_id: Godfather
     sort_title: "!106_Godfather Trilogy"
     plex_search:
       all:
@@ -104,7 +120,6 @@ collections:
   The Hunger Games Collection:
     template:
       name: Franchise
-      poster_id: The Hunger Games
     sort_title: "!106_Hunger Games Collection"
     plex_search:
       all:
@@ -114,7 +129,6 @@ collections:
   Indiana Jones Collection:
     template: 
       name: Franchise
-      poster_id: Indiana Jones
     trakt_list:
       - https://trakt.tv/users/rygo92/lists/indiana-jones
     summary: "Indiana Jones is an American media franchise that began in 1981 with the film Raiders of the Lost Ark. Consisting of five films and a prequel television series, along with games, comics, and tie-in novels, the series depicts the adventures of Dr. Henry Walton 'Indiana' Jones, Jr., a fictional professor of archaeology."
@@ -122,7 +136,6 @@ collections:
   Jackass Collection:
     template:
       name: Franchise
-      poster_id: Jackass
     plex_search:
       any:
         title:
@@ -133,7 +146,6 @@ collections:
   Jack Ryan Collection:
     template:
       name: Franchise
-      poster_id: Jack Ryan
     trakt_list:
       - https://trakt.tv/users/jes-wan/lists/jack-ryan
     summary: "The Jack Ryan franchise consists of American action-thriller installments, based on the fictional titular character from a series of novels written by Tom Clancy. Various actors have portrayed the role. Despite inconsistency with its lead actors and crew members, the series has been distributed solely by Paramount Pictures since its inception. Mace Neufeld has produced every film in the series, with producing partner Robert Rehme co-producing Patriot Games and Clear and Present Danger, and Lorenzo di Bonaventura co-producing Shadow Recruit. With a combined unadjusted worldwide gross of $788.4 million to date, the films constitute the 57th highest-grossing film series. The films have been nominated for four Academy Awards, winning one for Sound Effects (now Sound Editing) in The Hunt for Red October (at the 63rd Awards)."
@@ -141,7 +153,6 @@ collections:
   James Bond Collection:
     template: 
       name: Franchise
-      poster_id: James Bond 007
     trakt_list:
       - https://trakt.tv/users/michaeldibben/lists/james-bond
     summary: "The James Bond series focuses on James Bond, a fictional British Secret Service agent created in 1953 by writer Ian Fleming. The character—also known by the code number 007 (pronounced 'double-oh-seven')—has also been adapted for television, radio, comic strip, video games and film. The films are one of the longest continually running film series and have grossed over US$7.04 billion in total at the box office, making it the fifth-highest-grossing film series to date, which started in 1962 with Dr. No, starring Sean Connery as Bond. As of 2021, there have been twenty-five films in the Eon Productions series. The most recent Bond film, No Time to Die (2021), stars Daniel Craig in his fifth portrayal of Bond; he is the sixth actor to play Bond in the Eon series. There have also been two independent Bond film productions: Casino Royale (a 1967 spoof starring David Niven) and Never Say Never Again (a 1983 remake of an earlier Eon-produced film, 1965's Thunderball, both starring Connery). In 2015, the series was estimated to be worth $19.9 billion in total (based on box-office grosses, DVD sales and merchandise tie-ins), making James Bond one of the highest-grossing media franchises of all time. Casino Royale has also been adapted for television, as a one-hour show in 1954 as part of the CBS series Climax!."
@@ -149,7 +160,6 @@ collections:
   Jason Bourne Collection:
     template: 
       name: Franchise
-      poster_id: Bourne
     trakt_list:
       - https://trakt.tv/users/jjmalpz/lists/bourne
     summary: "The Bourne franchise consists of action-thriller installments based on the character Jason Bourne, created by author Robert Ludlum. The franchise includes five films and a spin-off prequel/sequel television series. The overall plot centers around Jason Bourne, a CIA assassin suffering from dissociative amnesia, portrayed by Matt Damon."
@@ -157,7 +167,6 @@ collections:
   John Wick Collection:
     template:
       name: Franchise
-      poster_id: John Wick
     plex_search:
       all:
         title: John Wick
@@ -166,7 +175,6 @@ collections:
   Lethal Weapon Collection:
     template:
       name: Franchise
-      poster_id: Lethal Weapon
     plex_search:
       all:
         title: Lethal Weapon
@@ -175,7 +183,7 @@ collections:
   "Laugh It Up, Fuzzball: The Family Guy Trilogy":
     template:
       name: Franchise
-      poster_id: Family Guy
+    file_poster: /config/assets/plex/Collections/Laugh It Up, Fuzzball The Family Guy Trilogy/poster.jpg
     plex_search:
       all:
         title: Family Guy Presents
@@ -184,7 +192,6 @@ collections:
   The Matrix Collection:
     template:
       name: Franchise
-      poster_id: Matrix
     sort_title: "!106_Matrix"
     plex_search:
       all:
@@ -194,7 +201,6 @@ collections:
   Men in Black Collection:
     template:
       name: Franchise
-      poster_id: Men in Black
     plex_search:
       all:
         title: Men in Black
@@ -203,7 +209,7 @@ collections:
   "Mission: Impossible Collection":
     template:
       name: Franchise
-      poster_id: Mission Impossible
+    file_poster: /config/assets/plex/Collections/Mission Impossible Collection/poster.jpg
     plex_search:
       all:
         title.begins: "Mission: Impossible"
@@ -213,7 +219,6 @@ collections:
   "Ocean's Collection":
     template: 
       name: Franchise
-      poster_id: Oceans
     plex_search:
       all:
         title: Ocean's
@@ -222,7 +227,6 @@ collections:
   Pirates of the Caribbean:
     template: 
       name: Franchise
-      poster_id: Pirates of the Caribbean
     trakt_list:
       - https://trakt.tv/users/bertjj/lists/pirates-of-the-caribbean
     summary: "Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the eponymous media franchise."
@@ -230,7 +234,6 @@ collections:
   The Purge Collection:
     template:
       name: Franchise
-      poster_id: Purge
     collection_order: custom
     trakt_list:
       - https://trakt.tv/users/mythicalsensai/lists/the-purge
@@ -239,7 +242,6 @@ collections:
   Rambo Collection:
     template:
       name: Franchise
-      poster_id: Rambo
     plex_search:
       any:
         title:
@@ -250,7 +252,6 @@ collections:
   Resident Evil Collection:
     template:
       name: Franchise
-      poster_id: Resident Evil
     plex_search:
       all:
         title.begins: Resident Evil
@@ -260,7 +261,6 @@ collections:
   The Chronicles of Riddick:
     template:
       name: Franchise
-      poster_id: Riddick
     plex_search:
       any:
         title:
@@ -271,7 +271,6 @@ collections:
   RoboCop Collection:
     template:
       name: Franchise
-      poster_id: Robocop
     plex_search:
       all:
         title: RoboCop
@@ -280,7 +279,6 @@ collections:
   Scream Collection:
     template:
       name: Franchise
-      poster_id: Scream
     plex_search:
       all:
         title.begins: Scream
@@ -289,7 +287,6 @@ collections:
   The Terminator Collection:
     template:
       name: Franchise
-      poster_id: Terminator
     sort_title: "!106_Terminator"
     plex_search:
       all:
@@ -299,7 +296,6 @@ collections:
   Transformers Collection:
     template:
       name: Franchise
-      poster_id: Transformers
     trakt_list:
       - https://trakt.tv/users/strangerer/lists/transformers
     summary: "Transformers is a series of science fiction action films based on the Transformers franchise of the 1980s. Michael Bay directed the first five films: Transformers (2007), Revenge of the Fallen (2009), Dark of the Moon (2011), Age of Extinction (2014), and The Last Knight (2017), and has served as a producer for subsequent films. A sixth film Bumblebee, directed by Travis Knight, was released in December 2018, while a seventh film, Rise of the Beasts, directed by Steven Caple Jr. was released in June 2023."
@@ -307,7 +303,6 @@ collections:
   The Transporter Trilogy:
     template:
       name: Franchise
-      poster_id: Transporter
     sort_title: "!106_Transporter"
     plex_search:
       all:
@@ -317,7 +312,6 @@ collections:
   The Twilight Saga:
     template:
       name: Franchise
-      poster_id: Twilight
     sort_title: "!106_Twilight Saga"
     plex_search:
       all:

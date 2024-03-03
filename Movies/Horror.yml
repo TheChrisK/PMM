@@ -3,7 +3,7 @@
 #####################
 templates:
   Genre:
-    file_poster: /config/assets/posters/genre/<<poster_id>>.jpg
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!060_<<collection_name>>"
     collection_order: title.asc
   
@@ -18,7 +18,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/movistapp/lists/horror
       - https://trakt.tv/users/g0g0/lists/horror
-      - https://trakt.tv/users/thechrisk/lists/horror
+      - https://trakt.tv/users/oldmankestis/lists/horror
     plex_search:
       any:
         genre: Horror

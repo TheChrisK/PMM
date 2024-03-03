@@ -3,7 +3,7 @@
 #####################
 templates:
   Duration:
-    file_poster: /config/assets/posters/duration/<<collection_name>>.png
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
     sort_title: "!099_<<collection_name>>"
     collection_order: alpha
     sync_mode: sync

@@ -4,6 +4,7 @@
 templates:
   City:
     file_poster: /config/assets/posters/cities/<<city>>.png
+    #file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!105_<<collection_name>>"
     collection_order: title.asc
     content_rating: R
@@ -19,34 +20,34 @@ collections:
     template: 
       name: City
       city: Chicago
-    trakt_list: https://trakt.tv/users/thechrisk/lists/chicago
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/chicago
       
   Detroit Collection:
     template: 
       name: City
       city: Detroit
-    trakt_list: https://trakt.tv/users/thechrisk/lists/detroit
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/detroit
 
   Las Vegas Collection:
     template: 
       name: City
       city: Las Vegas
-    trakt_list: https://trakt.tv/users/thechrisk/lists/las-vegas
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/las-vegas
 
   Los Angeles Collection:
     template: 
       name: City
       city: Los Angeles
-    trakt_list: https://trakt.tv/users/thechrisk/lists/los-angeles
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/los-angeles
       
   New York Collection:
     template: 
       name: City
       city: New York
-    trakt_list: https://trakt.tv/users/thechrisk/lists/new-york
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/new-york
     
   Washington D.C. Collection:
     template:
       name: City
       city: Washington DC
-    trakt_list: https://trakt.tv/users/thechrisk/lists/washington-dc
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/washington-dc

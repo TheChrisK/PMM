@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  plex-meta-manager:
+    image: meisnate12/plex-meta-manager:latest
+    container_name: plex-meta-manager
+    hostname: pmm
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=US/Central
+      - PMM_TIME=7:00
+    volumes:
+      - /plex-meta-manager:/config
+    restart: unless-stopped

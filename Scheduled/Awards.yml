@@ -3,7 +3,7 @@
 #####################
 templates:
   Awards:
-    file_poster: /config/assets/posters/award/<<award>>/best_picture_winner.jpg
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!019_<<collection_name>>"
     collection_order: release.desc
     sync_mode: sync
@@ -17,24 +17,35 @@ collections:
       name: Awards
       award: golden
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/golden-globe-best-picture-winners
+      - https://trakt.tv/users/oldmankestis/lists/golden-globe-best-picture-winners
     summary: "Winners of the Golden Globes Best Picture category."
-    schedule: range(01/01-02/01)
+    schedule: range(01/01-01/31)
  
   Critics' Choice Best Picture Winners:
     template:
       name: Awards
       award: choice
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/critics-choice-best-picture-winners
+      - https://trakt.tv/users/oldmankestis/lists/critics-choice-best-picture-winners
     summary: "Winners of the Critics' Choice Best Picture category."
-    schedule: range(01/01-02/01)
+    schedule: range(01/01-01/31)
     
   Academy Awards Best Picture Winners:
     template:
       name: Awards
-      award: oscar
+      award: oscars
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/academy-awards-best-picture-winners
+      - https://trakt.tv/users/oldmankestis/lists/academy-awards-best-picture-winners
     summary: "Winners of the Academy Awards Best Picture category."
-    schedule: range(03/01-04/01)
+    schedule: range(02/01-03/31)
+
+  Academy Award Nominees:
+    template:
+      name: Awards
+    file_poster: /config/assets/posters/award/oscars/nomination.jpg
+    collection_order: alpha
+    trakt_list: 
+      - https://trakt.tv/users/sergeyhist/lists/oscars-2024
+    summary: "Films nominated for the upcoming Academy Awards"
+    schedule: range(02/01-03/15)
+

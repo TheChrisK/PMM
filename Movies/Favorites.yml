@@ -3,7 +3,7 @@
 #####################
 templates:
   Favorites:
-    file_poster: /config/assets/posters/favorites/<<collection_name>>.png
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
     sort_title: "!059_<<collection_name>>"
     collection_order: alpha
     content_rating: R
@@ -17,12 +17,12 @@ collections:
     template:
       name: Favorites
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/chris-top
+      - https://trakt.tv/users/oldmankestis/lists/chris-top
     summary: "A collection of Chris' favorite films."
     
   Marnie's Favorites:
     template:
       name: Favorites
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/marnie-top
+      - https://trakt.tv/users/oldmankestis/lists/marnie-top
     summary: "A collection of Marnie's favorite films."

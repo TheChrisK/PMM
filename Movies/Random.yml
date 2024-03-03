@@ -3,7 +3,7 @@
 #####################
 templates:
   random:
-    file_poster: /config/assets/posters/favorites/random.png
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
     sort_title: "!058_<<collection_name>>"
     summary: "A weekly collection of 10 random movies. Changes every Monday."
     sync_mode: sync

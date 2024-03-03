@@ -3,7 +3,7 @@
 #####################
 templates:
   Holiday:
-    file_poster: /config/assets/posters/seasonal/<<poster_id>>.jpg
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
     sort_title: "!00_<<collection_name>>" #PLACES COLLECTION AT THE TOP OF THE LIST
     collection_order: alpha
     sync_mode: sync
@@ -25,7 +25,7 @@ collections:
       - https://trakt.tv/users/littlestella3/lists/christmas
       - https://trakt.tv/users/triadcool/lists/christmas
       - https://trakt.tv/users/pterisaur/lists/christmas
-      - https://trakt.tv/users/thechrisk/lists/christmas
+      - https://trakt.tv/users/oldmankestis/lists/christmas
     filters:
       title.not: 
         - Lethal Weapon
@@ -46,7 +46,7 @@ collections:
       name: Holiday
       poster_id: halloween
     trakt_list:
-      - https://trakt.tv/users/thechrisk/lists/horror
+      - https://trakt.tv/users/oldmankestis/lists/horror
       - https://trakt.tv/users/movistapp/lists/horror
       - https://trakt.tv/users/g0g0/lists/horror
       - https://trakt.tv/users/pterisaur/lists/halloween
