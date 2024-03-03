@@ -7,10 +7,14 @@ Credit to [@meisnate12](https://github.com/meisnate12) for Plex-Meta-Manager and
 
 <img src="https://github.com/TheChrisK/PMM/blob/main/Collections.png?raw=true">
 
-## Cities Collection (Movies)
+## Movies
+
+### Cities Collection
 
 This collection includes films where the city plays a character role in the story. For now this is only in the U.S.
 The films come from my own Trakt collections. If you have a movie that needs to be added, please let me know.
+
+<img src="https://github.com/TheChrisK/PMM/blob/main/cities.png?raw=true">
 
 ```yaml
 #####################
@@ -18,8 +22,7 @@ The films come from my own Trakt collections. If you have a movie that needs to 
 #####################
 templates:
   City:
-    file_poster: /config/assets/posters/cities/<<city>>.png
-    #file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/cities/<<city>>.png
     sort_title: "!105_<<collection_name>>"
     collection_order: title.asc
     content_rating: R
