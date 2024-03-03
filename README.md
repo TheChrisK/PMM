@@ -74,7 +74,7 @@ collections:
 ### Weekly Random Collection
 I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/weekly.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/weekl.png">
 
 ```yaml
 #####################
