@@ -14,7 +14,7 @@ Credit to [@meisnate12](https://github.com/meisnate12) for Plex-Meta-Manager and
 This collection includes films where the city plays a character role in the story. For now this is only in the U.S.
 The films come from my own Trakt collections. If you have a movie that needs to be added, please let me know.
 
-<img src="https://github.com/TheChrisK/PMM/blob/main/cities.png?raw=true">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/cities.png">
 
 ```yaml
 #####################
@@ -69,4 +69,36 @@ collections:
       name: City
       city: Washington DC
     trakt_list: https://trakt.tv/users/oldmankestis/lists/washington-dc
+```
+
+### Weekly Random Collection
+I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/weekly.png">
+
+```yaml
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  random:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
+    sort_title: "!058_<<collection_name>>"
+    summary: "A weekly collection of 10 random movies. Changes every Monday."
+    sync_mode: sync
+    schedule: weekly(monday)
+
+#####################
+#    COLLECTIONS    #
+##################### 
+
+collections:
+  Weekly Random Movies:
+    template:
+      name: random
+    plex_search:
+      all:
+        title.not: "`" 
+      sort_by: random
+      limit: 10
 ```
