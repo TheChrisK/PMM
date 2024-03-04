@@ -14,6 +14,8 @@ Credit to [@meisnate12](https://github.com/meisnate12) for Plex-Meta-Manager and
 This collection includes films where the city plays a character role in the story. For now this is only in the U.S.
 The films come from my own Trakt collections. If you have a movie that needs to be added, please let me know.
 
+The below posters were created by me using the PMM default template provided by [@meisnate12](https://github.com/meisnate12).
+
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/cities.png">
 
 ```yaml
