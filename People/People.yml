@@ -1,17 +1,17 @@
 #####################
 #     TEMPLATES     #
 #####################
-external_templates:
-  git: PMM/templates
-  template_variables:
-    collection_section: 17
+#external_templates:
+#  git: PMM/templates
+#  template_variables:
+#    collection_section: 17
 
 templates:
   actor_dynamic:
     default:
       sort_by: release.desc
     tmdb_person: <<value>>
-    file_poster: /config/assets/posters/people/<<key>>.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
     sort_title: <<key_name>>
     schedule: weekly(saturday)
     smart_filter:
@@ -23,30 +23,19 @@ templates:
     default:
       sort_by: release.desc
     tmdb_person: <<value>>
-    file_poster: /config/assets/posters/people/<<key>>.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
     sort_title: <<key_name>>
     schedule: weekly(saturday)
     smart_filter:
       sort_by: <<sort_by>>
       all:
         director: tmdb
-    
-  writer_dynamic:
-    default:
-      sort_by: release.desc
-    tmdb_person: <<value>>
-    file_poster: /config/assets/posters/people/<<key>>.png
-    sort_title: <<key_name>>
-    schedule: weekly(saturday)
-    smart_filter:
-      sort_by: <<sort_by>>
-      all:
-        writer: tmdb
 
+#TEMPLATE FOR ONE-OFF COLLECTIONS THAT WILL NEVER BE CREATED BY THE DYNAMIC COLLECTIONS
   Person:
     collection_order: release.desc
     tmdb_person: <<actor>>
-    file_poster: /config/assets/posters/people/<<actor>>.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<actor>>.png
     sort_title: <<actor>>
     schedule: weekly(saturday)
     plex_search:
@@ -56,6 +45,7 @@ templates:
 #############################
 #    DYNAMIC COLLECTIONS    #
 #############################
+
 dynamic_collections:
   Top Actors:
     type: actor
@@ -77,15 +67,6 @@ dynamic_collections:
       minimum: 10
       limit: 5
 
-  #Top Writers:
-    #type: writer
-    #template:
-    #  - writer_dynamic
-    #title_format: <<title>> Collection
-    #data:
-    #  depth: 2
-    #  limit: 5
-      
 #############################
 #   STANDARD COLLECTIONS    #
 #############################

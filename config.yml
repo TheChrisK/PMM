@@ -33,7 +33,7 @@ libraries:
     collection_files:
     - folder: config/Movies/
       asset_directory: config/assets/plex/Collections
-    - file: config/People/TopActors.yml
+    - file: config/People/People.yml
       asset_directory: config/assets/plex/People
     - pmm: based
       asset_directory: config/assets/plex/Collections
@@ -141,23 +141,34 @@ libraries:
     schedule_overlays: weekly(tuesday)
     overlay_files:
     - file: config/overlays/Top.yml
+    - file: config/overlays/Background.yml
     - pmm: resolution
       template_variables:
-        use_edition: false
-        use_dv: false
-        use_hdr: false
+        file: config/overlays/resolution-top-left-45deg/<<overlay_name>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        final_horizontal_offset: 0
+        final_vertical_offset: 0
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
         use_1080p: false
         use_720p: false
         use_576p: false
         use_480p: false
-        use_1080p_hdr: false
-        use_1080p_dv: false
-        use_1080p_dvhdr: false
-        use_1080p_plus: false
-        use_720p_hdr: false
-        use_720p_dv: false
-        use_720p_plus: false
-        use_720p_dvhdr: false
+        use_edition: false
+    - pmm: audio_codec
+      template_variables:
+        file: config/overlays/audio-top-left-45deg/<<key>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
     - remove_overlays: false
     operations:
       #schedule: weekly(monday)
@@ -222,6 +233,33 @@ libraries:
     settings:
       delete_not_scheduled: true
       asset_directory: config/assets/plex/TV Shows
+      
+#DENNIS WITTHUHNS SHOWS CONFIG
+  Witthuhn:
+    report_path: config/missing/Witthuhn_report.yml
+    overlay_files:
+    - remove_overlays: false
+    - file: config/overlays/Top.yml
+    - file: config/overlays/Status.yml
+    - pmm: network
+      template_variables:
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        file: config/overlays/network-top-left/<<key>>.png
+        back_color: 00
+    operations:
+      schedule: weekly(saturday)
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+    settings:
+      delete_not_scheduled: true
+      asset_directory: config/assets/plex/TV Shows
 
 #GLOBAL SETTINGS
 settings:
@@ -273,6 +311,80 @@ settings:
   - metadata
   - collections
   - overlays
-######################################################################################
-#REMAINING CONFIG REDACTED FOR SECURITY REASONS. PLEASE USE YOUR OWN API KEYS ETC....#
-######################################################################################
+webhooks:
+  error: notifiarr
+  version: notifiarr
+  run_start: notifiarr
+  run_end: notifiarr
+  changes: notifiarr
+  delete:
+plex:
+  url: http://10.252.20.14:32400
+  token: vtiXWsnDdBagZf8XS-dV
+  timeout: 60
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  db_cache: 2048
+tmdb:
+  apikey: 8b5834c3a5033a8f564d64ec32c4345a
+  language: en
+  cache_expiration: 60
+  region:
+tautulli:
+  url: http://10.252.20.14:8181
+  apikey: f92ee82df1ac4e769d6cea47f7973642
+#omdb:
+  #apikey: #########
+  #cache_expiration: 60
+mdblist:
+  apikey: ctdc8wn70taulk81l6blktmv2
+  cache_expiration: 60
+notifiarr:
+  apikey: 941b4d0d-6611-4ce6-aef1-9d383c66f308
+radarr:
+  url: http://10.252.55.12:7878
+  token: 141b3719f3db4d75bcc058abef96f62e
+  add_missing: false
+  add_existing: false
+  root_folder_path: /movies
+  monitor: true
+  availability: announced
+  quality_profile: HD-1080p
+  tag:
+  search: false
+  radarr_path:
+  plex_path:
+  upgrade_existing: false
+  ignore_cache: false
+  monitor_existing: false
+sonarr:
+  url: http://10.252.55.12:8989
+  token: a3d46c53557d4a16b6bc43df3f7cbf72
+  add_missing: false
+  add_existing: false
+  root_folder_path: /shows
+  monitor: all
+  quality_profile: HD-1080p
+  language_profile: English
+  series_type: standard
+  season_folder: true
+  tag:
+  search: false
+  cutoff_search: false
+  sonarr_path:
+  plex_path:
+  upgrade_existing: false
+  ignore_cache: false
+  monitor_existing: false
+trakt:
+  client_id: 41ae845fe03a7c0d12d933b92c64696ffba9db232549cd7fc658fb53ffe96367
+  client_secret: ca8c7aac89ebb5d006a06085b4a41eac00827532d48b43c260419f9c9ce32497
+  pin:
+  authorization:
+    access_token: 48028dfe1cc25500289da1fad27ccd9258bb63e5fd386163075200c706d414fe
+    token_type: Bearer
+    expires_in: 7889237
+    refresh_token: e1b39350f4baa404a3499852344855108be0120b9db6b64a1b90bd97313355b2
+    scope: public
+    created_at: 1708611246
