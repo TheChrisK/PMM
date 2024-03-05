@@ -105,3 +105,26 @@ collections:
       sort_by: random
       limit: 10
 ```
+
+## Overlays
+
+### Media Stinger
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png">
+
+**[Media Stinger](https://mediastinger.com)** is a website that tells you if a mid-credit or post-credit scene exists.
+
+Add the following to your library block in your `config.yml`
+
+```yaml
+    - pmm: mediastinger
+      template_variables:
+        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png
+        vertical_align: bottom
+        vertical_offset: 0
+        horizontal_align: right
+        horizontal_offset: 0
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
+```
