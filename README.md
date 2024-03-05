@@ -110,7 +110,7 @@ collections:
 
 ### Media Stinger
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/mediastinger-text.png">
 
 **[Media Stinger](https://mediastinger.com)** is a website that tells you if a mid-credit or post-credit scene exists.
 
