@@ -101,7 +101,7 @@ collections:
       name: random
     plex_search:
       all:
-        title.not: "`" 
+        title.not: "`" #USING THE BACKTICK AS A SEARCH PARAMETER SINCE NO FILM CONTAINS THIS CHARACTER
       sort_by: random
       limit: 10
 ```
