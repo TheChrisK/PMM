@@ -1,0 +1,57 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Holiday:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    sort_title: "!00_<<collection_name>>" #PLACES COLLECTION AT THE TOP OF THE LIST
+    collection_order: alpha
+    sync_mode: sync
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    delete_not_scheduled: true
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Christmas Collection:
+    template:
+      name: Holiday
+      poster_id: christmas
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=655666f7f5d2acfadaa0a530
+    trakt_list:
+      - https://trakt.tv/users/littlestella3/lists/christmas
+      - https://trakt.tv/users/triadcool/lists/christmas
+      - https://trakt.tv/users/pterisaur/lists/christmas
+      - https://trakt.tv/users/oldmankestis/lists/christmas
+    filters:
+      title.not: 
+        - Lethal Weapon
+        - The Ice Harvest
+        - Life with Mikey
+        - Two Night Stand
+        - Brazil
+        - Spencer
+        - Grumpy Old Men
+        - Iron Man 3
+        - Planes, Trains & Automobiles
+        - Kiss Kiss Bang Bang
+    schedule: range(11/20-12/28)
+    summary: "Christmas and holiday themed movies. Movies that take place during the Holidays are included."
+
+  Halloween and Horror Collection:
+    template:
+      name: Holiday
+      poster_id: halloween
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/horror
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/pterisaur/lists/halloween
+    plex_search:
+      any:
+        genre: Horror
+    schedule: range(09/15-10/31)
+    summary: "This collection includes Horror films, themes and Halloween based titles."

@@ -1,0 +1,12 @@
+*.bak
+*.cache
+UUID
+logs/meta.log.*
+*.log
+*.log*
+*report.yml
+overlays/Kids Movies Original Posters/
+overlays/Movies Original Posters/
+overlays/TV Shows Original Posters/
+overlays/Family Original Posters/
+overlays/4K Movies Original Posters/

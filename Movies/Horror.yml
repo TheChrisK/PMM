@@ -1,0 +1,29 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Genre:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    sort_title: "!060_<<collection_name>>"
+    collection_order: title.asc
+  
+ #####################
+#    COLLECTIONS    #
+#####################   
+collections:
+  Horror Movies:
+    template:
+      name: Genre
+      poster_id: Horror
+    trakt_list:
+      - https://trakt.tv/users/movistapp/lists/horror
+      - https://trakt.tv/users/g0g0/lists/horror
+      - https://trakt.tv/users/oldmankestis/lists/horror
+    plex_search:
+      any:
+        genre: Horror
+    schedule: range(11/01-09/14)
+    delete_not_scheduled: true
+    summary: "This collection includes Horror films, themes and Halloween based titles."
+    sync_to_trakt_list: horror
+    sync_missing_to_trakt_list: true

@@ -1,0 +1,24 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  random:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
+    sort_title: "!058_<<collection_name>>"
+    summary: "A weekly collection of 10 random movies. Changes every Monday."
+    sync_mode: sync
+    schedule: weekly(monday)
+
+#####################
+#    COLLECTIONS    #
+##################### 
+
+collections:
+  Weekly Random Movies:
+    template:
+      name: random
+    plex_search:
+      all:
+        title.not: "`" 
+      sort_by: random
+      limit: 10

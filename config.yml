@@ -1,0 +1,320 @@
+libraries:
+#MOVIE LIBRARY CONFIG FOR SCHEDULED COLLECTIONS TO BE DELETED WHEN OUT OF SEASON
+  Scheduled:
+    library_name: Movies
+    report_path: config/missing/Scheduled_report.yml
+    template_variables:
+      use_separator: false
+    collection_files:
+    - folder: /config/Scheduled/
+      asset_directory: config/assets/plex/Collections
+    - pmm: year
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        limit: 25
+        sort_by: critic_rating.desc
+        data:
+          starting: current_year-1
+          ending: current_year-1
+        summary_format: Top <<limit>> movies of <<key>>. Sorted by critic rating.
+        collection_section: '010'
+        schedule: range(01/01-02/28)
+    settings:
+      delete_not_scheduled: true
+      asset_directory: config/assets/plex/Movies
+
+ #MAIN MOVIE LIBRARY CONFIG
+  Movies:
+    report_path: config/missing/Movies_report.yml
+    schedule_overlays: weekly(tuesday)
+    remove_overlays: false
+    template_variables:
+      use_separator: false
+    collection_files:
+    - folder: config/Movies/
+      asset_directory: config/assets/plex/Collections
+    - file: config/People/People.yml
+      asset_directory: config/assets/plex/People
+    - pmm: based
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        summary_true_story: Films based on or inspired by a true story.
+        summary_book: Films based on or inspired by a book.
+        summary_video_game: Films based on or inspired by a video game.
+        summary_comic: Films based on or inspired by a comic.
+        schedule: weekly(sunday)
+    - pmm: decade
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        exclude:
+        - 1960
+        limit: 100
+        limit_1970: 25
+        summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
+        summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic rating.
+        minimum_items: 25
+    - pmm: genre
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        sort_by: title.asc
+        exclude:
+        - Horror #IN SCHEDULED LIBRARY
+        - War #GENRE.YML
+        - Western #GENRE.YML
+        - Spy #GENRE.YML
+        - Sport #GENRE.YML
+        minimum_items: 10
+    - pmm: imdb
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        use_lowest: false
+        order_top: 3
+        order_popular: 3
+    - pmm: seasonal
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        emoji: ''
+        schedule_easter: range(03/20-04/05)
+        schedule_independence: range(06/28-07/05)
+        schedule_labor: range(09/01-09/05)
+        schedule_thanksgiving: range(11/01-11/24)
+        schedule_veteran: range(11/01-11/12)
+        schedule_valentine: range(02/05-02/15)
+        exclude:
+        - christmas #IN SCHEDULED LIBRARY
+        - halloween #IN SCHEDULED LIBRARY
+        - latinx #NOT ENOUGH FILMS
+        - women #INOP DUE TO IMDB CHANGES
+    - pmm: tautulli
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        use_watched: false
+        list_days: 30
+        list_size: 25
+        summary_popular: A collection of the most watched movies on this Plex server.
+        order_popular: 1
+    - pmm: trakt
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        use_collected: false
+        use_recommended: false
+        use_watched: false
+        order_popular: 4
+        order_trending: 4
+        schedule: weekly(monday)
+    - pmm: universe
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        trakt_list_mcu: https://trakt.tv/users/oldmankestis/lists/marvel-cinematic-universe
+        trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
+        trakt_list_trek: https://trakt.tv/users/oldmankestis/lists/star-trek
+        trakt_list_avp: https://trakt.tv/users/oldmankestis/lists/alien-predator
+        trakt_list_xmen: https://trakt.tv/users/oldmankestis/lists/x-men-collection
+        summary_xmen: The X-Men Collection. Sorted in chronological order.
+        summary_mcu: The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. Sorted in chronological order.
+        minimum_items: 3
+        append_data:
+          star: Star Wars Saga
+          trek: Star Trek Universe
+          xmen: X-Men Collection
+        exclude:
+        - rocky
+        collection_section: '106'
+    overlay_files:
+    - file: config/overlays/Top.yml
+    - remove_overlays: false
+    operations:
+      #schedule: weekly(monday)
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: trakt_user
+    settings:
+      asset_directory: config/assets/plex/Movies
+      asset_depth: 2
+      show_missing_assets: false
+
+#4K MOVIES CONFIG
+  4K Movies:
+    report_path: config/missing/4K_Movies_report.yml
+    schedule_overlays: weekly(tuesday)
+    overlay_files:
+    - file: config/overlays/Top.yml
+    - file: config/overlays/Background.yml
+    - pmm: resolution
+      template_variables:
+        file: config/overlays/resolution-top-left-45deg/<<overlay_name>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        final_horizontal_offset: 0
+        final_vertical_offset: 0
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
+        use_1080p: false
+        use_720p: false
+        use_576p: false
+        use_480p: false
+        use_edition: false
+    - pmm: audio_codec
+      template_variables:
+        file: config/overlays/audio-top-left-45deg/<<key>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
+    - remove_overlays: false
+    operations:
+      #schedule: weekly(monday)
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: trakt_user
+    settings:
+      asset_directory: config/assets/plex/4K Movies
+      show_missing_assets: false
+
+#CHILDREN'S MOVIES CONFIG
+  Family:
+    schedule_overlays: weekly(friday)
+    overlay_files:
+    - file: config/overlays/Top.yml
+    - remove_overlays: false
+    report_path: config/missing/Kids_Movies_report.yml
+    collection_files:
+     #- folder: config/Kids/
+    - pmm: tautulli
+      template_variables:
+        use_watched: false
+        asset_directory: config/assets/plex/Collections
+    operations:
+      schedule: weekly(monday|wednesday|friday)
+      #mass_poster_update: tmdb
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: trakt_user
+    settings:
+      asset_directory: config/assets/plex/Family
+      show_missing_assets: false
+
+#TV SHOWS CONFIG
+  TV Shows:
+    report_path: config/missing/Shows_report.yml
+    overlay_files:
+    - remove_overlays: false
+    - file: config/overlays/Top.yml
+    - file: config/overlays/Status.yml
+    - pmm: network
+      template_variables:
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        file: config/overlays/network-top-left/<<key>>.png
+        back_color: 00
+    operations:
+      #schedule: weekly(saturday)
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+      mass_user_rating_update: trakt_user
+    settings:
+      delete_not_scheduled: true
+      asset_directory: config/assets/plex/TV Shows
+      
+#DENNIS WITTHUHNS SHOWS CONFIG
+  Witthuhn:
+    report_path: config/missing/Witthuhn_report.yml
+    overlay_files:
+    - remove_overlays: false
+    - file: config/overlays/Top.yml
+    - file: config/overlays/Status.yml
+    - pmm: network
+      template_variables:
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        file: config/overlays/network-top-left/<<key>>.png
+        back_color: 00
+    operations:
+      schedule: weekly(saturday)
+      assets_for_all: true
+      mass_genre_update: tmdb
+      mass_audience_rating_update: imdb
+      mass_critic_rating_update: mdb_tomatoes
+    settings:
+      delete_not_scheduled: true
+      asset_directory: config/assets/plex/TV Shows
+
+#GLOBAL SETTINGS
+settings:
+  cache: true
+  cache_expiration: 30
+  asset_directory:
+  - config/assets
+  - config/assets/plex/Movies
+  - config/assets/plex/TV Shows
+  - config/assets/plex/Family
+  - config/assets/plex/4K Movies
+  - config/assets/plex/Collections
+  asset_folders: true
+  asset_depth: 2
+  create_asset_folders: true
+  prioritize_assets: true
+  dimensional_asset_rename: false
+  download_url_assets: true
+  show_missing_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: false
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_filtered: false
+  show_options: false
+  show_missing: false
+  save_report: true
+  tvdb_language: eng
+  ignore_ids: 689128,241226,762972,232618,156249,241239,71365,None,84200,40714,520261,99254,817404,181911,67037,723597,363731,377531,481501,768354,1040227
+  ignore_imdb_ids: tt0096548,tt0214341,tt4834232,tt0088484,tt0090509,tt0092324,tt0280249,tt4093826,tt1758429,tt0203082
+  item_refresh_delay: 0
+  playlist_sync_to_user: all
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  check_nightly: true
+  show_unconfigured: true
+  playlist_exclude_users:
+  run_order:
+  - operations
+  - metadata
+  - collections
+  - overlays
+webhooks:
+  error: notifiarr
+  version: notifiarr
+  run_start: notifiarr
+  run_end: notifiarr
+  changes: notifiarr
+  delete:

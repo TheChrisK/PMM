@@ -1,0 +1,79 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Genre:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    sort_title: "!060_<<collection_name>>"
+    collection_order: title.asc
+    sync_mode: sync
+  
+#####################
+#    COLLECTIONS    #
+#####################   
+collections:
+  Sports Movies:
+    template:
+      name: Genre
+      #poster_id: Sport
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=654e862a78250cfc782dacae
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/sports
+    schedule: weekly(tuesday)
+    summary: "A collection of sports films, themes and sporting related titles."
+    sync_to_trakt_list: sports
+    sync_missing_to_trakt_list: true
+
+  Spy Movies:
+    template:
+      name: Genre
+      #poster_id: Spy
+   #reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=65c449d93b496fe24fdc0355
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/espionage
+    schedule: weekly(tuesday)
+    summary: "This collection includes Spy films, themes and government intelligence based titles."
+    sync_to_trakt_list: espionage
+    sync_missing_to_trakt_list: true
+    
+  Stand-up Comedy:
+    template:
+      name: Genre
+      #poster_id: Stand-Up Comedy
+    reciperr_list: https://reciperr.com/api/recipe/list/params?recipeMetadataId=65c445333b496fe24fdc027a
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/stand-up-comedy
+    schedule: weekly(tuesday)
+    summary: "A collection of stand-up comedy specials."
+    sync_to_trakt_list: stand-up-comedy
+    sync_missing_to_trakt_list: true
+
+  War Movies:
+    template:
+      name: Genre
+      #poster_id: War
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/war
+      - https://trakt.tv/users/movistapp/lists/war
+    plex_search:
+      all:
+        genre: War
+    schedule: weekly(tuesday)
+    summary: "This collection includes War films, themes and military based titles."
+    sync_to_trakt_list: war
+    sync_missing_to_trakt_list: true
+   
+  Western Movies:
+    template:
+      name: Genre
+      #poster_id: Western
+    trakt_list:
+      - https://trakt.tv/users/movistapp/lists/western
+      - https://trakt.tv/users/oldmankestis/lists/western
+    plex_search:
+      all:
+        genre: Western
+    schedule: weekly(tuesday)
+    summary: "A collection of Western films, themes and cowboy related titles."
+    sync_to_trakt_list: western
+    sync_missing_to_trakt_list: true

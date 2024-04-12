@@ -1,0 +1,88 @@
+#####################
+#     TEMPLATES     #
+#####################
+#external_templates:
+#  git: PMM/templates
+#  template_variables:
+#    collection_section: 17
+
+templates:
+  actor_dynamic:
+    default:
+      sort_by: release.desc
+    tmdb_person: <<value>>
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
+    sort_title: <<key_name>>
+    schedule: weekly(saturday)
+    smart_filter:
+      sort_by: <<sort_by>>
+      all:
+        actor: tmdb
+
+  director_dynamic:
+    default:
+      sort_by: release.desc
+    tmdb_person: <<value>>
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
+    sort_title: <<key_name>>
+    schedule: weekly(saturday)
+    smart_filter:
+      sort_by: <<sort_by>>
+      all:
+        director: tmdb
+
+#TEMPLATE FOR ONE-OFF COLLECTIONS THAT WILL NEVER BE CREATED BY THE DYNAMIC COLLECTIONS
+  Person:
+    collection_order: release.desc
+    tmdb_person: <<actor>>
+    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<actor>>.png
+    sort_title: <<actor>>
+    schedule: weekly(saturday)
+    plex_search:
+      any:
+        actor: <<actor>>
+
+#############################
+#    DYNAMIC COLLECTIONS    #
+#############################
+
+dynamic_collections:
+  Top Actors:
+    type: actor
+    template:
+      - actor_dynamic
+    title_format: <<title>> Collection
+    data:
+      depth: 5
+      minimum: 10
+      limit: 200
+
+  Top Directors:
+    type: director
+    template:
+      - director_dynamic
+    title_format: <<title>> Collection
+    data:
+      depth: 1
+      minimum: 10
+      limit: 5
+
+#############################
+#   STANDARD COLLECTIONS    #
+#############################
+
+collections:
+  Chris Farley Collection:
+    template:
+      name: Person
+      actor: "Chris Farley"
+
+  Ray Liotta Collection:
+    template:
+      name: Person
+      actor: "Ray Liotta"
+
+  Michael Jackson Collection:
+    template:
+      name: Person
+      actor: "Michael Jackson"

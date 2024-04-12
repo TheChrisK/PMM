@@ -1,0 +1,53 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  City:
+    file_poster: /config/assets/posters/cities/<<city>>.png
+    #file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    sort_title: "!105_<<collection_name>>"
+    collection_order: title.asc
+    content_rating: R
+    summary: "A selection of films where the City of <<city>> plays a character role."
+    sync_mode: sync
+    schedule: weekly(saturday)
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  Chicago Collection:
+    template: 
+      name: City
+      city: Chicago
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/chicago
+      
+  Detroit Collection:
+    template: 
+      name: City
+      city: Detroit
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/detroit
+
+  Las Vegas Collection:
+    template: 
+      name: City
+      city: Las Vegas
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/las-vegas
+
+  Los Angeles Collection:
+    template: 
+      name: City
+      city: Los Angeles
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/los-angeles
+      
+  New York Collection:
+    template: 
+      name: City
+      city: New York
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/new-york
+    
+  Washington D.C. Collection:
+    template:
+      name: City
+      city: Washington DC
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/washington-dc

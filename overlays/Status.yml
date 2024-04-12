@@ -1,0 +1,58 @@
+templates:
+  Status:
+    default:
+      overlay: <<overlay_name>>
+    run_definition: show
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/status-top-left/<<status>>.png
+      group: status
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: left
+      vertical_offset: 0
+      vertical_align: top
+
+overlays:
+  Airing:
+    template:
+      name: Status
+      group: status
+      weight: 900
+      status: airing
+    tmdb_on_the_air: 1000
+
+  Returning:
+    template:
+      name: Status
+      group: status
+      weight: 800
+      status: returning
+    plex_all: true
+    filters:
+      tmdb_status:
+         - returning
+         - planned
+         - production
+
+  Ended:
+    template:
+      name: Status
+      group: status
+      weight: 600
+      status: ended
+    plex_all: true
+    filters:
+      tmdb_status:
+         - ended
+
+  Cancelled:
+    template:
+      name: Status
+      group: status
+      weight: 700
+      status: cancelled
+    plex_all: true
+    filters:
+      tmdb_status:
+         - canceled

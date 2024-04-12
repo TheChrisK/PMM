@@ -1,0 +1,320 @@
+#####################
+#     TEMPLATES     #
+#####################
+templates:
+  Franchise:
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.jpg
+    sort_title: "!106_<<collection_name>>"
+    collection_order: release
+    sync_mode: sync
+    schedule:
+      - weekly(sunday)
+      - weekly(thursday)
+
+#####################
+#    COLLECTIONS    #
+#####################
+collections:
+  After Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: After
+        actor: Josephine Langford
+    summary: "The After film series consists of American romantic-dramas based on the Anna Todd authored After novels. The plot centers around the positive and negative experiences of a romantic relationship between a young couple named Tessa and Hardin. Over the events of their courtship, the pair overcome their various differences, all while strengthening the plans of building a future together."
+  Jurassic Park Collection:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/iamgabriel/lists/jurassic
+    summary: "Jurassic Park, later also referred to as Jurassic World, is an American science fiction media franchise centered on a disastrous attempt to create a theme park of cloned dinosaurs."
+ 
+  American Pie Collection:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/jes-wan/lists/american-pie
+    summary: "American Pie is a film series consisting of four sex comedy films. American Pie, the first film in the series, was released by Universal Pictures in 1999. The film became a worldwide pop culture phenomenon and gained a cult following among young people. Following American Pie, the second and third films in the series, American Pie 2 (2001) and American Wedding (2003), were released; the fourth, American Reunion, was released in 2012. A spin-off film series entitled American Pie Presents consists of five direct-to-video films that were released from 2005 to 2020. "
+    
+  Back to the Future Trilogy:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: "Back to the Future"
+    summary: "Back to the Future is an American science fiction comedy franchise created by Robert Zemeckis and Bob Gale. The franchise follows the adventures of a high school student, Marty McFly, and an eccentric scientist, Dr. Emmett 'Doc' Brown, as they use a DeLorean time machine to time travel to different periods in the history of the fictional town of Hill Valley, California."
+
+  Batman Collection:
+    template:
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/oldmankestis/lists/batman
+    summary: "This collection contains the Batman films directed by Tim Burton and Joel Schumacher between 1989 and 1997. Batman and Bruce Wayne are portayed by Michael Keaton in the first two installments, Val Kilmer in Batman Forever and George Clooney in Batman & Robin."
+
+  Beverly Hills Cop Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: Beverly Hills Cop
+    summary: "Beverly Hills Cop is a film franchise of American action comedy films and an unaired television pilot based on characters created by Daniel Petrie, Jr. and Danilo Bach. The films star Eddie Murphy as Axel Foley, a street-smart Detroit cop who travels to Beverly Hills, California to investigate a crime, even though it is out of his jurisdiction. There, he meets Detective Billy Rosewood (Judge Reinhold), Sergeant John Taggart (John Ashton), and Lieutenant Andrew Bogomil (Ronny Cox). Ashton and Cox do not appear in Beverly Hills Cop III. Murphy and Reinhold are the only actors who appear in all four films. Harold Faltermeyer produced the 'Axel F' theme song heard throughout the series. The first three films have been distributed by Paramount Pictures, while Netflix is set to distribute the fourth film. The films have grossed a total of $712 million at the worldwide box office."
+
+  Blade Trilogy:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: Blade
+        actor: Wesley Snipes
+    summary: "Blade is a film and television franchise based on the Marvel Comics character of the same name, starring Wesley Snipes as Blade in the original trilogy, and Sticky Fingaz in the television series. The original trilogy was directed by Stephen Norrington, Guillermo del Toro and David S. Goyer, the latter of whom also wrote the films and served as a co-writer for the first and last two episodes of the television series. The original films and television series were distributed by New Line Cinema from 1998 to 2006."
+    
+  Cornetto Trilogy:
+    template: 
+      name: Franchise
+    imdb_id: tt0425112, tt0365748, tt1213663
+    summary: "The Three Flavours Cornetto trilogy (also sometimes referred to as the Cornetto trilogy or the Blood and Ice Cream trilogy) is an anthology series of British comedic genre films directed by Edgar Wright, written by Wright and Simon Pegg, and produced by Nira Park. The series stars Pegg, Nick Frost, and Bill Nighy, with several other actors, including Rafe Spall and Martin Freeman, also appearing in all three films. The trilogy consists of Shaun of the Dead (2004), Hot Fuzz (2007), and The World's End (2013)."
+
+  Die Hard Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: Die Hard
+        actor: Bruce Willis
+    summary: "Die Hard is an American action film series that originated with Roderick Thorp's 1979 novel Nothing Lasts Forever. All five films revolve around the main character of John McClane, a New York City/Los Angeles police detective who continually finds himself in the middle of a crisis where he is the only hope against disaster. The films have grossed a combined $1.4 billion worldwide."
+
+  Dark Knight Trilogy:
+    template:
+      name: Franchise
+    imdb_id: tt0372784, tt0468569, tt1345836
+    summary: "The Dark Knight Trilogy consists of Batman Begins (2005), The Dark Knight (2008), and The Dark Knight Rises (2012), all directed by Christopher Nolan. Collectively grossing over $2.4 billion at the worldwide box office, the trilogy has been ranked among the greatest ever made."
+
+  Ghostbusters Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: Ghostbusters
+    summary: "The Ghostbusters franchise consists of American supernatural comedies, based on an original concept created by Dan Aykroyd and Harold Ramis in 1984. The plot ostensibly centers around a group of eccentric New York City parapsychologists who investigate, encounter, and capture ghosts, paranormal manifestations, demigods and demons. The franchise expanded with licensed action figures, books, comic books, video games, television series, theme park attractions, and other original Ghostbusters-themed products. This collection does not include the 2016 reboot directed by Robert Feig."
+
+  The Equalizer Collection:
+    template:
+      name: Franchise
+    sort_title: "!106_Equalizer_Collection"
+    plex_search:
+      all:
+        title.begins: The Equalizer
+        actor: Denzel Washington
+    summary: "The Equalizer is an American spy thriller multimedia franchise initially co-created by Michael Sloan and Richard Lindheim. It originated with a CBS television series from 1985 to 1989 starring Edward Woodward. The concept was thereafter rebooted twice with a trilogy of movies (The Equalizer in 2014, The Equalizer 2 in 2018, and The Equalizer 3 in 2023) starring Denzel Washington and a re-imagined 2021 television series, also on CBS, starring Queen Latifah as Robyn McCall. A series of novels featuring Robert McCall has been written by original co-creator Michael Sloan with the first volume published in 2014."
+
+  The Godfather Trilogy:
+    template:
+      name: Franchise
+    sort_title: "!106_Godfather Trilogy"
+    plex_search:
+      all:
+        title.begins: The Godfather
+    summary: "The Godfather is a trilogy of American crime films directed by Francis Ford Coppola inspired by the 1969 novel of the same name by Italian American author Mario Puzo. The films follow the trials of the fictional Italian American mafia Corleone family whose patriarch, Vito Corleone, rises to be a major figure in American organized crime. His youngest son, Michael Corleone, becomes his successor. The films were distributed by Paramount Pictures and released in 1972, 1974, and 1990. The series achieved success at the box office, with the films earning between $430 and $517 million worldwide. The Godfather and The Godfather Part II are both seen by many as two of the greatest films of all time. The series is heavily awarded, winning 9 out of 28 total Academy Award nominations."
+
+  The Hunger Games Collection:
+    template:
+      name: Franchise
+    sort_title: "!106_Hunger Games Collection"
+    plex_search:
+      all:
+        title.begins: The Hunger Games
+    summary: "The Hunger Games film series is composed of science fiction dystopian adventure films, based on The Hunger Games trilogy of novels by American author Suzanne Collins. The films are distributed by Lionsgate and produced by Nina Jacobson and Jon Kilik. The series feature an ensemble cast including Jennifer Lawrence as Katniss Everdeen, Josh Hutcherson as Peeta Mellark, Liam Hemsworth as Gale Hawthorne, Woody Harrelson as Haymitch Abernathy, Elizabeth Banks as Effie Trinket, Stanley Tucci as Caesar Flickerman, and Donald Sutherland as President Snow."
+
+  Indiana Jones Collection:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/rygo92/lists/indiana-jones
+    summary: "Indiana Jones is an American media franchise that began in 1981 with the film Raiders of the Lost Ark. Consisting of five films and a prequel television series, along with games, comics, and tie-in novels, the series depicts the adventures of Dr. Henry Walton 'Indiana' Jones, Jr., a fictional professor of archaeology."
+
+  Jackass Collection:
+    template:
+      name: Franchise
+    plex_search:
+      any:
+        title:
+          - Jackass
+          - Bad Grandpa
+    summary: "Jackass is an American reality comedy franchise created by Jeff Tremaine, Spike Jonze, and Johnny Knoxville. It originally aired as a television series for three short seasons on MTV between October 2000 and August 2001, with reruns extending into 2002. The show featured a cast of nine friends carrying out stunts and pranks on each other and the public. The cast included Johnny Knoxville, Bam Margera, Chris Pontius, Dave England, Ryan Dunn, Steve-O, Jason 'Wee Man' Acuña, Ehren McGhehey and Preston Lacy."
+
+  Jack Ryan Collection:
+    template:
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/jes-wan/lists/jack-ryan
+    summary: "The Jack Ryan franchise consists of American action-thriller installments, based on the fictional titular character from a series of novels written by Tom Clancy. Various actors have portrayed the role. Despite inconsistency with its lead actors and crew members, the series has been distributed solely by Paramount Pictures since its inception. Mace Neufeld has produced every film in the series, with producing partner Robert Rehme co-producing Patriot Games and Clear and Present Danger, and Lorenzo di Bonaventura co-producing Shadow Recruit. With a combined unadjusted worldwide gross of $788.4 million to date, the films constitute the 57th highest-grossing film series. The films have been nominated for four Academy Awards, winning one for Sound Effects (now Sound Editing) in The Hunt for Red October (at the 63rd Awards)."
+
+  James Bond Collection:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/michaeldibben/lists/james-bond
+    summary: "The James Bond series focuses on James Bond, a fictional British Secret Service agent created in 1953 by writer Ian Fleming. The character—also known by the code number 007 (pronounced 'double-oh-seven')—has also been adapted for television, radio, comic strip, video games and film. The films are one of the longest continually running film series and have grossed over US$7.04 billion in total at the box office, making it the fifth-highest-grossing film series to date, which started in 1962 with Dr. No, starring Sean Connery as Bond. As of 2021, there have been twenty-five films in the Eon Productions series. The most recent Bond film, No Time to Die (2021), stars Daniel Craig in his fifth portrayal of Bond; he is the sixth actor to play Bond in the Eon series. There have also been two independent Bond film productions: Casino Royale (a 1967 spoof starring David Niven) and Never Say Never Again (a 1983 remake of an earlier Eon-produced film, 1965's Thunderball, both starring Connery). In 2015, the series was estimated to be worth $19.9 billion in total (based on box-office grosses, DVD sales and merchandise tie-ins), making James Bond one of the highest-grossing media franchises of all time. Casino Royale has also been adapted for television, as a one-hour show in 1954 as part of the CBS series Climax!."
+
+  Jason Bourne Collection:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/jjmalpz/lists/bourne
+    summary: "The Bourne franchise consists of action-thriller installments based on the character Jason Bourne, created by author Robert Ludlum. The franchise includes five films and a spin-off prequel/sequel television series. The overall plot centers around Jason Bourne, a CIA assassin suffering from dissociative amnesia, portrayed by Matt Damon."
+
+  John Wick Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: John Wick
+    summary: "John Wick is an American neo-noir action thriller media franchise created by Derek Kolstad and centered on John Wick, a former hitman who is forced back into the criminal underworld he had previously abandoned."
+
+  Lethal Weapon Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: Lethal Weapon
+    summary: "Lethal Weapon is an American buddy cop action-comedy media franchise created by Shane Black. It focuses on two Los Angeles Police Department (LAPD) detectives, Martin Riggs and Roger Murtaugh. The franchise consists of a series of four films released between 1987 and 1998 and a television series which aired from 2016 to 2019. The four films were directed by Richard Donner and also share many of the same core cast members, while the television series is a reboot with different actors. Although the first film was not explicitly a comedy, the later films and the television series gradually became comedic in nature."
+
+  "Laugh It Up, Fuzzball: The Family Guy Trilogy":
+    template:
+      name: Franchise
+    file_poster: /config/assets/plex/Collections/Laugh It Up, Fuzzball The Family Guy Trilogy/poster.jpg
+    plex_search:
+      all:
+        title: Family Guy Presents
+    summary: "Laugh It Up, Fuzzball: The Family Guy Trilogy consists of three episodes of the American animated sitcom Family Guy. The episodes are a crossover and parody retelling of the original Star Wars trilogy Star Wars (1977), The Empire Strikes Back (1980), and Return of the Jedi (1983). The first episode, 'Blue Harvest' (2007), was released to commemorate the original film's 30th anniversary. Due to its success, it was followed by two direct-to-video sequels: 'Something, Something, Something, Dark Side' (2010) and 'It's a Trap!' (2011), which were subsequently aired on television in edited versions, omitting most profanity and sexual references. The trilogy was released on Blu-ray and DVD in the United States on December 21, 2010. Its title comes from a phrase Han Solo said to Chewbacca in The Empire Strikes Back as the latter was laughing at the former."
+  
+  The Matrix Collection:
+    template:
+      name: Franchise
+    sort_title: "!106_Matrix"
+    plex_search:
+      all:
+        title: The Matrix
+    summary: "The Matrix is an American media franchise consisting of four feature films, beginning with The Matrix (1999) and continuing with three sequels, The Matrix Reloaded, The Matrix Revolutions (both 2003), and The Matrix Resurrections (2021). The first three films were written and directed by the Wachowskis and produced by Joel Silver. The screenplay for the fourth film was written by David Mitchell and Aleksandar Hemon, was directed by Lana Wachowski, and was produced by Grant Hill, James McTeigue, and Lana Wachowski. The franchise is owned by Warner Bros., which distributed the films along with Village Roadshow Pictures. The latter, along with Silver Pictures, are the two production companies that worked on the first three films."
+
+  Men in Black Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: Men in Black
+    summary: "Men in Black (also known as MIB) is a series of American science fiction action comedy films directed by Barry Sonnenfeld, and based on the Malibu / Marvel comic book series The Men in Black by Lowell Cunningham, which was itself based on the conspiracy theory. The first film, Men in Black, was released in 1997, the second film, Men in Black II in 2002, the third film, Men in Black 3 in 2012, and the fourth film, a spin-off Men in Black: International in 2019. Amblin Entertainment and MacDonald/Parkes Productions produced all four films and distributed through Columbia Pictures."
+
+  "Mission: Impossible Collection":
+    template:
+      name: Franchise
+    file_poster: /config/assets/plex/Collections/Mission Impossible Collection/poster.jpg
+    plex_search:
+      all:
+        title.begins: "Mission: Impossible"
+        actor: Tom Cruise
+    summary: "Mission: Impossible is a series of American action spy films based on the television series of the same name created by Bruce Geller. The series is mainly produced by and stars Tom Cruise, who plays Ethan Hunt, an agent of the Impossible Missions Force (IMF). The films have been directed, written, and scored by various filmmakers and crew, while incorporating musical themes from the original series by Lalo Schifrin."
+
+  "Ocean's Collection":
+    template: 
+      name: Franchise
+    plex_search:
+      all:
+        title: Ocean's
+    summary: "Ocean's Eleven is a 2001 American heist comedy film directed by Steven Soderbergh from a screenplay by Ted Griffin. The first installment in the Ocean's film trilogy, it is a remake of the 1960 Rat Pack film of the same name. The film features an ensemble cast including George Clooney, Matt Damon, Andy García, Brad Pitt, Julia Roberts, Casey Affleck, Scott Caan, Elliott Gould, Bernie Mac, Qin Shaobo, and Carl Reiner. The story follows friends Danny Ocean (Clooney) and Rusty Ryan (Pitt), who plan a heist of $160 million from casino owner Terry Benedict (García), the lover of Ocean's ex-wife Tess (Roberts). Ocean's Eleven was theatrically released in the United States on December 7, 2001, by Warner Bros. Pictures. The film received positive reviews from critics and was a box-office hit, grossing $450.7 million worldwide and becoming the fifth-highest-grossing film of 2001. Soderbergh directed two sequels, Ocean's Twelve in 2004 and Ocean's Thirteen in 2007. Ocean's 8, a spin-off with an all-female lead cast, was released in 2018."
+
+  Pirates of the Caribbean:
+    template: 
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/bertjj/lists/pirates-of-the-caribbean
+    summary: "Pirates of the Caribbean is an American fantasy supernatural swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the eponymous media franchise."
+
+  The Purge Collection:
+    template:
+      name: Franchise
+    collection_order: custom
+    trakt_list:
+      - https://trakt.tv/users/mythicalsensai/lists/the-purge
+    summary: "The Purge is an American anthology media franchise centered on a series of dystopian action horror films distributed by Universal Pictures and produced by Blumhouse Productions and Platinum Dunes, which are written and in some cases also directed by James DeMonaco, who was inspired by a Star Trek: The Original Series episode, 'The Return of the Archons'. The films present a seemingly normal, crime-free America in the near-future. However, the country is a dystopia which observes an annual event known as 'the Purge', in which all crime, including murder, is decriminalized for a 12-hour period."
+
+  Rambo Collection:
+    template:
+      name: Franchise
+    plex_search:
+      any:
+        title:
+          - First Blood
+          - Rambo
+    summary: "Rambo is an American media franchise centered on a series of action films featuring John J. Rambo. The five films are First Blood (1982), Rambo: First Blood Part II (1985), Rambo III (1988), Rambo (2008), and Rambo: Last Blood (2019). Rambo is a United States Army Special Forces veteran played by Sylvester Stallone, whose Vietnam War experience traumatized him but also gave him superior military skills, which he has used to fight corrupt police officers, enemy troops and drug cartels. First Blood is an adaptation of the 1972 novel First Blood by David Morrell."
+
+  Resident Evil Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: Resident Evil
+        genre.not: Animation
+    summary: "Resident Evil is an action horror film series based on the Japanese video game franchise by Capcom. The German studio Constantin Film bought the rights to adapt the series in January 1997. In 2000, Paul W. S. Anderson was announced as writer and director for Resident Evil (2002). Anderson continued as writer and producer for Resident Evil: Apocalypse (2004) and Resident Evil: Extinction (2007), and returned as the director for Resident Evil: Afterlife (2010), Resident Evil: Retribution (2012) and Resident Evil: The Final Chapter (2016). These first six films follow Alice (Milla Jovovich), a character created for the films. Alice is a former security specialist and covert operative who battles the Umbrella Corporation, whose bioweapons have triggered a zombie apocalypse. Characters from the games appear, including Claire Redfield, Jill Valentine, Ada Wong, Carlos Olivera, Chris Redfield, Leon S. Kennedy, Barry Burton and the antagonists Albert Wesker and James Marcus. In 2021, a reboot film, Resident Evil: Welcome to Raccoon City, was released."
+
+  The Chronicles of Riddick:
+    template:
+      name: Franchise
+    plex_search:
+      any:
+        title:
+          - Pitch Black
+          - Riddick
+    summary: "The Chronicles of Riddick is a science fiction space Western media franchise created by brothers Ken and Jim Wheat and later continued by writer-director David Twohy. It follows the adventures of antihero character Riddick (either portrayed or voiced by Vin Diesel) in the 28th century."
+
+  RoboCop Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title: RoboCop
+    summary: "RoboCop is an American dystopian cyberpunk science fiction action superhero media franchise featuring the futuristic adventures of Alex Murphy, a Detroit, Michigan police officer, who is fatally wounded in the line of duty and transformed into a powerful cyborg, brand-named RoboCop, at the behest of a powerful mega-corporation, Omni Consumer Products. Thus equipped, Murphy battles both violent crime in a severely decayed city and the blatantly corrupt machinations within OCP."
+
+  Scream Collection:
+    template:
+      name: Franchise
+    plex_search:
+      all:
+        title.begins: Scream
+    summary: "Scream is an American murder mystery and slasher franchise that includes six films, a television series, merchandise, and game. The first four films were directed by Wes Craven. The series was created by Kevin Williamson, who wrote the first two films and the fourth; Ehren Kruger wrote the third. The fifth and sixth installments were directed by Matt Bettinelli-Olpin and Tyler Gillett, with Guy Busick and James Vanderbilt serving as writers and Williamson returning as executive producer. Dimension Films produced the first four films. Spyglass Media Group took over the rights from the fifth film on with Paramount Pictures distributing. The film series has grossed over US$900 million at the global box office."
+
+  The Terminator Collection:
+    template:
+      name: Franchise
+    sort_title: "!106_Terminator"
+    plex_search:
+      all:
+        title: Terminator
+    summary: "Terminator is an American media franchise created by James Cameron and Gale Anne Hurd. The franchise encompasses a series of science fiction action films, comics, novels and additional media, concerning a total war between Skynet's synthetic intelligence – a self-aware military machine network – and John Connor's Resistance forces comprising the survivors of the human race. Skynet's most famous products in its genocidal goals are the various terminator models, such as the T-800, who was portrayed by Arnold Schwarzenegger from the original Terminator film in 1984. By 2010, the franchise had generated $3 billion in revenue."
+
+  Transformers Collection:
+    template:
+      name: Franchise
+    trakt_list:
+      - https://trakt.tv/users/strangerer/lists/transformers
+    summary: "Transformers is a series of science fiction action films based on the Transformers franchise of the 1980s. Michael Bay directed the first five films: Transformers (2007), Revenge of the Fallen (2009), Dark of the Moon (2011), Age of Extinction (2014), and The Last Knight (2017), and has served as a producer for subsequent films. A sixth film Bumblebee, directed by Travis Knight, was released in December 2018, while a seventh film, Rise of the Beasts, directed by Steven Caple Jr. was released in June 2023."
+
+  The Transporter Trilogy:
+    template:
+      name: Franchise
+    sort_title: "!106_Transporter"
+    plex_search:
+      all:
+        title: Transporter
+    summary: "Transporter is a French action thriller film franchise, comprising four films released between 2002 and 2015, and a television series. Jason Statham plays Frank Martin in the first three movies, a professional freelance courier driver for hire. Statham is an accomplished martial artist, allowing him to do all the combat scenes involving Frank Martin himself. This permits the film's signature Hong Kong-style fight scenes, choreographed by Corey Yuen. Chris Vance portrays Martin in the sequel television series and Ed Skrein portrays him in the fourth film, a reboot."
+
+  The Twilight Saga:
+    template:
+      name: Franchise
+    sort_title: "!106_Twilight Saga"
+    plex_search:
+      all:
+        title: Twilight
+        actor: Kristen Stewart
+    summary: "The Twilight Saga is a series of romance fantasy films based on the book series Twilight by Stephenie Meyer. The series has grossed over $3.4 billion worldwide. The first installment, Twilight, was released on November 21, 2008. The second installment, New Moon, followed on November 20, 2009. The third installment, Eclipse, was released on June 30, 2010. The fourth installment, Breaking Dawn – Part 1, was released on November 18, 2011, while the fifth installment, Breaking Dawn – Part 2, was released on November 16, 2012."

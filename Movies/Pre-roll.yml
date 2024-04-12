@@ -1,0 +1,34 @@
+#THIS IS A CONFIG TO SCHEDULE PRE-ROLLS IN PLEX. YOUR PRE-ROLLS AND THEIR LOCATIONS WILL BE DIFFERENT. USE THIS AS A STARTING POINT TO MAKE YOUR OWN SCHEDULING
+
+#####################
+#    COLLECTIONS    #
+#####################
+
+collections:
+  Weekdays:
+    build_collection: false
+    server_preroll: /nfs/preroll/PlexParticles.mp4;/nfs/preroll/PlexHulu.mp4;/nfs/preroll/PlexAurora.mp4;/nfs/preroll/PlexBTTF.mp4;/nfs/preroll/PlexDistortion.mp4;/nfs/preroll/PlexCards.mp4;/nfs/preroll/PlexColorful.mp4;/nfs/preroll/PlexNeon.mp4;/nfs/preroll/PlexCyberGlitch.mp4;/nfs/preroll/PlexRetro.mp4;/nfs/preroll/PlexSynthwave.mp4;/nfs/preroll/PlexCartoonWave.mp4
+    schedule: all[range(03/01-09/15), weekly(monday|tuesday|wednesday|thursday|friday)]
+
+#CUSTOM MOVIE CLIP PRE-ROLLS
+  Weekends:
+    build_collection: false
+    server_preroll: /nfs/preroll/clips/PlexAirplane.mp4;/nfs/preroll/clips/PlexBlazingSaddles.mp4;/nfs/preroll/clips/PlexBTTF2.mp4;/nfs/preroll/clips/PlexCrocodileDundee.mp4;/nfs/preroll/clips/PlexMaverick.mp4;/nfs/preroll/clips/PlexSpaceBalls.mp4;/nfs/preroll/clips/PlexStepBrothers.mp4;/nfs/preroll/clips/PlexTerminator2.mp4;/nfs/preroll/clips/PlexTrueLies.mp4;/nfs/preroll/clips/PlexGoodWillHunting.mp4;/nfs/preroll/clips/PlexTwister.mp4
+    schedule: all[weekly(saturday|sunday)]
+ 
+  Halloween:
+    build_collection: false
+    server_preroll: /nfs/preroll/PlexGhost.mp4;/nfs/preroll/PlexHalloweenGlitch.mp4;/nfs/preroll/PlexApocalypse.mp4;/nfs/preroll/PlexHorror.mp4;/nfs/preroll/PlexZombie.mp4;/nfs/preroll/PlexBlood.mp4
+    schedule: all[range(09/16-10/31), weekly(monday|tuesday|wednesday|thursday|friday)]
+    
+  Winter:
+    build_collection: false
+    server_preroll: /nfs/preroll/PlexSnow.mp4;/nfs/preroll/PlexSnowflakes;/nfs/preroll/PlexFrost.mp4;/nfs/preroll/PlexSynthwave.mp4
+    schedule:
+      - all[range(11/01-11/30), weekly(monday|tuesday|wednesday|thursday|friday)]
+      - all[range(12/26-02/29), weekly(monday|tuesday|wednesday|thursday|friday)]
+    
+  Christmas:
+    build_collection: false
+    server_preroll: /nfs/preroll/PlexSnow.mp4;/nfs/preroll/PlexSnowflakes;/nfs/preroll/PlexFrost.mp4;/nfs/preroll/PlexChristmasTrain.mp4;/nfs/preroll/PlexChristmasLights.mp4
+    schedule: range(12/01-12/25)
