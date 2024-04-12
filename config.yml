@@ -233,33 +233,6 @@ libraries:
     settings:
       delete_not_scheduled: true
       asset_directory: config/assets/plex/TV Shows
-      
-#DENNIS WITTHUHNS SHOWS CONFIG
-  Witthuhn:
-    report_path: config/missing/Witthuhn_report.yml
-    overlay_files:
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
-    - file: config/overlays/Status.yml
-    - pmm: network
-      template_variables:
-        horizontal_align: left
-        horizontal_offset: 0
-        vertical_offset: 0
-        vertical_align: top
-        back_width: 1000
-        back_height: 1500
-        file: config/overlays/network-top-left/<<key>>.png
-        back_color: 00
-    operations:
-      schedule: weekly(saturday)
-      assets_for_all: true
-      mass_genre_update: tmdb
-      mass_audience_rating_update: imdb
-      mass_critic_rating_update: mdb_tomatoes
-    settings:
-      delete_not_scheduled: true
-      asset_directory: config/assets/plex/TV Shows
 
 #GLOBAL SETTINGS
 settings:
