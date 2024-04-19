@@ -303,15 +303,6 @@ libraries:
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: trakt_user
-      metadata_backup:
-        path: config/metadata/Shows_Backup.yml
-        sync_tags: true
-        add_blank_entries: false
-    - schedule: hourly(06-07)
-      assets_for_all: true
-    settings:
-      delete_not_scheduled: false
-      asset_directory: config/assets/plex/TV Shows   
 
 #GLOBAL SETTINGS
 settings:
