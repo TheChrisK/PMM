@@ -136,6 +136,7 @@ Add the following to your library block in your `config.yml`
 
 **This will add the network and status of the show in the top left corner of the poster**
 
+Add the below to your 'TV Shows' section of your `config.yml`
 ```yaml
 TV Shows:
     template_variables:
