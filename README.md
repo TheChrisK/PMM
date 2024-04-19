@@ -74,7 +74,7 @@ collections:
 ```
 
 ### Weekly Random Collection
-I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies, grabs 10 at random and adds them to the collection. This is scheduled to run on Mondays. 
+I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies, grabs 10 at random and adds them to the collection. This is scheduled to run on Mondays in the 6am to 7am hours. 
 If you have your PMM run more than once per day, you will need to adjust the schedule as it will reset on each run for Monday.
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/weekly.png">
