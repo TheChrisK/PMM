@@ -89,7 +89,7 @@ templates:
     sort_title: "!058_<<collection_name>>"
     summary: "A weekly collection of 10 random movies. Changes every Monday."
     sync_mode: sync
-    schedule: weekly(monday)
+    schedule: all[weekly(monday), hourly(06-07)]
 
 #####################
 #    COLLECTIONS    #
