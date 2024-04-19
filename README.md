@@ -120,7 +120,7 @@ Add the following to your library block in your `config.yml`
     - pmm: mediastinger
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png
-       #url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
+       #url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left-notext.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
         vertical_align: bottom
         vertical_offset: 0
         horizontal_align: right
