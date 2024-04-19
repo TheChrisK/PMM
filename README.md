@@ -132,6 +132,7 @@ Add the following to your library block in your `config.yml`
 
 ### Movie Audio and Video
 
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/av-top-left.png">
 
 Add the below to your 'Movies' section of your `config.yml`
 
