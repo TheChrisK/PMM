@@ -7,7 +7,7 @@ templates:
     collection_level: <<overlay_level>>
     overlay:
       name: <<overlay_name>>
-      file: /config/overlays/images/<<overlay>>.png
+      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/images/<<overlay>>.png
       queue: Rating_Queue_Logo
       weight: <<weight>>
       
@@ -33,7 +33,7 @@ templates:
     collection_level: <<overlay_level>>
     overlay:
       name: <<overlay_name>>
-      file: /config/overlays/images/<<overlay>>.png
+      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/images/<<overlay>>.png
       queue: Rating_Queue_Logo
       weight: <<weight>>
       
@@ -45,7 +45,7 @@ templates:
     collection_level: <<overlay_level>>
     overlay:
       name: <<overlay_name>>
-      file: /config/overlays/images/<<overlay>>.png
+      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/images/<<overlay>>.png
       queue: Rating_Queue_Logo
       weight: <<weight>>
       

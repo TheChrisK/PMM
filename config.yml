@@ -1,4 +1,8 @@
 libraries:
+#######################################################
+##                  MOVIE LIBRARIES                  ##
+#######################################################
+
 #MOVIE LIBRARY CONFIG FOR SCHEDULED COLLECTIONS TO BE DELETED WHEN OUT OF SEASON
   Scheduled:
     library_name: Movies
@@ -26,7 +30,7 @@ libraries:
  #MAIN MOVIE LIBRARY CONFIG
   Movies:
     report_path: config/missing/Movies_report.yml
-    schedule_overlays: weekly(tuesday)
+    schedule_overlays: all[weekly(monday|friday), hourly(06-07)]
     remove_overlays: false
     template_variables:
       use_separator: false
@@ -42,7 +46,7 @@ libraries:
         summary_book: Films based on or inspired by a book.
         summary_video_game: Films based on or inspired by a video game.
         summary_comic: Films based on or inspired by a comic.
-        schedule: weekly(sunday)
+        schedule: all[weekly(sunday), hourly(06-07)]
     - pmm: decade
       asset_directory: config/assets/plex/Collections
       template_variables:
@@ -82,6 +86,7 @@ libraries:
         schedule_valentine: range(02/05-02/15)
         exclude:
         - christmas #IN SCHEDULED LIBRARY
+        - easter #NOT ENOUGH FILMS
         - halloween #IN SCHEDULED LIBRARY
         - latinx #NOT ENOUGH FILMS
         - women #INOP DUE TO IMDB CHANGES
@@ -89,47 +94,56 @@ libraries:
       asset_directory: config/assets/plex/Collections
       template_variables:
         use_watched: false
-        list_days: 30
+        list_days: 14
         list_size: 25
         summary_popular: A collection of the most watched movies on this Plex server.
         order_popular: 1
-    - pmm: trakt
-      asset_directory: config/assets/plex/Collections
-      template_variables:
-        use_collected: false
-        use_recommended: false
-        use_watched: false
-        order_popular: 4
-        order_trending: 4
-        schedule: weekly(monday)
+        schedule: hourly(06-07)
+#    - pmm: trakt
+#      asset_directory: config/assets/plex/Collections
+#      template_variables:
+#        use_collected: false
+#        use_recommended: false
+#        use_watched: false
+#        order_popular: 4
+#        order_trending: 4
+#        schedule: weekly(monday)
     - pmm: universe
       asset_directory: config/assets/plex/Collections
       template_variables:
-        trakt_list_mcu: https://trakt.tv/users/oldmankestis/lists/marvel-cinematic-universe
-        trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
-        trakt_list_trek: https://trakt.tv/users/oldmankestis/lists/star-trek
         trakt_list_avp: https://trakt.tv/users/oldmankestis/lists/alien-predator
+        trakt_list_dcu: https://trakt.tv/users/lampshadetricky/lists/dc-extended-universe
+        trakt_list_mcu: https://trakt.tv/users/oldmankestis/lists/marvel-cinematic-universe
+        trakt_list_star: https://trakt.tv/users/oldmankestis/lists/star-wars
+        trakt_list_trek: https://trakt.tv/users/oldmankestis/lists/star-trek
         trakt_list_xmen: https://trakt.tv/users/oldmankestis/lists/x-men-collection
-        summary_xmen: The X-Men Collection. Sorted in chronological order.
         summary_mcu: The Marvel Cinematic Universe (MCU) is an American media franchise and shared universe centered on a series of superhero films produced by Marvel Studios. Sorted in chronological order.
+        summary_xmen: The X-Men Collection. Sorted in chronological order.
         minimum_items: 3
         append_data:
           star: Star Wars Saga
           trek: Star Trek Universe
           xmen: X-Men Collection
         exclude:
-        - rocky
+        - marvel #FRANCHISE.YML
+        - mummy #FRANCHISE.YML
+        - rocky #NOT IN LIBRARY
         collection_section: '106'
     overlay_files:
     - file: config/overlays/Top.yml
     - remove_overlays: false
     operations:
-      #schedule: weekly(monday)
-      assets_for_all: true
+    - schedule: all[weekly(monday|thursday|saturday), hourly(06-07)]
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: trakt_user
+      metadata_backup:
+        path: config/metadata/Movies_Backup.yml
+        sync_tags: true
+        add_blank_entries: false
+    - schedule: hourly(06-07)
+      assets_for_all: true
     settings:
       asset_directory: config/assets/plex/Movies
       asset_depth: 2
@@ -138,10 +152,20 @@ libraries:
 #4K MOVIES CONFIG
   4K Movies:
     report_path: config/missing/4K_Movies_report.yml
-    schedule_overlays: weekly(tuesday)
+    schedule_overlays: hourly(06-07)
     overlay_files:
     - file: config/overlays/Top.yml
     - file: config/overlays/Background.yml
+    - pmm: mediastinger
+      template_variables:
+        file: config/overlays/bottom-left/mediastinger-bottom-left.png
+        vertical_align: bottom
+        vertical_offset: 0
+        horizontal_align: right
+        horizontal_offset: 0
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
     - pmm: resolution
       template_variables:
         file: config/overlays/resolution-top-left-45deg/<<overlay_name>>.png
@@ -154,6 +178,8 @@ libraries:
         back_width: 1000
         back_height: 1500
         back_color: 00
+        use_4k_dvhdrplus: false
+        use_dvhdrplus: false
         use_1080p: false
         use_720p: false
         use_576p: false
@@ -171,44 +197,89 @@ libraries:
         back_color: 00
     - remove_overlays: false
     operations:
-      #schedule: weekly(monday)
-      assets_for_all: true
+    - schedule: all[weekly(monday|thursday|saturday), hourly(06-07)]
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: trakt_user
+      metadata_backup:
+        path: config/metadata/4KMovies_Backup.yml
+        sync_tags: true
+        add_blank_entries: false
+    - schedule: hourly(06-07)
+      assets_for_all: true
     settings:
       asset_directory: config/assets/plex/4K Movies
       show_missing_assets: false
 
 #CHILDREN'S MOVIES CONFIG
   Family:
-    schedule_overlays: weekly(friday)
+    schedule_overlays: all[weekly(friday), hourly(06-07)]
+    template_variables:
+      use_separator: false
     overlay_files:
     - file: config/overlays/Top.yml
     - remove_overlays: false
     report_path: config/missing/Kids_Movies_report.yml
     collection_files:
-     #- folder: config/Kids/
     - pmm: tautulli
+      asset_directory: config/assets/plex/Collections
       template_variables:
         use_watched: false
-        asset_directory: config/assets/plex/Collections
+    - pmm: studio
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        minimum_items: 7
+        sort_by: title.asc
+        addons:
+          Walt Disney Pictures:
+          - Walt Disney Animation Studios
+          - Walt Disney Productions
+          DreamWorks Pictures:
+          - DreamWorks Animation
     operations:
-      schedule: weekly(monday|wednesday|friday)
+      schedule: all[weekly(monday|wednesday|friday), hourly(06-07)]
       #mass_poster_update: tmdb
       assets_for_all: true
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: trakt_user
+      metadata_backup:
+        path: config/metadata/Family_Backup.yml
+        sync_tags: true
+        add_blank_entries: false
     settings:
       asset_directory: config/assets/plex/Family
       show_missing_assets: false
 
+#######################################################
+##                   TV LIBRARIES                    ##
+#######################################################
+
 #TV SHOWS CONFIG
   TV Shows:
     report_path: config/missing/Shows_report.yml
+    template_variables:
+      use_separator: false
+    collection_files:
+    - pmm: tautulli
+      asset_directory: config/assets/plex/Collections
+      template_variables:
+        use_watched: false
+        list_days: 30
+        summary_popular: A collection of the most watched shows on this Plex server.
+        order_popular: 1
+        schedule: hourly(06-07)
+    - pmm: franchise
+      template_variables:
+        collection_section: '040'
+        exclude:
+        - 85536   #STAR WARS
+        schedule: all[weekly(sunday), hourly(06-07)]
+    - pmm: universe
+      template_variables:
+        schedule: all[weekly(sunday), hourly(06-07)]
     overlay_files:
     - remove_overlays: false
     - file: config/overlays/Top.yml
@@ -223,43 +294,24 @@ libraries:
         back_height: 1500
         file: config/overlays/network-top-left/<<key>>.png
         back_color: 00
+    metadata_files:
+    - file: config/metadata/title_cards.yml
+      schedule: never
     operations:
-      #schedule: weekly(saturday)
-      assets_for_all: true
+    - schedule: all[weekly(monday|thursday|saturday), hourly(06-07)]
       mass_genre_update: tmdb
       mass_audience_rating_update: imdb
       mass_critic_rating_update: mdb_tomatoes
       mass_user_rating_update: trakt_user
-    settings:
-      delete_not_scheduled: true
-      asset_directory: config/assets/plex/TV Shows
-      
-#DENNIS WITTHUHNS SHOWS CONFIG
-  Witthuhn:
-    report_path: config/missing/Witthuhn_report.yml
-    overlay_files:
-    - remove_overlays: false
-    - file: config/overlays/Top.yml
-    - file: config/overlays/Status.yml
-    - pmm: network
-      template_variables:
-        horizontal_align: left
-        horizontal_offset: 0
-        vertical_offset: 0
-        vertical_align: top
-        back_width: 1000
-        back_height: 1500
-        file: config/overlays/network-top-left/<<key>>.png
-        back_color: 00
-    operations:
-      schedule: weekly(saturday)
+      metadata_backup:
+        path: config/metadata/Shows_Backup.yml
+        sync_tags: true
+        add_blank_entries: false
+    - schedule: hourly(06-07)
       assets_for_all: true
-      mass_genre_update: tmdb
-      mass_audience_rating_update: imdb
-      mass_critic_rating_update: mdb_tomatoes
     settings:
-      delete_not_scheduled: true
-      asset_directory: config/assets/plex/TV Shows
+      delete_not_scheduled: false
+      asset_directory: config/assets/plex/TV Shows   
 
 #GLOBAL SETTINGS
 settings:

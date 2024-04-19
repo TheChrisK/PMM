@@ -5,7 +5,7 @@ templates:
     run_definition: show
     overlay:
       name: <<overlay_name>>
-      file: config/overlays/status-top-left/<<status>>.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/status-top-left/<<status>>.png
       group: status
       weight: <<weight>>
       horizontal_offset: 0
@@ -20,7 +20,7 @@ overlays:
       group: status
       weight: 900
       status: airing
-    tmdb_on_the_air: 1000
+    tmdb_on_the_air: 500
 
   Returning:
     template:

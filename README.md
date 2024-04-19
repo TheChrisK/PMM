@@ -129,3 +129,28 @@ Add the following to your library block in your `config.yml`
         back_height: 1500
         back_color: 00
 ```
+
+### TV Show Network and Status
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/status-top-left.png">
+
+**This will add the network and status of the show in the top left corner of the poster**
+
+```yaml
+TV Shows:
+    template_variables:
+      use_separator: false
+    overlay_files:
+    - remove_overlays: false
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
+    - pmm: network
+      template_variables:
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network-top-left/<<key>>.png
+        back_color: 00
+``` 
