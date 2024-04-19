@@ -136,14 +136,16 @@ Add the following to your library block in your `config.yml`
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/av-top-left.png">
 
-This configuration will add the audio codec and video resolution to the top left of your posters and the top lists in the bottom right. The lists include:
+This configuration will add the audio codec and video resolution to the top left of your posters and the top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
+
+The lists include:
 
 * IMDb Top 250
 * Letterbox Top 1000
 * Metacritic's Must See
 * Rotten Tomatoes Certified Fresh
 
-These top lists are applied in that order. Ex: If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
 
 Add the below to your 'Movies' section of your `config.yml`
 
