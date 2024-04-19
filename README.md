@@ -130,6 +130,49 @@ Add the following to your library block in your `config.yml`
         back_color: 00
 ```
 
+### Movie Audio and Video
+
+
+Add the below to your 'Movies' section of your `config.yml`
+
+```yaml
+  Movies:
+    schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UPDATE AS NEEDED
+    overlay_files:
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER
+    - pmm: resolution
+      template_variables:
+        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        final_horizontal_offset: 0
+        final_vertical_offset: 0
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
+        use_4k_dvhdrplus: false
+        use_dvhdrplus: false
+        use_1080p: false
+        use_720p: false
+        use_576p: false
+        use_480p: false
+        use_edition: false
+    - pmm: audio_codec
+      template_variables:
+        url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
+        horizontal_align: left
+        horizontal_offset: 0
+        vertical_offset: 0
+        vertical_align: top
+        back_width: 1000
+        back_height: 1500
+        back_color: 00
+    - remove_overlays: false
+```
+
 ### TV Show Network and Status
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/status-top-left.png">
