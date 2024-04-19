@@ -144,7 +144,7 @@ TV Shows:
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - pmm: network
+    - pmm: network #PMM default but using a custom image below
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
