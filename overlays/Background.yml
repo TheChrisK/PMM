@@ -3,6 +3,6 @@ overlays:
   Background:
     overlay:
       name: top-left-313-wide
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/background-top-left/top-left-313-wide.png
+      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/background/top-left-313-wide.png
       weight: 2
     plex_all: true
