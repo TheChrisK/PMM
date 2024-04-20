@@ -5,7 +5,7 @@ templates:
     imdb_chart: top_<<library_type>>s
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -21,7 +21,7 @@ templates:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/rotten-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/rotten-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -37,7 +37,7 @@ templates:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/metacriticmustseemovies
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/metacritic-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/metacritic-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -55,7 +55,7 @@ templates:
       winning: true
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/razzie-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/razzie-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -71,7 +71,7 @@ templates:
     letterboxd_list: https://letterboxd.com/prof_ratigan/list/top-1000-films-of-all-time-calculated/
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/letterboxd-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/letterboxd-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -86,7 +86,7 @@ templates:
     imdb_chart: lowest_rated
     overlay:
       name: <<overlay_name>>
-      file: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-lowest-ribbon.png
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-lowest-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
