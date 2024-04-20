@@ -1,5 +1,5 @@
 overlays:
-## Creates a black background ribbon in the top left corner
+## Creates a black background ribbon in the top left corner. Run this before any other top left overlay.
   Background:
     overlay:
       name: top-left-313-wide
