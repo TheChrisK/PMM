@@ -154,7 +154,7 @@ Add the below to your 'Movies' section of your `config.yml`
     schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UPDATE AS NEEDED
     overlay_files:
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
     - pmm: resolution
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
