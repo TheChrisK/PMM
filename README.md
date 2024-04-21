@@ -167,13 +167,13 @@ Add the below to your 'Movies' section of your `config.yml`
         back_width: 1000
         back_height: 1500
         back_color: 00
-        use_4k_dvhdrplus: false
-        use_dvhdrplus: false
-        use_1080p: false
-        use_720p: false
-        use_576p: false
-        use_480p: false
-        use_edition: false
+        #use_4k_dvhdrplus: false #UNCOMMENT THE BELOW LINES IF YOU WISH TO EXCLUDE CERTAIN RESOLUTIONS OR CHANGE TO "TRUE"
+        #use_dvhdrplus: false
+        #use_1080p: false
+        #use_720p: false
+        #use_576p: false
+        #use_480p: false
+        #use_edition: false
     - pmm: audio_codec
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
