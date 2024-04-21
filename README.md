@@ -132,28 +132,18 @@ Add the following to your library block in your `config.yml`
         back_color: 00
 ```
 
-### Movie Audio and Video and Top Lists
+### Movie Audio and Video Codec Ribbon
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/av-top-left.png">
 
-This configuration will add the audio codec and video resolution to the top left of your posters and the top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
-
-The lists include:
-
-* IMDb Top 250
-* Letterbox Top 1000
-* Metacritic's Must See
-* Rotten Tomatoes Certified Fresh
-
-These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+This configuration will add the audio codec and video resolution to the top left of your posters.
 
 Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
   Movies:
-    schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UPDATE AS NEEDED
+    #schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UNCOMMENT AND UPDATE AS NEEDED
     overlay_files:
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
     - pmm: resolution
       template_variables:
@@ -187,6 +177,28 @@ Add the below to your 'Movies' section of your `config.yml`
     - remove_overlays: false
 ```
 
+### Movie Top Ranked Ribbon
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/top-bottom-right.png">
+
+This will add top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
+
+The lists include:
+
+* IMDb Top 250
+* Letterbox Top 1000
+* Metacritic's Must See
+* Rotten Tomatoes Certified Fresh
+
+These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+
+Add the below to your 'Movies' section of your `config.yml`
+
+```yaml
+overlay_files:
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+```
+
 ### TV Show Network and Status
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/status-top-left.png">
@@ -195,9 +207,8 @@ Add the below to your 'Movies' section of your `config.yml`
 
 Add the below to your 'TV Shows' section of your `config.yml`
 ```yaml
-TV Shows:
+TV Shows: #UPDATE TO YOUR LIBRARY NAME
     template_variables:
-      use_separator: false
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
