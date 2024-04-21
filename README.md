@@ -9,7 +9,9 @@ These setups may not work unless you are on the `develop` or `nightly` branch of
 
 <img src="https://github.com/TheChrisK/PMM/blob/main/Collections.png?raw=true">
 
-## Movies
+# Movies
+
+## Collections
 
 ### Cities Collection
 
@@ -198,6 +200,9 @@ Add the below to your 'Movies' section of your `config.yml`
 overlay_files:
   - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
 ```
+# TV Shows
+
+## Overlays
 
 ### TV Show Network and Status
 
