@@ -9,7 +9,7 @@ Credit to [@meisnate12](https://github.com/meisnate12) for Plex-Meta-Manager and
 
 These setups may not work unless you are on the `develop` or `nightly` branch of PMM.
 
-<img src="https://github.com/TheChrisK/PMM/blob/main/Collections.png?raw=true">
+<img src="https://github.com/TheChrisK/PMM/blob/main/images/Collections.png?raw=true">
 
 # Movies
 
@@ -22,7 +22,7 @@ The films come from my own Trakt collections. If you have a movie that needs to 
 
 The below posters were created by me using the PMM default template provided by [@meisnate12](https://github.com/meisnate12).
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/cities.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/cities.png">
 
 ```yaml
 #####################
@@ -83,7 +83,7 @@ collections:
 I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies, grabs 10 at random and adds them to the collection. This is scheduled to run on Mondays in the 6am to 7am hours. 
 If you have your PMM run more than once per day, you will need to adjust the schedule as it will reset on each run for Monday.
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/weekly.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/weekly.png">
 
 ```yaml
 #####################
@@ -116,7 +116,7 @@ collections:
 
 ### Media Stinger
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/mediastinger-text.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/mediastinger-text.png">
 
 **[Media Stinger](https://mediastinger.com)** is a website that tells you if a mid-credit or post-credit scene exists.
 
@@ -138,7 +138,7 @@ Add the following to your library block in your `config.yml`
 
 ### Movie Audio and Video Codec Ribbon
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/av-top-left.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/av-top-left.png">
 
 This configuration will add the audio codec and video resolution to the top left of your posters.
 
@@ -183,7 +183,7 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ### Movie Top Ranked Ribbon
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/top-bottom-right.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right.png">
 
 This will add top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
 
@@ -208,7 +208,7 @@ overlay_files:
 
 ### TV Show Network and Status
 
-<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/status-top-left.png">
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/status-top-left.png">
 
 **This will add the network and status of the show in the top left corner of the poster**
 
@@ -227,4 +227,25 @@ Add the below to your 'TV Shows' section of your `config.yml`
         back_height: 1500
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network-top-left/<<key>>.png
         back_color: 00
-``` 
+```
+
+### Movie Top Ranked Ribbon
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right-show.png">
+
+Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
+
+The lists include:
+
+* IMDb Top 250
+* Metacritic's Must See
+* Rotten Tomatoes Certified Fresh
+
+These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+
+Add the below to your 'Movies' section of your `config.yml`
+
+```yaml
+overlay_files:
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+```
