@@ -140,12 +140,12 @@ overlays:
 
   MC-Must-See-Movie:
     template:
-      - name: Meta-MustSee-Movie
+      - name: Meta-Must-See-Movie
         weight: 40
         
   MC-Must-See-Show:
     template:
-      - name: Meta-MustSee-Show
+      - name: Meta-Must-See-Show
         weight: 40
 
   RT-Cert-Fresh-Movie:
