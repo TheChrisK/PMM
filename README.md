@@ -126,7 +126,7 @@ Add the following to your **Movie** `collection_files:` section:
 
 ```yaml
 collection_files:
-  url: https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml
 ```
 If you wish to customize this config, you may [download it](https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml) and reference it locally.
 
