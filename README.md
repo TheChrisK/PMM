@@ -1,3 +1,8 @@
+# NOTICE: 
+## The [Top.yml](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) is currently broken due to missing mdblist links cause by Plex Meta Manager rebranding. They will be back soon
+
+---
+
 # Plex Meta Manager Config
 Public PMM configs by TheChrisK
 
