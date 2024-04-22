@@ -115,6 +115,7 @@ collections:
 ### Top Actors and Directors
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-people.png">
+<sup>People posters courtesy of @pterisaur.</sup>
 
 This config will add dynamic collections for the top rated actors and directors that exist in your library.
 
