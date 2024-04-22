@@ -1,11 +1,11 @@
 templates:
-  IMDbTop250:
+  IMDb-Top-250:
     default:
       overlay: <<overlay_name>>
     imdb_chart: top_<<library_type>>s
     overlay:
       name: <<overlay_name>>
-      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png #UPDATED ALL OVERLAY IMAGES TO URL FROM FILE TO FIX #2
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -13,12 +13,12 @@ templates:
       vertical_offset: 0
       vertical_align: bottom
   
-  RT-Cert-Fresh:
+  RT-Cert-Fresh-Movie:
     optional:
       - overlay_level
     run_definition: movie
     collection_level: <<overlay_level>>
-    mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies
+    mdblist_list: https://mdblist.com/lists/k0meta/certifiedfreshmovies
     overlay:
       name: <<overlay_name>>
       url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/rotten-ribbon.png
@@ -29,15 +29,63 @@ templates:
       vertical_offset: 0
       vertical_align: bottom
       
-  Meta-Must:
+  RT-Cert-Fresh-Show:
+    optional:
+      - overlay_level
+    run_definition: show
+    collection_level: <<overlay_level>>
+    mdblist_list: https://mdblist.com/lists/k0meta/certifiedfreshshows
+    overlay:
+      name: <<overlay_name>>
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/rotten-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+      
+  Meta-Must-See-Movie:
     optional:
       - overlay_level
     run_definition: movie
     collection_level: <<overlay_level>>
-    mdblist_list: https://mdblist.com/lists/plexmetamanager/metacriticmustseemovies
+    mdblist_list: https://mdblist.com/lists/k0meta/metacriticmustseemovies
     overlay:
       name: <<overlay_name>>
       url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/metacritic-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+
+  Meta-Must-See-Show:
+    optional:
+      - overlay_level
+    run_definition: show
+    collection_level: <<overlay_level>>
+    mdblist_list: https://mdblist.com/lists/k0meta/metacriticmustseeshows
+    overlay:
+      name: <<overlay_name>>
+      file: config/overlays/bottom-right/metacritic-ribbon.png
+      group: logo
+      weight: <<weight>>
+      horizontal_offset: 0
+      horizontal_align: right
+      vertical_offset: 0
+      vertical_align: bottom
+
+  Letterboxd-1000:
+    optional:
+      - overlay_level
+    run_definition: movie
+    collection_level: <<overlay_level>>
+    letterboxd_list: https://letterboxd.com/prof_ratigan/list/top-1000-films-of-all-time-calculated/
+    overlay:
+      name: <<overlay_name>>
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/letterboxd-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
@@ -63,22 +111,6 @@ templates:
       vertical_offset: 0
       vertical_align: bottom
 
-  Letterboxd-1000:
-    optional:
-      - overlay_level
-    run_definition: movie
-    collection_level: <<overlay_level>>
-    letterboxd_list: https://letterboxd.com/prof_ratigan/list/top-1000-films-of-all-time-calculated/
-    overlay:
-      name: <<overlay_name>>
-      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/letterboxd-ribbon.png
-      group: logo
-      weight: <<weight>>
-      horizontal_offset: 0
-      horizontal_align: right
-      vertical_offset: 0
-      vertical_align: bottom
-
   IMDb-Lowest:
     optional:
       - overlay_level
@@ -96,9 +128,9 @@ templates:
       
       
 overlays:
-  IMDB-Top-250red:
+  IMDB-Top-250:
     template:
-      - name: IMDbTop250
+      - name: IMDb-Top-250
         weight: 60
         
   Letterboxd-1000:
@@ -106,21 +138,31 @@ overlays:
       - name: Letterboxd-1000
         weight: 50
 
-  MC-Must-See:
+  MC-Must-See-Movie:
     template:
-      - name: Meta-Must
+      - name: Meta-Must-See-Movie
+        weight: 40
+        
+  MC-Must-See-Show:
+    template:
+      - name: Meta-Must-See-Show
         weight: 40
 
-  RT-Cert-Freshred:
+  RT-Cert-Fresh-Movie:
     template:
-      - name: RT-Cert-Fresh
+      - name: RT-Cert-Fresh-Movie
+        weight: 30
+
+  RT-Cert-Fresh-Show:
+    template:
+      - name: RT-Cert-Fresh-Show
         weight: 30
 
 #  Razzie:
 #    template:
 #      - name: Razzie
 #        weight: 5
-        
+
 #  IMDb-Lowest:
 #    template:
 #      - name: IMDb-Lowest

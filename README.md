@@ -1,5 +1,7 @@
-# Plex Meta Manager Config
-Public PMM configs by TheChrisK
+# Kometa Configs (formerly Plex Meta Manager)
+Public Kometa configs by TheChrisK
+
+<a href="https://www.buymeacoffee.com/thechrisk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 This config is what I use to produce the below collection examples. It is installed on Docker in Linux. Your install, paths and setup will vary. It is not advised to use this config as-is, but rather to pick and choose which parts you wish to use.
 
@@ -9,7 +11,9 @@ These setups may not work unless you are on the `develop` or `nightly` branch of
 
 <img src="https://github.com/TheChrisK/PMM/blob/main/Collections.png?raw=true">
 
-## Movies
+# Movies
+
+## Collections
 
 ### Cities Collection
 
@@ -132,29 +136,19 @@ Add the following to your library block in your `config.yml`
         back_color: 00
 ```
 
-### Movie Audio and Video and Top Lists
+### Movie Audio and Video Codec Ribbon
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/av-top-left.png">
 
-This configuration will add the audio codec and video resolution to the top left of your posters and the top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
-
-The lists include:
-
-* IMDb Top 250
-* Letterbox Top 1000
-* Metacritic's Must See
-* Rotten Tomatoes Certified Fresh
-
-These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+This configuration will add the audio codec and video resolution to the top left of your posters.
 
 Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
   Movies:
-    schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UPDATE AS NEEDED
+    #schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UNCOMMENT AND UPDATE AS NEEDED
     overlay_files:
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
-    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
     - pmm: resolution
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
@@ -167,13 +161,13 @@ Add the below to your 'Movies' section of your `config.yml`
         back_width: 1000
         back_height: 1500
         back_color: 00
-        use_4k_dvhdrplus: false
-        use_dvhdrplus: false
-        use_1080p: false
-        use_720p: false
-        use_576p: false
-        use_480p: false
-        use_edition: false
+        #use_4k_dvhdrplus: false #UNCOMMENT THE BELOW LINES IF YOU WISH TO EXCLUDE CERTAIN RESOLUTIONS OR CHANGE TO "TRUE"
+        #use_dvhdrplus: false
+        #use_1080p: false
+        #use_720p: false
+        #use_576p: false
+        #use_480p: false
+        #use_edition: false
     - pmm: audio_codec
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
@@ -187,6 +181,31 @@ Add the below to your 'Movies' section of your `config.yml`
     - remove_overlays: false
 ```
 
+### Movie Top Ranked Ribbon
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/top-bottom-right.png">
+
+This will add top lists in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) optionally has bottom ranked lists but for now those are commented out.
+
+The lists include:
+
+* IMDb Top 250
+* Letterbox Top 1000
+* Metacritic's Must See
+* Rotten Tomatoes Certified Fresh
+
+These top lists are applied in that order. **Ex:** If a movie is in the Metacritic's Must See but is also an IMDb Top 250, the IMDb overlay will take precedence.
+
+Add the below to your 'Movies' section of your `config.yml`
+
+```yaml
+overlay_files:
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+```
+# TV Shows
+
+## Overlays
+
 ### TV Show Network and Status
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/status-top-left.png">
@@ -195,13 +214,10 @@ Add the below to your 'Movies' section of your `config.yml`
 
 Add the below to your 'TV Shows' section of your `config.yml`
 ```yaml
-TV Shows:
-    template_variables:
-      use_separator: false
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - pmm: network #PMM default but using a custom image below
+    - pmm: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
