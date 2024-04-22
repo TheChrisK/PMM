@@ -214,12 +214,10 @@ overlay_files:
 
 Add the below to your 'TV Shows' section of your `config.yml`
 ```yaml
-TV Shows: #UPDATE TO YOUR LIBRARY NAME
-    template_variables:
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - pmm: network #PMM default but using a custom image below
+    - pmm: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
