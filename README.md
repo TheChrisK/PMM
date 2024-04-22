@@ -1,10 +1,5 @@
-# NOTICE: 
-## The [Top.yml](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) overlay config is currently broken due to missing mdblist links caused by Plex Meta Manager rebranding. They will be back soon
-
----
-
-# ~~Plex~~ Meta Manager Config
-Public ~~Plex~~ Meta Manager configs by TheChrisK
+# Kometa Configs (formerly Plex Meta Manager)
+Public Kometa configs by TheChrisK
 
 <a href="https://www.buymeacoffee.com/thechrisk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
