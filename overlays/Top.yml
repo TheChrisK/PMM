@@ -61,7 +61,7 @@ templates:
       vertical_offset: 0
       vertical_align: bottom
 
-    Meta-Must-See-Show:
+  Meta-Must-See-Show:
     optional:
       - overlay_level
     run_definition: show
