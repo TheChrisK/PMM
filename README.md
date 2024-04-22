@@ -1,5 +1,5 @@
 # NOTICE: 
-## The [Top.yml](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) overlay config is currently broken due to missing mdblist links cause by Plex Meta Manager rebranding. They will be back soon
+## The [Top.yml](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml) overlay config is currently broken due to missing mdblist links caused by Plex Meta Manager rebranding. They will be back soon
 
 ---
 
