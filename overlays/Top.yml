@@ -5,7 +5,7 @@ templates:
     imdb_chart: top_<<library_type>>s
     overlay:
       name: <<overlay_name>>
-      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png 
+      url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-right/imdb-ribbon.png
       group: logo
       weight: <<weight>>
       horizontal_offset: 0
