@@ -140,7 +140,9 @@ Add the following to your library block in your `config.yml`
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/av-top-left.png">
 
-This configuration will add the audio codec and video resolution to the top left of your posters.
+This configuration will add the audio codec and video resolution to the top left of your posters. These are designed to work together to remain centered. 
+
+**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-pmm: resolution` and `-pmm: audio_codec` defaults
 
 Add the below to your 'Movies' section of your `config.yml`
 
@@ -233,7 +235,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right-show.png">
 
-Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
+Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The config is [here](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
 
 The lists include:
 
@@ -247,5 +249,5 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
 overlay_files:
-  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH AND MC MUST SEE.
 ```
