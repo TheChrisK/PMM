@@ -112,6 +112,24 @@ collections:
       limit: 10
 ```
 
+### Top Actors and Directors
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-people.png">
+
+This config will add dynamic collections for the top rated actors and directors that exist in your library.
+
+For **Actors**, it will search TMDb for the top 200 actors who are at least in the top 5 cast of a movie `(depth = 5)` and will only create a collection if 10 or more titles exist.
+
+For **Directors**, it will search TMDb for the top 10 primary directors `(depth = 1)` with a limit of 5 collections total, also only creating if 10 or more exist.
+
+Add the following to your **Movie** `collection_files:` section:
+
+```yaml
+collection_files:
+  url: https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml
+```
+If you wish to customize this config, you may [download it](https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml) and reference it locally.
+
 ## Overlays
 
 ### Media Stinger
