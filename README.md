@@ -5,7 +5,7 @@ Public Kometa configs by TheChrisK
 
 This config is what I use to produce the below collection examples. It is installed on Docker in Linux. Your install, paths and setup will vary. It is not advised to use this config as-is, but rather to pick and choose which parts you wish to use.
 
-Credit to [@meisnate12](https://github.com/meisnate12) for Plex-Meta-Manager and related images, [@s0len](https://github.com/s0len/meta-manager-config) for the TV overlay images, and to [@pterisaur](https://github.com/pterisaur) for the people posters.
+Credit to [@meisnate12](https://github.com/meisnate12) for Kometa and related images, [@s0len](https://github.com/s0len/meta-manager-config) for the TV overlay images, and to [@pterisaur](https://github.com/pterisaur) for the people posters.
 
 These setups may not work unless you are on the `develop` or `nightly` branch of Kometa.
 
@@ -112,6 +112,25 @@ collections:
       limit: 10
 ```
 
+### Top Actors and Directors
+
+<img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-people.png">
+<sup>People posters courtesy of @pterisaur.</sup>
+
+This config will add dynamic collections for the top rated actors and directors that exist in your library.
+
+For **Actors**, it will search TMDb for the top 200 actors who are at least in the top 5 cast of a movie `(depth = 5)` and will only create a collection if 10 or more titles exist.
+
+For **Directors**, it will search TMDb for the top 10 primary directors `(depth = 1)` with a limit of 5 collections total, also only creating if 10 or more exist.
+
+Add the following to your **Movie** `collection_files:` section:
+
+```yaml
+collection_files:
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml
+```
+If you wish to customize this config, you may [download it](https://raw.githubusercontent.com/TheChrisK/PMM/main/People/People.yml) and reference it locally.
+
 ## Overlays
 
 ### Media Stinger
@@ -140,7 +159,9 @@ Add the following to your library block in your `config.yml`
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/av-top-left.png">
 
-This configuration will add the audio codec and video resolution to the top left of your posters.
+This configuration will add the audio codec and video resolution to the top left of your posters. These are designed to work together to remain centered. 
+
+**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-pmm: resolution` and `-pmm: audio_codec` defaults
 
 Add the below to your 'Movies' section of your `config.yml`
 
@@ -233,7 +254,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right-show.png">
 
-Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The [config](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
+Same config as the [Movies](https://github.com/TheChrisK/PMM/main/README.md#movie-top-ranked-ribbon), this will add top rankings in the bottom right. The config is [here](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml).
 
 The lists include:
 
@@ -247,5 +268,5 @@ Add the below to your 'Movies' section of your `config.yml`
 
 ```yaml
 overlay_files:
-  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH, MC MUST SEE AND LETTERBOX 1000
+  - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Top.yml #BOTTOM RIGHT OVERLAY FOR IMDB TOP 250, RT FRESH AND MC MUST SEE.
 ```
