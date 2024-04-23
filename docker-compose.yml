@@ -1,15 +1,15 @@
 ---
 version: "2.1"
 services:
-  plex-meta-manager:
-    image: meisnate12/plex-meta-manager:latest
-    container_name: plex-meta-manager
-    hostname: pmm
+  kometa:
+    image: kometateam/kometa:nightly
+    container_name: kometa
+    hostname: kometa
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=US/Central
-      - PMM_TIME=7:00
+      - KOMETA_TIMES=6:00,18:00
     volumes:
-      - /plex-meta-manager:/config
+      - /kometa:/config
     restart: unless-stopped
