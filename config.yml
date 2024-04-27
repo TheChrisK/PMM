@@ -12,7 +12,7 @@ libraries:
     collection_files:
     - folder: /config/Scheduled/
       asset_directory: config/assets/plex/Collections
-    - pmm: year
+    - default: year
       asset_directory: config/assets/plex/Collections
       template_variables:
         limit: 25
@@ -39,7 +39,7 @@ libraries:
       asset_directory: config/assets/plex/Collections
     - file: config/People/People.yml
       asset_directory: config/assets/plex/People
-    - pmm: based
+    - default: based
       asset_directory: config/assets/plex/Collections
       template_variables:
         summary_true_story: Films based on or inspired by a true story.
@@ -47,7 +47,7 @@ libraries:
         summary_video_game: Films based on or inspired by a video game.
         summary_comic: Films based on or inspired by a comic.
         schedule: all[weekly(sunday), hourly(06-07)]
-    - pmm: decade
+    - default: decade
       asset_directory: config/assets/plex/Collections
       template_variables:
         exclude:
@@ -57,7 +57,7 @@ libraries:
         summary_format: Top <<limit>> movies of the <<key>>s. Sorted by critic rating.
         summary_1970: Top <<limit_1970>> movies of the <<key>>s. Sorted by critic rating.
         minimum_items: 25
-    - pmm: genre
+    - default: genre
       asset_directory: config/assets/plex/Collections
       template_variables:
         sort_by: title.asc
@@ -68,13 +68,13 @@ libraries:
         - Spy #GENRE.YML
         - Sport #GENRE.YML
         minimum_items: 10
-    - pmm: imdb
+    - default: imdb
       asset_directory: config/assets/plex/Collections
       template_variables:
         use_lowest: false
         order_top: 3
         order_popular: 3
-    - pmm: seasonal
+    - default: seasonal
       asset_directory: config/assets/plex/Collections
       template_variables:
         emoji: ''
@@ -90,7 +90,7 @@ libraries:
         - halloween #IN SCHEDULED LIBRARY
         - latinx #NOT ENOUGH FILMS
         - women #INOP DUE TO IMDB CHANGES
-    - pmm: tautulli
+    - default: tautulli
       asset_directory: config/assets/plex/Collections
       template_variables:
         use_watched: false
@@ -99,7 +99,7 @@ libraries:
         summary_popular: A collection of the most watched movies on this Plex server.
         order_popular: 1
         schedule: hourly(06-07)
-#    - pmm: trakt
+#    - default: trakt
 #      asset_directory: config/assets/plex/Collections
 #      template_variables:
 #        use_collected: false
@@ -108,7 +108,7 @@ libraries:
 #        order_popular: 4
 #        order_trending: 4
 #        schedule: weekly(monday)
-    - pmm: universe
+    - default: universe
       asset_directory: config/assets/plex/Collections
       template_variables:
         trakt_list_avp: https://trakt.tv/users/oldmankestis/lists/alien-predator
@@ -156,7 +156,7 @@ libraries:
     overlay_files:
     - file: config/overlays/Top.yml
     - file: config/overlays/Background.yml
-    - pmm: mediastinger
+    - default: mediastinger
       template_variables:
         file: config/overlays/bottom-left/mediastinger-bottom-left.png
         vertical_align: bottom
@@ -166,7 +166,7 @@ libraries:
         back_width: 1000
         back_height: 1500
         back_color: 00
-    - pmm: resolution
+    - default: resolution
       template_variables:
         file: config/overlays/resolution-top-left-45deg/<<overlay_name>>.png
         horizontal_align: left
@@ -185,7 +185,7 @@ libraries:
         use_576p: false
         use_480p: false
         use_edition: false
-    - pmm: audio_codec
+    - default: audio_codec
       template_variables:
         file: config/overlays/audio-top-left-45deg/<<key>>.png
         horizontal_align: left
@@ -222,11 +222,11 @@ libraries:
     - remove_overlays: false
     report_path: config/missing/Kids_Movies_report.yml
     collection_files:
-    - pmm: tautulli
+    - default: tautulli
       asset_directory: config/assets/plex/Collections
       template_variables:
         use_watched: false
-    - pmm: studio
+    - default: studio
       asset_directory: config/assets/plex/Collections
       template_variables:
         minimum_items: 7
@@ -263,7 +263,7 @@ libraries:
     template_variables:
       use_separator: false
     collection_files:
-    - pmm: tautulli
+    - default: tautulli
       asset_directory: config/assets/plex/Collections
       template_variables:
         use_watched: false
@@ -271,20 +271,20 @@ libraries:
         summary_popular: A collection of the most watched shows on this Plex server.
         order_popular: 1
         schedule: hourly(06-07)
-    - pmm: franchise
+    - default: franchise
       template_variables:
         collection_section: '040'
         exclude:
         - 85536   #STAR WARS
         schedule: all[weekly(sunday), hourly(06-07)]
-    - pmm: universe
+    - default: universe
       template_variables:
         schedule: all[weekly(sunday), hourly(06-07)]
     overlay_files:
     - remove_overlays: false
     - file: config/overlays/Top.yml
     - file: config/overlays/Status.yml
-    - pmm: network
+    - default: network
       template_variables:
         horizontal_align: left
         horizontal_offset: 0

@@ -142,7 +142,7 @@ If you wish to customize this config, you may [download it](https://raw.githubus
 Add the following to your library block in your `config.yml`
 
 ```yaml
-    - pmm: mediastinger
+    - default: mediastinger
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png
        #url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left-notext.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
@@ -161,7 +161,7 @@ Add the following to your library block in your `config.yml`
 
 This configuration will add the audio codec and video resolution to the top left of your posters. These are designed to work together to remain centered. 
 
-**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-pmm: resolution` and `-pmm: audio_codec` defaults
+**NOTE:** [This config adds a black background prior to the audio and video overlays.](https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml) If you use this overlay, the Background must be run before the `-default: resolution` and `-default: audio_codec` defaults
 
 Add the below to your 'Movies' section of your `config.yml`
 
@@ -170,7 +170,7 @@ Add the below to your 'Movies' section of your `config.yml`
     #schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UNCOMMENT AND UPDATE AS NEEDED
     overlay_files:
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
-    - pmm: resolution
+    - default: resolution
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
         horizontal_align: left
@@ -189,7 +189,7 @@ Add the below to your 'Movies' section of your `config.yml`
         #use_576p: false
         #use_480p: false
         #use_edition: false
-    - pmm: audio_codec
+    - default: audio_codec
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
         horizontal_align: left
@@ -238,7 +238,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - pmm: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
+    - default: network #KOMETA DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
