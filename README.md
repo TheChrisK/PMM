@@ -7,7 +7,7 @@ This config is what I use to produce the below collection examples. It is instal
 
 Credit to [@meisnate12](https://github.com/meisnate12) for Kometa and related images, [@s0len](https://github.com/s0len/meta-manager-config) for the TV overlay images, and to [@pterisaur](https://github.com/pterisaur) for the people posters.
 
-These setups may not work unless you are on the `develop` or `nightly` branch of PMM.
+These setups may not work unless you are on the `develop` or `nightly` branch of Kometa.
 
 <img src="https://github.com/TheChrisK/PMM/blob/main/images/Collections.png?raw=true">
 
@@ -20,7 +20,7 @@ These setups may not work unless you are on the `develop` or `nightly` branch of
 This collection includes films where the city plays a character role in the story. For now this is only in the U.S.
 The films come from my own Trakt collections. If you have a movie that needs to be added, please let me know.
 
-The below posters were created by me using the PMM default template provided by [@meisnate12](https://github.com/meisnate12).
+The below posters were created by me using the Kometa default template provided by [@meisnate12](https://github.com/meisnate12).
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/cities.png">
 
@@ -81,7 +81,7 @@ collections:
 
 ### Weekly Random Collection
 I created a simple config to generate a "Weekly Random" collection. It searches all your Plex movies, grabs 10 at random and adds them to the collection. This is scheduled to run on Mondays in the 6am to 7am hours. 
-If you have your PMM run more than once per day, you will need to adjust the schedule as it will reset on each run for Monday.
+If you have your Kometa run more than once per day, you will need to adjust the schedule as it will reset on each run for Monday.
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/weekly.png">
 
@@ -142,7 +142,7 @@ If you wish to customize this config, you may [download it](https://raw.githubus
 Add the following to your library block in your `config.yml`
 
 ```yaml
-    - pmm: mediastinger
+    - default: mediastinger
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left.png
        #url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/bottom-left/mediastinger-bottom-left-notext.png #USE THIS IF YOU WANT JUST THE LOGO AND NO TEXT
@@ -170,7 +170,7 @@ Add the below to your 'Movies' section of your `config.yml`
     #schedule_overlays: hourly(06-07) #RUNS DAILY DURING THE 6AM and 7AM HOURS. UNCOMMENT AND UPDATE AS NEEDED
     overlay_files:
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Background.yml #REQUIRED: PLACES A BLACK BACGROUND IN THE TOP LEFT CORNER BEFORE THE RESOLUTION AND CODEC OVERLAYS
-    - pmm: resolution
+    - default: resolution
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/resolution-top-left-45deg/<<overlay_name>>.png
         horizontal_align: left
@@ -189,7 +189,7 @@ Add the below to your 'Movies' section of your `config.yml`
         #use_576p: false
         #use_480p: false
         #use_edition: false
-    - pmm: audio_codec
+    - default: audio_codec
       template_variables:
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/audio-top-left-45deg/<<key>>.png
         horizontal_align: left
@@ -238,7 +238,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - pmm: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
+    - default: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
