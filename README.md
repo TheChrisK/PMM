@@ -250,7 +250,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
         back_color: 00
 ```
 
-### Movie Top Ranked Ribbon
+### TV Shows Top Ranked Ribbon
 
 <img src="https://raw.githubusercontent.com/TheChrisK/PMM/main/images/top-bottom-right-show.png">
 
