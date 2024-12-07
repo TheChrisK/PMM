@@ -1,6 +1,9 @@
 # Kometa Configs (formerly Plex Meta Manager)
 Public Kometa configs by TheChrisK
 
+# NOTE: Breaking Changes from TMDB API
+Please read [this](https://github.com/TheChrisK/PMM/issues/17#issuecomment-2525106995) for workaround instructions.
+
 <a href="https://www.buymeacoffee.com/thechrisk" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 This config is what I use to produce the below collection examples. It is installed on Docker in Linux. Your install, paths and setup will vary. It is not advised to use this config as-is, but rather to pick and choose which parts you wish to use.
