@@ -30,18 +30,24 @@ The below posters were created by me using the Kometa default template provided 
 #####################
 templates:
   City:
-    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/cities/<<city>>.png
+    file_poster: /config/assets/plex/Collections/<<collection_name>>/poster.png
     sort_title: "!105_<<collection_name>>"
     collection_order: title.asc
     content_rating: R
     summary: "A selection of films where the City of <<city>> plays a character role."
     sync_mode: sync
-    schedule: weekly(saturday)
+    schedule: hourly(18)
 
 #####################
 #    COLLECTIONS    #
 #####################
 collections:
+  Boston Collection:
+    template:
+      name: City
+      city: Boston
+    trakt_list: https://trakt.tv/users/oldmankestis/lists/boston
+
   Chicago Collection:
     template: 
       name: City
