@@ -7,7 +7,7 @@ templates:
     default:
       sort_by: release.desc
     tmdb_person: <<value>>
-    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/Kometa-Images/refs/heads/main/Collections/People/<<key>>/poster_acting.png
     sort_title: <<key_name>>
     schedule: weekly(saturday)
     smart_filter:
@@ -19,7 +19,7 @@ templates:
     default:
       sort_by: release.desc
     tmdb_person: <<value>>
-    url_poster: https://raw.githubusercontent.com/TheChrisK/PMM/main/assets/posters/people/<<key>>.png
+    url_poster: https://raw.githubusercontent.com/TheChrisK/Kometa-Images/refs/heads/main/Collections/People/<<key>>/poster_directing.png
     sort_title: <<key_name>>
     schedule: weekly(saturday)
     smart_filter:
