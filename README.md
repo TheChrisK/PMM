@@ -36,7 +36,7 @@ templates:
     content_rating: R
     summary: "A selection of films where the City of <<city>> plays a character role."
     sync_mode: sync
-    schedule: hourly(18)
+    #schedule: hourly(18) #OPTIONAL SCHEDULED RUN 
 
 #####################
 #    COLLECTIONS    #
@@ -46,43 +46,43 @@ collections:
     template:
       name: City
       city: Boston
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/boston
+    mdblist_list: https://mdblist.com/lists/oldmankestis/boston
 
   Chicago Collection:
     template: 
       name: City
       city: Chicago
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/chicago
+    mdblist_list: https://mdblist.com/lists/oldmankestis/chicago
       
   Detroit Collection:
     template: 
       name: City
       city: Detroit
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/detroit
+    mdblist_list: https://mdblist.com/lists/oldmankestis/detroit
 
   Las Vegas Collection:
     template: 
       name: City
       city: Las Vegas
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/las-vegas
+    mdblist_list: https://mdblist.com/lists/oldmankestis/las-vegas
 
   Los Angeles Collection:
     template: 
       name: City
       city: Los Angeles
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/los-angeles
+    mdblist_list: https://mdblist.com/lists/oldmankestis/los-angeles
       
   New York Collection:
     template: 
       name: City
       city: New York
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/new-york
+    mdblist_list: https://mdblist.com/lists/oldmankestis/new-york
     
   Washington D.C. Collection:
     template:
       name: City
       city: Washington DC
-    trakt_list: https://trakt.tv/users/oldmankestis/lists/washington-dc
+    mdblist_list: https://mdblist.com/lists/oldmankestis/washington-dc
 ```
 
 ### Weekly Random Collection
@@ -101,7 +101,7 @@ templates:
     sort_title: "!058_<<collection_name>>"
     summary: "A weekly collection of 10 random movies. Changes every Monday."
     sync_mode: sync
-    schedule: all[weekly(monday), hourly(06-07)]
+    #schedule: all[weekly(monday), hourly(06-07)] #OPTIONAL SCHEDULED RUN
 
 #####################
 #    COLLECTIONS    #
