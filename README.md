@@ -253,7 +253,7 @@ Add the below to your 'TV Shows' section of your `config.yml`
         back_width: 1000
         back_height: 1500
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network-top-left/<<key>>.png
-        back_color: 00
+        back_color: 000
 ```
 
 ### TV Shows Top Ranked Ribbon
