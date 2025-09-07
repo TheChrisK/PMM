@@ -252,6 +252,8 @@ Add the below to your 'TV Shows' section of your `config.yml`
         vertical_align: top
         back_width: 1000
         back_height: 1500
+        url_#0: https://raw.githubusercontent.com/TheChrisK/PMM/refs/heads/main/overlays/network-top-left/%230.png   #THIS NETWORK CONTAINS A UNICODE CHARACTER WHICH DOESN'T WORK AS-IS
+        #use_#0: false  #TO SKIP THIS OVERLAY, UNCOMMENT THIS LINE AND COMMENT OUT THE ABOVE LINE.
         url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network-top-left/<<key>>.png
         back_color: 000
 ```
