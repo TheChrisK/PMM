@@ -244,7 +244,8 @@ Add the below to your 'TV Shows' section of your `config.yml`
     overlay_files:
     - remove_overlays: false
     - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/Status.yml #AIRING STATUS OVERLAY CONFIG
-    - default: network #PMM DEFAULT NETWORK OVERLAY USING CUSTOM IMAGES
+    #- default: network #DEFAULT OVERLAY FROM KOMETA TEAM
+    - url: https://raw.githubusercontent.com/TheChrisK/PMM/main/overlays/network.yml #SAME AS DEFAULT WITH FIXES FOR MISSING NETWORKS (APPLE TV, MUBI, etc...)
       template_variables:
         horizontal_align: left
         horizontal_offset: 0
