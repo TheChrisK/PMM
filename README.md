@@ -1,3 +1,5 @@
+# THIS REPOSITORY IS DEPRECATED, IT IS NOW AVAILABLE [HERE](https://github.com/TheChrisK/Kometa)
+
 # Kometa Configs (formerly Plex Meta Manager)
 Public Kometa configs by TheChrisK
 
