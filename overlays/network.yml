@@ -143,11 +143,7 @@ overlays:
 
   Apple TV:
     variables: { weight: 10}
-    template: [name: standard, name: networks]
-
-  Apple TV+:
-    variables: { weight: 10}
-    template: [name: standard, name: networks]
+    template: [name: standard, {name: networks, search: [Apple TV, Apple TV+]}]
 
   ARD:
     variables: { weight: 10}
@@ -664,6 +660,10 @@ overlays:
   MTV:
     variables: { weight: 10}
     template: [name: standard, {name: networks, search: [MTV, MTV2, MTV3, MTV Lebanon, MTV Latin America, MTV Italia, MTV Australia, MTV Canada, MTV Global, MTV Nederland]}]
+
+  MUBI:
+    variables: { weight: 10}
+    template: [name: standard, name: networks]
 
   M-Net:
     variables: { weight: 10}
